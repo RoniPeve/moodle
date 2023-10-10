@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-10-2023 a las 21:16:19
+-- Tiempo de generación: 10-10-2023 a las 02:52:18
 -- Versión del servidor: 10.6.15-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -1413,7 +1413,7 @@ CREATE TABLE `mdl_cache_flags` (
 --
 
 INSERT INTO `mdl_cache_flags` (`id`, `flagtype`, `name`, `timemodified`, `value`, `expiry`) VALUES
-(1, 'userpreferenceschanged', '2', 1696953993, '1', 1696982793);
+(1, 'userpreferenceschanged', '2', 1696870398, '1', 1696899198);
 
 -- --------------------------------------------------------
 
@@ -5071,10 +5071,7 @@ INSERT INTO `mdl_config_log` (`id`, `userid`, `timemodified`, `plugin`, `name`, 
 (1813, 2, 1696877182, 'theme_moove', 'sliderimage3', '/Banner03.png', '/Banner01Aula.png'),
 (1814, 2, 1696898183, 'theme_moove', 'favicon', '/icon.ico', ''),
 (1815, 2, 1696898586, 'theme_moove', 'logo', '/logo_ceplan.png', '/LOGO-CEPLAN-fondo-transparene.png'),
-(1816, 2, 1696898586, 'theme_moove', 'loginbgimg', '/fondo_logo.jpg', '/student-849822_1280.jpg'),
-(1817, 2, 1696955812, 'theme_moove', 'facebook', 'https://www.facebook.com/ceplan/', ''),
-(1818, 2, 1696955812, 'theme_moove', 'twitter', 'https://twitter.com/CEPLAN2050', ''),
-(1819, 2, 1696955812, 'theme_moove', 'youtube', 'https://www.youtube.com/@CanalCeplan/', '');
+(1816, 2, 1696898586, 'theme_moove', 'loginbgimg', '/fondo_logo.jpg', '/student-849822_1280.jpg');
 
 -- --------------------------------------------------------
 
@@ -6944,10 +6941,10 @@ INSERT INTO `mdl_config_plugins` (`id`, `plugin`, `name`, `value`) VALUES
 (1929, 'theme_moove', 'website', 'https://geo.ceplan.gob.pe/'),
 (1930, 'theme_moove', 'mobile', ''),
 (1931, 'theme_moove', 'mail', ''),
-(1932, 'theme_moove', 'facebook', 'https://www.facebook.com/ceplan/'),
-(1933, 'theme_moove', 'twitter', 'https://twitter.com/CEPLAN2050'),
+(1932, 'theme_moove', 'facebook', ''),
+(1933, 'theme_moove', 'twitter', ''),
 (1934, 'theme_moove', 'linkedin', ''),
-(1935, 'theme_moove', 'youtube', 'https://www.youtube.com/@CanalCeplan/'),
+(1935, 'theme_moove', 'youtube', ''),
 (1936, 'theme_moove', 'instagram', ''),
 (1937, 'theme_moove', 'whatsapp', ''),
 (1938, 'theme_moove', 'telegram', ''),
@@ -9407,7 +9404,7 @@ INSERT INTO `mdl_files` (`id`, `contenthash`, `pathnamehash`, `contextid`, `comp
 (10, '567b2006a0ea2f35f120a2c6f495e548db2912e8', '329dbf6f6f598e6c6e6776297b61e22881c35e91', 1, 'core', 'preview', 0, '/thumb/', '580bbd2462a17b9cab73e4613b0e76aaebfbad26', NULL, 3614, 'image/png', 0, NULL, NULL, NULL, 1696616150, 1696616150, 0, NULL),
 (11, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '74c104d54c05b5f8c633a36da516d37e6c5279e4', 1, 'core', 'preview', 0, '/thumb/', '.', NULL, 0, NULL, 0, NULL, NULL, NULL, 1696616150, 1696616150, 0, NULL),
 (12, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '884555719c50529b9df662a38619d04b5b11e25c', 1, 'core', 'preview', 0, '/', '.', NULL, 0, NULL, 0, NULL, NULL, NULL, 1696616150, 1696616150, 0, NULL),
-(14, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '7d2d3bd28ea1be627ad966d2fc0a8bc480355609', 1, 'theme_moove', 'logo', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696616149, 1696955673, 0, NULL),
+(14, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '7d2d3bd28ea1be627ad966d2fc0a8bc480355609', 1, 'theme_moove', 'logo', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696616149, 1696898597, 0, NULL),
 (15, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', 'db41421c544b0bce1596cb2830189f9e28009b91', 5, 'user', 'draft', 342430149, '/', 'LOGO-CEPLAN-fondo-transparene.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:33:\"LOGO-CEPLAN-fondo-transparene.png\";s:8:\"original\";s:244:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czozMzoiTE9HTy1DRVBMQU4tZm9uZG8tdHJhbnNwYXJlbmUucG5nIjt9\";}', 'Admin User', 'unknown', 1696616149, 1696616156, 0, NULL),
 (16, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '870063d625512ca8d9a68cfcb87dd1b065c6cd35', 5, 'user', 'draft', 342430149, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696616516, 1696616516, 0, NULL),
 (17, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '9a71d6e2f7dc9596076f8e9bb711dd0d9a132ed8', 5, 'user', 'draft', 740034309, '/', 'LOGO-CEPLAN-fondo-transparene.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:33:\"LOGO-CEPLAN-fondo-transparene.png\";s:8:\"original\";s:244:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czozMzoiTE9HTy1DRVBMQU4tZm9uZG8tdHJhbnNwYXJlbmUucG5nIjt9\";}', 'Admin User', 'unknown', 1696616149, 1696616156, 0, NULL),
@@ -9422,9 +9419,9 @@ INSERT INTO `mdl_files` (`id`, `contenthash`, `pathnamehash`, `contextid`, `comp
 (27, '2c750840bfd5f1756959a2ae61f539b338af5c34', '72870f87cd2730807ae9d19353fd02d75e0fdce2', 5, 'user', 'draft', 251223635, '/', 'planes_Sectoriales.png', 2, 194844, 'image/png', 0, 'O:8:\"stdClass\":1:{s:6:\"source\";s:22:\"planes_Sectoriales.png\";}', 'Admin User', 'unknown', 1696617243, 1696617243, 0, NULL),
 (28, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '18eba25856ed55bee1e0a38975397177f2a9af83', 5, 'user', 'draft', 251223635, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617243, 1696617243, 0, NULL),
 (29, '9a932c375d3c96efadb8c0ba5e271d9727fab3f5', 'd42f296a067c5f03a3f1aad9d17133264560f4bf', 1, 'core', 'preview', 0, '/thumb/', '2c750840bfd5f1756959a2ae61f539b338af5c34', NULL, 3910, 'image/png', 0, NULL, NULL, NULL, 1696617244, 1696617244, 0, NULL),
-(31, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'bb9b866e96fab33829a1353d285960b30add11f3', 1, 'theme_moove', 'sliderimage1', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617231, 1696955673, 0, NULL),
-(32, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '6d1cd9ef9c8833b279f17f7e48a6fcc266120f09', 1, 'theme_moove', 'sliderimage2', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617196, 1696955673, 0, NULL),
-(35, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '64b49b910709298de88422bf56278faca24c1493', 1, 'theme_moove', 'sliderimage3', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617243, 1696955673, 0, NULL),
+(31, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'bb9b866e96fab33829a1353d285960b30add11f3', 1, 'theme_moove', 'sliderimage1', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617231, 1696898601, 0, NULL),
+(32, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '6d1cd9ef9c8833b279f17f7e48a6fcc266120f09', 1, 'theme_moove', 'sliderimage2', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617196, 1696898601, 0, NULL),
+(35, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '64b49b910709298de88422bf56278faca24c1493', 1, 'theme_moove', 'sliderimage3', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617243, 1696898601, 0, NULL),
 (36, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '51a46891db0923c4b25ab8688c7ce9c371524b82', 5, 'user', 'draft', 348270437, '/', 'LOGO-CEPLAN-fondo-transparene.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:33:\"LOGO-CEPLAN-fondo-transparene.png\";s:8:\"original\";s:244:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czozMzoiTE9HTy1DRVBMQU4tZm9uZG8tdHJhbnNwYXJlbmUucG5nIjt9\";}', 'Admin User', 'unknown', 1696616149, 1696616156, 0, NULL),
 (37, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '629b6b9a2784bd842cf364fccdf5416ec70cc3c1', 5, 'user', 'draft', 348270437, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696617255, 1696617255, 0, NULL),
 (38, '8b3f970f55b6863151cc05d95866880f3b719b79', '1b865c2b4ea3c85d69a6d7718b0a715469db27ab', 5, 'user', 'draft', 564903863, '/', 'guias_planes_politicas.png', 2, 391698, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:26:\"guias_planes_politicas.png\";s:8:\"original\";s:248:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoyNjoiZ3VpYXNfcGxhbmVzX3BvbGl0aWNhcy5wbmciO30=\";}', 'Admin User', 'unknown', 1696617231, 1696617249, 0, NULL),
@@ -9507,7 +9504,7 @@ INSERT INTO `mdl_files` (`id`, `contenthash`, `pathnamehash`, `contextid`, `comp
 (125, 'b14f299fa831cb13a5d02a16228de508267ebc9f', '641e0d9d664cd9945e7162833998599c17406db9', 5, 'user', 'draft', 510969278, '/', 'student-849822_1280.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":1:{s:6:\"source\";s:23:\"student-849822_1280.jpg\";}', 'Admin User', 'unknown', 1696619521, 1696619521, 0, NULL),
 (126, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '6917c5b2b0d179b6617d05b7e5c5242caff685f2', 5, 'user', 'draft', 510969278, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696619521, 1696619521, 0, NULL),
 (127, '390e2898f3ec45b30da6a66822ea31b699a93fc8', '8ea3fe38a623548638b3b6cf5836394eef2be16e', 1, 'core', 'preview', 0, '/thumb/', 'b14f299fa831cb13a5d02a16228de508267ebc9f', NULL, 13509, 'image/png', 0, NULL, NULL, NULL, 1696619522, 1696619522, 0, NULL),
-(129, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '253db534e9a1a7082782e0cda8a86406a72a4f53', 1, 'theme_moove', 'loginbgimg', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696619521, 1696955673, 0, NULL),
+(129, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '253db534e9a1a7082782e0cda8a86406a72a4f53', 1, 'theme_moove', 'loginbgimg', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696619521, 1696898600, 0, NULL),
 (130, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', 'a6897c73477afab9ffc32089e4ce32792bff18db', 5, 'user', 'draft', 869616429, '/', 'LOGO-CEPLAN-fondo-transparene.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:33:\"LOGO-CEPLAN-fondo-transparene.png\";s:8:\"original\";s:244:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czozMzoiTE9HTy1DRVBMQU4tZm9uZG8tdHJhbnNwYXJlbmUucG5nIjt9\";}', 'Admin User', 'unknown', 1696616149, 1696616156, 0, NULL),
 (131, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'e12c67e1aa00b80c75a6547efb6e228f8f5d4131', 5, 'user', 'draft', 869616429, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696619535, 1696619535, 0, NULL),
 (132, 'b14f299fa831cb13a5d02a16228de508267ebc9f', '94cee1a5dd78a0eec4394b07643d05d0698c5695', 5, 'user', 'draft', 338497734, '/', 'student-849822_1280.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:23:\"student-849822_1280.jpg\";s:8:\"original\";s:240:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MjM6InN0dWRlbnQtODQ5ODIyXzEyODAuanBnIjt9\";}', 'Admin User', 'unknown', 1696619521, 1696619528, 0, NULL),
@@ -9596,7 +9593,7 @@ INSERT INTO `mdl_files` (`id`, `contenthash`, `pathnamehash`, `contextid`, `comp
 (220, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '4c2b157bab21d554f5733feb08b722e2a1700682', 5, 'user', 'draft', 912542144, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898145, 1696898145, 0, NULL),
 (221, 'a33072d65cfa52605029d07a98b628a32f7f3f73', 'ca9cfa89179d5ba576131b21180e895b60d68896', 5, 'user', 'draft', 337068074, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":1:{s:6:\"source\";s:8:\"icon.ico\";}', 'Roni Peve', 'unknown', 1696898172, 1696898172, 0, NULL),
 (222, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'afb43cb04b952c8cf09740a09b147f46a52165c5', 5, 'user', 'draft', 337068074, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898172, 1696898172, 0, NULL),
-(224, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'b8a9db73fbfd9447288cdeed4cf892ef804907d1', 1, 'theme_moove', 'favicon', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898172, 1696955673, 0, NULL),
+(224, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'b8a9db73fbfd9447288cdeed4cf892ef804907d1', 1, 'theme_moove', 'favicon', 0, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898172, 1696898600, 0, NULL),
 (226, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '213d4ec200a4d89ba5f69ee77052f73aebd18bb4', 5, 'user', 'draft', 552608964, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898186, 1696898186, 0, NULL),
 (228, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'aa023b6535c59fd84648bbec9516d74f93757f53', 5, 'user', 'draft', 29258361, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898186, 1696898186, 0, NULL),
 (230, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'e96b23f8e69f20dc6dc3dcea9a8e2ca2067e5824', 5, 'user', 'draft', 902165973, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898187, 1696898187, 0, NULL),
@@ -9638,104 +9635,7 @@ INSERT INTO `mdl_files` (`id`, `contenthash`, `pathnamehash`, `contextid`, `comp
 (269, '7d148b4f19de2338a2579352102f9634e6376c15', 'f5242bdfab6a8aa963a32e43650696b458b8c546', 5, 'user', 'draft', 730003073, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
 (270, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '4074e60cd2464f294b28dc32f97da2b155190046', 5, 'user', 'draft', 730003073, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898755, 1696898755, 0, NULL),
 (271, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '5937aa8806648eecbac5f962b040eb57004d6cbe', 5, 'user', 'draft', 713912638, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(272, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '2dfb2f4c07cf5f7abe056a4be2cb2cfe90715b04', 5, 'user', 'draft', 713912638, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898755, 1696898755, 0, NULL),
-(273, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '28ec06253e9de1cd251d705623f1d70b3bbad161', 5, 'user', 'draft', 150420074, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(274, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'd79e8d40bd35f034a48c89c86cc85cec9c3b5664', 5, 'user', 'draft', 150420074, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954057, 1696954057, 0, NULL),
-(275, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '25de9867e849aaf1710771ff9dcd307adc6ead13', 5, 'user', 'draft', 890884132, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(276, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '59d53bf4f90aec79049c5ea3a00d8ecfedf88a27', 5, 'user', 'draft', 890884132, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954057, 1696954057, 0, NULL),
-(277, 'b14f299fa831cb13a5d02a16228de508267ebc9f', 'acabf7ee9469f274b5d9258d295e8946808caa4f', 5, 'user', 'draft', 636295271, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(278, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'e4cd72518b7d387a850534a0e35381061c93323e', 5, 'user', 'draft', 636295271, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954057, 1696954057, 0, NULL),
-(279, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', 'bac5cc95ea0bd52d6e21585f5460de5d5339692d', 5, 'user', 'draft', 973693288, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(280, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '003615c3d94677487bf6bdeb1ee0a7008442a8a0', 5, 'user', 'draft', 973693288, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954057, 1696954057, 0, NULL),
-(281, '7d148b4f19de2338a2579352102f9634e6376c15', '8bd990b5a1c6b83421409638284e46e8d5395779', 5, 'user', 'draft', 376778687, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(282, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '7a8967f010fed9c6dff28495c45e88ec2397dafb', 5, 'user', 'draft', 376778687, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954057, 1696954057, 0, NULL),
-(283, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '8763955932a56a91bbc64ec3d4ec689cfdb8183d', 5, 'user', 'draft', 240032075, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(284, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'ae7a2811a1c6cd541baf092abd59a1b57e5907a1', 5, 'user', 'draft', 240032075, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954057, 1696954057, 0, NULL),
-(285, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '862d48d49ab4d5c77f13f7773afd602f76008eca', 5, 'user', 'draft', 531107866, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(286, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '6b169a8fd380a86c5a6d881f5b5c6e2af361d34c', 5, 'user', 'draft', 531107866, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954535, 1696954535, 0, NULL),
-(287, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '99e9f308eed15000f189290ca89bb8227714d449', 5, 'user', 'draft', 356167796, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(288, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'bc005a64ab838834ab9693e2dcb1578f806431f4', 5, 'user', 'draft', 356167796, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954535, 1696954535, 0, NULL),
-(289, 'b14f299fa831cb13a5d02a16228de508267ebc9f', 'ca06204d8d89474635192d3118c6009797e00d0f', 5, 'user', 'draft', 300583155, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(290, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '0f110412366ad42e555ffd4b0987cca9cc01959f', 5, 'user', 'draft', 300583155, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954535, 1696954535, 0, NULL),
-(291, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', '92ae260fb16d968860b37964839fc9536aa5091c', 5, 'user', 'draft', 537442855, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(292, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'e2af8662365dc36ac1530c5687dd21fcc4145d16', 5, 'user', 'draft', 537442855, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954535, 1696954535, 0, NULL),
-(293, '7d148b4f19de2338a2579352102f9634e6376c15', '6851ea8a49fc80793dcd0b1c1271a23a34374045', 5, 'user', 'draft', 534963907, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(294, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '17c7925787cc5fd108f39387eebbc57217610289', 5, 'user', 'draft', 534963907, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954535, 1696954535, 0, NULL),
-(295, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '50ecca3482bb4724288f4fd5bc63bfadf896a5e5', 5, 'user', 'draft', 32189685, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(296, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '585bc49e7fb26b7c4a44800ecc132aa165294017', 5, 'user', 'draft', 32189685, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954535, 1696954535, 0, NULL),
-(297, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '140d3916299185747e45baf9b3702a44382ee68f', 5, 'user', 'draft', 183005533, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(298, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '0d8f4ba11f3ceeacc3d07644db038e62a261b738', 5, 'user', 'draft', 183005533, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954564, 1696954564, 0, NULL),
-(299, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '1f6b7140e28881531c0014cf80b31153c329302e', 5, 'user', 'draft', 132537509, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(300, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '97349633876171aab14a59b85d40e09ff56a4f59', 5, 'user', 'draft', 132537509, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954564, 1696954564, 0, NULL),
-(301, 'b14f299fa831cb13a5d02a16228de508267ebc9f', 'af33b33cc35f91bee022d45fa935b86c6b193a53', 5, 'user', 'draft', 533825069, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(302, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '55d3ce613eb34564f89f392175bcd8026a5476b5', 5, 'user', 'draft', 533825069, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954564, 1696954564, 0, NULL),
-(303, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', 'd7be6605e83de89e71a37b473b2ef287fde0d172', 5, 'user', 'draft', 987784957, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(304, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '84fbbf8090021c9083f4c6d86ce811cd08a0d783', 5, 'user', 'draft', 987784957, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954564, 1696954564, 0, NULL),
-(305, '7d148b4f19de2338a2579352102f9634e6376c15', '3f952fa9a9734c87369eca64322a2557842334dd', 5, 'user', 'draft', 182922114, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(306, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '50a020722ce8087a7201b51f57b816fb457c03c1', 5, 'user', 'draft', 182922114, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954564, 1696954564, 0, NULL),
-(307, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '0c3fc43a3fd65a30656b3eb265ba3c97febc4344', 5, 'user', 'draft', 823349052, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(308, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'a3bc07e35b1b3352e7aa3da5dab3f5d6e5115e27', 5, 'user', 'draft', 823349052, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954564, 1696954564, 0, NULL),
-(309, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', 'd584c80641b96b73223658603da74858a876efb8', 5, 'user', 'draft', 113053214, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(310, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '68b1421fb487ba948495d8f3c10921d92b507363', 5, 'user', 'draft', 113053214, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954608, 1696954608, 0, NULL),
-(311, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '0b61f8de513b6e56e822aba46d95fe1f1c770d5a', 5, 'user', 'draft', 949293524, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(312, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '3c32e6127395b9c3fa68cd250095f43edc5bacfc', 5, 'user', 'draft', 949293524, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954608, 1696954608, 0, NULL),
-(313, 'b14f299fa831cb13a5d02a16228de508267ebc9f', '1469b54f1c2b3700b079d2966973eb46b56bf3b9', 5, 'user', 'draft', 509040232, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL);
-INSERT INTO `mdl_files` (`id`, `contenthash`, `pathnamehash`, `contextid`, `component`, `filearea`, `itemid`, `filepath`, `filename`, `userid`, `filesize`, `mimetype`, `status`, `source`, `author`, `license`, `timecreated`, `timemodified`, `sortorder`, `referencefileid`) VALUES
-(314, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'ee5ecf90125a63abc74cd7c5a059411e3e64a74e', 5, 'user', 'draft', 509040232, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954608, 1696954608, 0, NULL),
-(315, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', 'a51a6ed84ece58f96e0d20f12153a8f608d58589', 5, 'user', 'draft', 548738393, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(316, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'd1eb608b19ae1780e7ac4f3e027a6cfdc61ff9b7', 5, 'user', 'draft', 548738393, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954608, 1696954608, 0, NULL),
-(317, '7d148b4f19de2338a2579352102f9634e6376c15', '5b90919795c7b3c7926d35118458425418a6f379', 5, 'user', 'draft', 478853733, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(318, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '1b34952a78a550a8c236099dd7a583c5dbcb4f3d', 5, 'user', 'draft', 478853733, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954608, 1696954608, 0, NULL),
-(319, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', 'f0f0b14116e50c2f8dbdc5b7bd92b2f37f529cbd', 5, 'user', 'draft', 843190517, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(320, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'ef043ab122b34594441dee9e5a4276fd52e3b141', 5, 'user', 'draft', 843190517, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696954608, 1696954608, 0, NULL),
-(321, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '3f456d1bd2d669951fb9bbed41f477863be9941d', 5, 'user', 'draft', 810316917, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(322, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '173d940c964019b90d3d590362f91461f3674de9', 5, 'user', 'draft', 810316917, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955673, 1696955673, 0, NULL),
-(323, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '1939c67f0efe30474cb39e8be908053cbb5c5340', 5, 'user', 'draft', 39327130, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(324, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '9dc0f22186179f670e91a5b84e10625ae592f7f1', 5, 'user', 'draft', 39327130, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955673, 1696955673, 0, NULL),
-(325, 'b14f299fa831cb13a5d02a16228de508267ebc9f', 'ecdb63e8a3759b715df5f0756236d86a7dee12d4', 5, 'user', 'draft', 636477467, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(326, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '4976aaf14867fc0534e344bb2b453a5c72b1cf26', 5, 'user', 'draft', 636477467, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955673, 1696955673, 0, NULL),
-(327, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', 'b30dc0e4fcdf555367a50d3651a1dcdbf652e8b6', 5, 'user', 'draft', 952802193, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(328, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'cd0c83e58007d39f82f6052b20cfa54d1670a2d6', 5, 'user', 'draft', 952802193, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955673, 1696955673, 0, NULL),
-(329, '7d148b4f19de2338a2579352102f9634e6376c15', '25fe2d51de70523548980486b92fefbc585c7d5b', 5, 'user', 'draft', 361798824, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(330, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'efd073616da4c719c6a50904f4757ffc9ee3f412', 5, 'user', 'draft', 361798824, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955673, 1696955673, 0, NULL),
-(331, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '732eb0218a0f3a3353c43a1d9fcb079ad9e2164c', 5, 'user', 'draft', 637854162, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(332, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '507c8619cf33a24e0ec9b66ff29dd645f1e245f6', 5, 'user', 'draft', 637854162, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955673, 1696955673, 0, NULL),
-(333, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '6cd5f78e957d74aa9e12d8ea625dadba50c17f9d', 5, 'user', 'draft', 200011157, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(334, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'c6db305137efa190530dd775f69261c5540938fc', 5, 'user', 'draft', 200011157, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955813, 1696955813, 0, NULL),
-(335, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '03602a9f98a22a2380c75e08439ad954ac9d5435', 5, 'user', 'draft', 719784544, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(336, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '87fcdba5110f7afb221a4edb837ae8bdca801461', 5, 'user', 'draft', 719784544, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955813, 1696955813, 0, NULL),
-(337, 'b14f299fa831cb13a5d02a16228de508267ebc9f', 'dad0982682b7ccc7cd97d22078f9e50966efba24', 5, 'user', 'draft', 248252777, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(338, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'b05e39fc931a9374ef83fa0d762adb9a62e35ca3', 5, 'user', 'draft', 248252777, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955813, 1696955813, 0, NULL),
-(339, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', '7fd7037acbdf8989ea699f5a722683cb6d0459ca', 5, 'user', 'draft', 730266941, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(340, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'fbb9e88ca238d97bb24c2e6f0e3193ee6c114d86', 5, 'user', 'draft', 730266941, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955813, 1696955813, 0, NULL),
-(341, '7d148b4f19de2338a2579352102f9634e6376c15', '60bf9da74945161d20db7243701158a54de688a4', 5, 'user', 'draft', 40219008, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(342, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'd31cc70a44044e8de2294dd40214dfd522b66d57', 5, 'user', 'draft', 40219008, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955813, 1696955813, 0, NULL),
-(343, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '1fe7686ee4ddeccf4031c0e4812514c5741426ea', 5, 'user', 'draft', 703778658, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(344, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'd50a7602b81ca94e9ecb8af9b35f397a25ec2f22', 5, 'user', 'draft', 703778658, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696955813, 1696955813, 0, NULL),
-(345, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '549ac817224647483d7b16f746d87e63e2762e61', 5, 'user', 'draft', 378776529, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(346, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '20e13601eb53244034ed78239127729cd4821b06', 5, 'user', 'draft', 378776529, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956486, 1696956486, 0, NULL),
-(347, 'a33072d65cfa52605029d07a98b628a32f7f3f73', '9882a24ff6a4232058c4ff225f46969d7ba3cfde', 5, 'user', 'draft', 639945046, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(348, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '607605cdeda495fdae9ecc217724a82d27f06d79', 5, 'user', 'draft', 639945046, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956486, 1696956486, 0, NULL),
-(349, 'b14f299fa831cb13a5d02a16228de508267ebc9f', '8545996af4d2c9d4eee60089c675a22c126e9838', 5, 'user', 'draft', 59872941, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(350, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '4bd2771612bb13b88e8e27ac35d6277a2a361478', 5, 'user', 'draft', 59872941, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956486, 1696956486, 0, NULL),
-(351, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', '7da09363431e2d71070890c05112775a456ccc53', 5, 'user', 'draft', 930887152, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(352, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '71e211449821bdce4f37d396c6478c579fcba28c', 5, 'user', 'draft', 930887152, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956486, 1696956486, 0, NULL),
-(353, '7d148b4f19de2338a2579352102f9634e6376c15', '302db4559efd45486b448f5b408bad870d1ec5d8', 5, 'user', 'draft', 446339907, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(354, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '6caafedfa4563bf26abe21c4767c32b5d0562e66', 5, 'user', 'draft', 446339907, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956486, 1696956486, 0, NULL),
-(355, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '1c1a7c6df0d9bdc8d712e53a6399f54669ffd6bd', 5, 'user', 'draft', 682909829, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(356, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'abbe84ef27139ca5aee2970c8c49a03e752c4525', 5, 'user', 'draft', 682909829, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956486, 1696956486, 0, NULL),
-(357, '580bbd2462a17b9cab73e4613b0e76aaebfbad26', '3ffc32ef3b030e48c6dbbad92d89dc37e5e7f61e', 5, 'user', 'draft', 48535177, '/', 'logo_ceplan.png', 2, 84870, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:15:\"logo_ceplan.png\";s:8:\"original\";s:220:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjQ6ImxvZ28iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxNToibG9nb19jZXBsYW4ucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898581, 1696898586, 0, NULL),
-(358, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '687d5e21c5e8f488b7bc79f68e79f0b94af51ddb', 5, 'user', 'draft', 48535177, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956540, 1696956540, 0, NULL),
-(359, 'a33072d65cfa52605029d07a98b628a32f7f3f73', 'c38e96c957b98b1cf9514eb5e91263f82c26c329', 5, 'user', 'draft', 845067975, '/', 'icon.ico', 2, 16958, 'image/vnd.microsoft.icon', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:8:\"icon.ico\";s:8:\"original\";s:216:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjc6ImZhdmljb24iO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czo4OiJpY29uLmljbyI7fQ==\";}', 'Roni Peve', 'unknown', 1696898570, 1696898586, 0, NULL),
-(360, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'd36553b13716d918ea37808923088f75c9347a5c', 5, 'user', 'draft', 845067975, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956540, 1696956540, 0, NULL),
-(361, 'b14f299fa831cb13a5d02a16228de508267ebc9f', 'dc4cc9506b69b8e393dabd8725cd30c66ffd1a37', 5, 'user', 'draft', 622222574, '/', 'fondo_logo.jpg', 2, 222827, 'image/jpeg', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:14:\"fondo_logo.jpg\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEwOiJsb2dpbmJnaW1nIjtzOjg6ImZpbGVwYXRoIjtzOjE6Ii8iO3M6ODoiZmlsZW5hbWUiO3M6MTQ6ImZvbmRvX2xvZ28uanBnIjt9\";}', 'Roni Peve', 'unknown', 1696898558, 1696898586, 0, NULL),
-(362, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '56f3e9ab8c3e6e0b86c2cac148eaa77664f35c02', 5, 'user', 'draft', 622222574, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956540, 1696956540, 0, NULL),
-(363, '708f08d8da0515cbe3bc9dcf294b0471613dfe03', '0ad8b69550ea20b7dd4ae4c124c15a66ed3a1ca2', 5, 'user', 'draft', 262482314, '/', 'Banner01.png', 2, 1661756, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner01.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTEiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDEucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898725, 1696898750, 0, NULL),
-(364, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'ac7772e38cb3004ab321cf222eba3dadf8ae87eb', 5, 'user', 'draft', 262482314, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956540, 1696956540, 0, NULL),
-(365, '7d148b4f19de2338a2579352102f9634e6376c15', '73597ee849c0697782884a3b0e3e1601f3731da4', 5, 'user', 'draft', 66466415, '/', 'Banner02.png', 2, 1101441, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner02.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTIiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDIucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898733, 1696898750, 0, NULL),
-(366, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '9e9ebf59b56d39f5a185a0345e8cb8e622844f63', 5, 'user', 'draft', 66466415, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956540, 1696956540, 0, NULL),
-(367, '20b7a9745578c8844eeeadeec4da3b0e741ff6be', '8d643c9bf91c63e3754f08b779fc4212abdec1e5', 5, 'user', 'draft', 948391510, '/', 'Banner03.png', 2, 935659, 'image/png', 0, 'O:8:\"stdClass\":2:{s:6:\"source\";s:12:\"Banner03.png\";s:8:\"original\";s:228:\"YTo2OntzOjk6ImNvbnRleHRpZCI7aToxO3M6OToiY29tcG9uZW50IjtzOjExOiJ0aGVtZV9tb292ZSI7czo2OiJpdGVtaWQiO2k6MDtzOjg6ImZpbGVhcmVhIjtzOjEyOiJzbGlkZXJpbWFnZTMiO3M6ODoiZmlsZXBhdGgiO3M6MToiLyI7czo4OiJmaWxlbmFtZSI7czoxMjoiQmFubmVyMDMucG5nIjt9\";}', 'Roni Peve', 'unknown', 1696898740, 1696898750, 0, NULL),
-(368, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'bacf6ddfa39b017dd70cadc0aface2c18d7627e3', 5, 'user', 'draft', 948391510, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696956540, 1696956540, 0, NULL);
+(272, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '2dfb2f4c07cf5f7abe056a4be2cb2cfe90715b04', 5, 'user', 'draft', 713912638, '/', '.', 2, 0, NULL, 0, NULL, NULL, NULL, 1696898755, 1696898755, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -12432,58 +12332,7 @@ INSERT INTO `mdl_logstore_standard_log` (`id`, `eventname`, `component`, `action
 (1277, '\\core\\event\\config_log_created', 'core', 'created', 'config_log', 'config_log', 1816, 'c', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"name\":\"loginbgimg\",\"oldvalue\":\"\\/student-849822_1280.jpg\",\"value\":\"\\/fondo_logo.jpg\",\"plugin\":\"theme_moove\"}', 1696898586, 'web', '127.0.0.1', NULL),
 (1278, '\\core\\event\\draft_file_added', 'core', 'added', 'draft_file', 'files', 255, 'c', 0, 5, 30, 2, 2, 0, 2, 0, '{\"itemid\":713006977,\"filename\":\"Banner01.png\",\"filesize\":1661756,\"filepath\":\"\\/\",\"contenthash\":\"708f08d8da0515cbe3bc9dcf294b0471613dfe03\"}', 1696898725, 'web', '127.0.0.1', NULL),
 (1279, '\\core\\event\\draft_file_added', 'core', 'added', 'draft_file', 'files', 256, 'c', 0, 5, 30, 2, 2, 0, 2, 0, '{\"itemid\":113098356,\"filename\":\"Banner02.png\",\"filesize\":1101441,\"filepath\":\"\\/\",\"contenthash\":\"7d148b4f19de2338a2579352102f9634e6376c15\"}', 1696898733, 'web', '127.0.0.1', NULL),
-(1280, '\\core\\event\\draft_file_added', 'core', 'added', 'draft_file', 'files', 257, 'c', 0, 5, 30, 2, 2, 0, 2, 0, '{\"itemid\":978720798,\"filename\":\"Banner03.png\",\"filesize\":935659,\"filepath\":\"\\/\",\"contenthash\":\"20b7a9745578c8844eeeadeec4da3b0e741ff6be\"}', 1696898741, 'web', '127.0.0.1', NULL),
-(1281, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696951607, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1282, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696951731, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1283, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696951883, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1284, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696951895, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1285, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696951900, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1286, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696952148, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1287, '\\core\\event\\user_login_failed', 'core', 'failed', 'user_login', NULL, NULL, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"username\":\"admin\",\"reason\":3}', 1696952165, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1288, '\\core\\event\\user_loggedin', 'core', 'loggedin', 'user', 'user', 2, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"username\":\"admin\",\"extrauserinfo\":[]}', 1696952216, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1289, '\\core\\event\\dashboard_viewed', 'core', 'viewed', 'dashboard', NULL, NULL, 'r', 0, 5, 30, 2, 2, 0, 2, 0, 'null', 1696952218, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1290, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696953581, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1291, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696953587, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1292, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696953672, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1293, '\\core\\event\\user_loggedin', 'core', 'loggedin', 'user', 'user', 2, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"username\":\"admin\",\"extrauserinfo\":[]}', 1696953712, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1294, '\\core\\event\\dashboard_viewed', 'core', 'viewed', 'dashboard', NULL, NULL, 'r', 0, 5, 30, 2, 2, 0, 2, 0, 'null', 1696953713, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1295, '\\core\\event\\mycourses_viewed', 'core', 'viewed', 'mycourses', NULL, NULL, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, 'null', 1696953725, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1296, '\\core\\event\\mycourses_viewed', 'core', 'viewed', 'mycourses', NULL, NULL, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, 'null', 1696953728, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1297, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 2, 1, NULL, 0, 'null', 1696953732, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1298, '\\core\\event\\user_loggedout', 'core', 'loggedout', 'user', 'user', 2, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"sessionid\":\"rjeh3n8oq5g6sk7mac8r73dv48\"}', 1696953840, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1299, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696953841, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1300, '\\core\\event\\user_loggedin', 'core', 'loggedin', 'user', 'user', 2, 'r', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"username\":\"admin\",\"extrauserinfo\":[]}', 1696953993, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1301, '\\core\\event\\dashboard_viewed', 'core', 'viewed', 'dashboard', NULL, NULL, 'r', 0, 5, 30, 2, 2, 0, 2, 0, 'null', 1696953994, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1302, '\\core\\event\\dashboard_viewed', 'core', 'viewed', 'dashboard', NULL, NULL, 'r', 0, 5, 30, 2, 2, 0, 2, 0, 'null', 1696954000, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1303, '\\core\\event\\user_updated', 'core', 'updated', 'user', 'user', 2, 'u', 0, 5, 30, 2, 2, 0, 2, 0, 'null', 1696954037, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1304, '\\core\\event\\config_log_created', 'core', 'created', 'config_log', 'config_log', 1817, 'c', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"name\":\"facebook\",\"oldvalue\":\"\",\"value\":\"https:\\/\\/www.facebook.com\\/ceplan\\/\",\"plugin\":\"theme_moove\"}', 1696955812, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1305, '\\core\\event\\config_log_created', 'core', 'created', 'config_log', 'config_log', 1818, 'c', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"name\":\"twitter\",\"oldvalue\":\"\",\"value\":\"https:\\/\\/twitter.com\\/CEPLAN2050\",\"plugin\":\"theme_moove\"}', 1696955812, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1306, '\\core\\event\\config_log_created', 'core', 'created', 'config_log', 'config_log', 1819, 'c', 0, 1, 10, 0, 2, 0, NULL, 0, '{\"name\":\"youtube\",\"oldvalue\":\"\",\"value\":\"https:\\/\\/www.youtube.com\\/@CanalCeplan\\/\",\"plugin\":\"theme_moove\"}', 1696955812, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1307, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956373, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1308, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956535, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1309, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956560, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1310, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956578, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1311, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956583, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1312, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956654, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1313, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956692, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1314, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956815, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1315, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956828, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1316, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956835, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1317, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696956939, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1318, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696957311, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1319, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696958281, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1320, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696958414, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1321, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696958426, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1322, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696958429, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1323, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696958502, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1324, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696959617, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1325, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696959629, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1326, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696959702, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1327, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696959703, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1328, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696959744, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1329, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696959777, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1330, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696960139, 'web', '0:0:0:0:0:0:0:1', NULL),
-(1331, '\\core\\event\\course_viewed', 'core', 'viewed', 'course', NULL, NULL, 'r', 2, 2, 50, 1, 0, 1, NULL, 0, 'null', 1696960664, 'web', '0:0:0:0:0:0:0:1', NULL);
+(1280, '\\core\\event\\draft_file_added', 'core', 'added', 'draft_file', 'files', 257, 'c', 0, 5, 30, 2, 2, 0, 2, 0, '{\"itemid\":978720798,\"filename\":\"Banner03.png\",\"filesize\":935659,\"filepath\":\"\\/\",\"contenthash\":\"20b7a9745578c8844eeeadeec4da3b0e741ff6be\"}', 1696898741, 'web', '127.0.0.1', NULL);
 
 -- --------------------------------------------------------
 
@@ -17256,10 +17105,7 @@ INSERT INTO `mdl_sessions` (`id`, `state`, `sid`, `userid`, `sessdata`, `timecre
 (22, 0, 'aqab3otonc7hlqtnde14mb5dvq', 0, NULL, 1696898395, 1696898395, '127.0.0.1', '127.0.0.1'),
 (23, 0, 'n0nse4193s0ndiit9nvs14vqjq', 0, NULL, 1696898398, 1696898398, '127.0.0.1', '127.0.0.1'),
 (24, 0, '2absr7lklpltudd07cod2k6tkg', 0, NULL, 1696898399, 1696898399, '127.0.0.1', '127.0.0.1'),
-(25, 0, 'jdguat6qba6p72qphquoci69cb', 0, NULL, 1696898404, 1696898404, '127.0.0.1', '127.0.0.1'),
-(31, 0, 'gkuspeeo79m3qh5oqff3ke51r8', 2, NULL, 1696953993, 1696958419, '0:0:0:0:0:0:0:1', '0:0:0:0:0:0:0:1'),
-(32, 0, '6qmqtq6hmjt9fmbfab1ie3l0l6', 0, NULL, 1696956373, 1696960664, '0:0:0:0:0:0:0:1', '0:0:0:0:0:0:0:1'),
-(33, 0, '8n0co5dvmuo70jemti51kmbha0', 0, NULL, 1696959434, 1696959434, '0:0:0:0:0:0:0:1', '0:0:0:0:0:0:0:1');
+(25, 0, 'jdguat6qba6p72qphquoci69cb', 0, NULL, 1696898404, 1696898404, '127.0.0.1', '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -17650,8 +17496,7 @@ CREATE TABLE `mdl_task_adhoc` (
 
 INSERT INTO `mdl_task_adhoc` (`id`, `component`, `classname`, `nextruntime`, `faildelay`, `customdata`, `userid`, `blocking`, `timecreated`, `timestarted`, `hostname`, `pid`) VALUES
 (1, 'tool_moodlenet', '\\tool_moodlenet\\task\\post_install', 1696614384, 0, '', NULL, 0, 1696614385, NULL, NULL, NULL),
-(2, 'core', '\\core\\task\\send_login_notifications', 1696619807, 0, '{\"ismoodleapp\":false,\"useragent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/117.0.0.0 Safari\\/537.36\",\"loginip\":\"0:0:0:0:0:0:0:1\",\"logintime\":1696619808}', 2, 0, 1696619808, NULL, NULL, NULL),
-(3, 'core', '\\core\\task\\send_login_notifications', 1696952215, 0, '{\"ismoodleapp\":false,\"useragent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/117.0.0.0 Safari\\/537.36 Edg\\/117.0.2045.60\",\"loginip\":\"0:0:0:0:0:0:0:1\",\"logintime\":1696952216}', 2, 0, 1696952216, NULL, NULL, NULL);
+(2, 'core', '\\core\\task\\send_login_notifications', 1696619807, 0, '{\"ismoodleapp\":false,\"useragent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/117.0.0.0 Safari\\/537.36\",\"loginip\":\"0:0:0:0:0:0:0:1\",\"logintime\":1696619808}', 2, 0, 1696619808, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -17843,15 +17688,8 @@ CREATE TABLE `mdl_tiny_autosave` (
 INSERT INTO `mdl_tiny_autosave` (`id`, `elementid`, `contextid`, `pagehash`, `userid`, `drafttext`, `draftid`, `pageinstance`, `timemodified`) VALUES
 (66, 'id_s__auth_instructions', 1, '', 2, '', NULL, '', 1696619946),
 (74, 'id_s__summary', 2, '', 2, '', NULL, '', 1696872234),
-(120, 'id_s_theme_moove_slidercap3', 1, '', 2, '', NULL, '', 1696956544),
-(121, 'id_s_theme_moove_slidercap2', 1, '', 2, '', NULL, '', 1696956544),
-(122, 'id_s_theme_moove_marketing1content', 1, '', 2, '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>', NULL, '', 1696956544),
-(123, 'id_s_theme_moove_marketing2content', 1, '', 2, '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>', NULL, '', 1696956544),
-(124, 'id_s_theme_moove_slidercap1', 1, '', 2, '<h3>El Centro Nacional de Planeamiento Estrat&eacute;gico pone a su disposici&oacute;n los cursos sobre planeamiento estrat&eacute;gico para el p&uacute;blico en general</h3>\n<p>&nbsp;</p>', NULL, '', 1696956544),
-(125, 'id_s_theme_moove_marketingcontent', 1, '', 2, '<p>Moove is a Moodle template based on Boost with modern and creative design.</p>', NULL, '', 1696956544),
-(126, 'id_s_theme_moove_marketing3content', 1, '', 2, '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>', NULL, '', 1696956544),
-(127, 'id_s_theme_moove_numbersfrontpagecontent', 1, '', 2, '<h2>Con la confianza de m&aacute;s de 25,000 clientes satisfechos.</h2>\n<p>Con muchos bloques &uacute;nicos usted puede f&aacute;cilmente construir <br class=\"d-none d-sm-block d-md-none d-xl-block\">una p&aacute;gina sin escribir c&oacute;digo. Construya su pr&oacute;ximo sitio web <br class=\"d-none d-sm-block d-md-none d-xl-block\">en pocos minutos.</p>', NULL, '', 1696956544),
-(128, 'id_s_theme_moove_marketing4content', 1, '', 2, '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>', NULL, '', 1696956544);
+(111, 'id_s_theme_moove_slidercap2', 1, '', 2, '', NULL, '', 1696898819),
+(112, 'id_s_theme_moove_slidercap3', 1, '', 2, '', NULL, '', 1696898819);
 
 -- --------------------------------------------------------
 
@@ -19833,7 +19671,7 @@ CREATE TABLE `mdl_user` (
 
 INSERT INTO `mdl_user` (`id`, `auth`, `confirmed`, `policyagreed`, `deleted`, `suspended`, `mnethostid`, `username`, `password`, `idnumber`, `firstname`, `lastname`, `email`, `emailstop`, `phone1`, `phone2`, `institution`, `department`, `address`, `city`, `country`, `lang`, `calendartype`, `theme`, `timezone`, `firstaccess`, `lastaccess`, `lastlogin`, `currentlogin`, `lastip`, `secret`, `picture`, `description`, `descriptionformat`, `mailformat`, `maildigest`, `maildisplay`, `autosubscribe`, `trackforums`, `timecreated`, `timemodified`, `trustbitmask`, `imagealt`, `lastnamephonetic`, `firstnamephonetic`, `middlename`, `alternatename`, `moodlenetprofile`) VALUES
 (1, 'manual', 1, 0, 0, 0, 1, 'guest', '$2y$10$TJWc0zehQsX4/AphxuEyo.O38bsWlP.YU77JDWN37v0t8xJ2Kgdei', '', 'Guest user', ' ', 'root@localhost', 0, '', '', '', '', '', '', '', 'en', 'gregorian', '', '99', 0, 0, 0, 0, '', '', 0, 'This user is a special user that allows read-only access to some courses.', 1, 1, 0, 2, 1, 0, 0, 1696613470, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'manual', 1, 0, 0, 0, 1, 'admin', '$2y$10$LJ0M463a/nVmEodWDFNdHufM17vvKbPfpQbb4WjH.UQFarBGc06x2', '', 'Roni', 'Peve', 'apevecarhuayo@gmail.com', 0, '', '', '', '', '', 'Lima', 'PE', 'es', 'gregorian', '', 'America/Lima', 1696614592, 1696958419, 1696953712, 1696953993, '0:0:0:0:0:0:0:1', '', 0, '', 1, 1, 0, 1, 1, 0, 0, 1696954037, 0, NULL, '', '', '', '', NULL);
+(2, 'manual', 1, 0, 0, 0, 1, 'admin', '$2y$10$LJ0M463a/nVmEodWDFNdHufM17vvKbPfpQbb4WjH.UQFarBGc06x2', '', 'Roni', 'Peve', 'apevecarhuayo@gmail.com', 0, '', '', '', '', '', 'Lima', 'PE', 'en', 'gregorian', '', 'America/Lima', 1696614592, 1696898791, 1696620475, 1696870398, '127.0.0.1', '', 0, '', 1, 1, 0, 1, 1, 0, 0, 1696614702, 0, NULL, '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -24867,7 +24705,7 @@ ALTER TABLE `mdl_config`
 -- AUTO_INCREMENT de la tabla `mdl_config_log`
 --
 ALTER TABLE `mdl_config_log`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1820;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1817;
 
 --
 -- AUTO_INCREMENT de la tabla `mdl_config_plugins`
@@ -25245,7 +25083,7 @@ ALTER TABLE `mdl_feedback_valuetmp`
 -- AUTO_INCREMENT de la tabla `mdl_files`
 --
 ALTER TABLE `mdl_files`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=369;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=273;
 
 --
 -- AUTO_INCREMENT de la tabla `mdl_files_reference`
@@ -25665,7 +25503,7 @@ ALTER TABLE `mdl_log`
 -- AUTO_INCREMENT de la tabla `mdl_logstore_standard_log`
 --
 ALTER TABLE `mdl_logstore_standard_log`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1332;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1281;
 
 --
 -- AUTO_INCREMENT de la tabla `mdl_log_display`
@@ -26583,7 +26421,7 @@ ALTER TABLE `mdl_search_simpledb_index`
 -- AUTO_INCREMENT de la tabla `mdl_sessions`
 --
 ALTER TABLE `mdl_sessions`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `mdl_stats_daily`
@@ -26679,7 +26517,7 @@ ALTER TABLE `mdl_tag_instance`
 -- AUTO_INCREMENT de la tabla `mdl_task_adhoc`
 --
 ALTER TABLE `mdl_task_adhoc`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `mdl_task_log`
@@ -26697,7 +26535,7 @@ ALTER TABLE `mdl_task_scheduled`
 -- AUTO_INCREMENT de la tabla `mdl_tiny_autosave`
 --
 ALTER TABLE `mdl_tiny_autosave`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT de la tabla `mdl_tool_brickfield_areas`
