@@ -1,4 +1,4 @@
-a:51:{s:13:"accountexists";s:231:"Ya existe un usuario en este sitio con ese nombre de usuario. Si esta es su cuenta inicie sesión utilizando su nombre de usuario y contraseña y añádalo como un inicio de sesión enlazado a través de su página de preferencias.";s:22:"auth_oauth2description";s:44:"Autenticación basada en estándares OAuth 2";s:19:"auth_oauth2settings";s:34:"Ajustes de autenticación OAuth 2.";s:19:"confirmaccountemail";s:686:"Hola, {$a->fullname}:
+a:51:{s:13:"accountexists";s:231:"Ya existe un usuario en este sitio con ese nombre de usuario. Si esta es su cuenta inicie sesión utilizando su nombre de usuario y contraseña y añádalo como un inicio de sesión enlazado a través de su página de preferencias.";s:22:"auth_oauth2description";s:44:"Autenticación basada en estándares OAuth 2";s:19:"auth_oauth2settings";s:34:"Ajustes de autenticación OAuth 2.";s:19:"confirmaccountemail";s:704:"Hola, {$a->fullname}:
 
 Se ha solicitado una nueva cuenta en '{$a->sitename}'
 utilizando su dirección de correo electrónico.
@@ -16,7 +16,7 @@ Si necesita ayuda, póngase en contacto con el administrador del sitio,
 {$a->admin}
 
 Si usted no hizo esto, alguien más podría estar intentando poner en peligro su cuenta.
-Póngase en contacto con el administrador del sitio de inmediato.";s:26:"confirmaccountemailsubject";s:29:"{$a}: confirmación de cuenta";s:19:"confirmationinvalid";s:164:"El enlace de confirmación no es válido o ha caducado. Vuelva a iniciar el proceso de inicio de sesión para generar un nuevo correo electrónico de confirmación.";s:19:"confirmationpending";s:69:"Esta cuenta está pendiente de confirmación por correo electrónico.";s:23:"confirmlinkedloginemail";s:801:"Hola, {$a->fullname}:
+Póngase en contacto con el administrador del sitio de inmediato.";s:26:"confirmaccountemailsubject";s:29:"{$a}: confirmación de cuenta";s:19:"confirmationinvalid";s:164:"El enlace de confirmación no es válido o ha caducado. Vuelva a iniciar el proceso de inicio de sesión para generar un nuevo correo electrónico de confirmación.";s:19:"confirmationpending";s:69:"Esta cuenta está pendiente de confirmación por correo electrónico.";s:23:"confirmlinkedloginemail";s:820:"Hola, {$a->fullname}:
 
 Se ha realizado una solicitud para vincular el inicio de sesión de {$a->issuername}
 {$a->linkedemail} a su cuenta en '{$a->sitename}'
@@ -35,11 +35,11 @@ Si necesita ayuda, póngase en contacto con el administrador del sitio,
 {$a->admin}
 
 Si usted no hizo esto, alguien más podría estar intentando poner en peligro su cuenta.
-Póngase en contacto con el administrador del sitio de inmediato.";s:30:"confirmlinkedloginemailsubject";s:50:"{$a}: confirmación de inicio de sesión vinculado";s:21:"createaccountswarning";s:191:"Este complemento de autenticación permite a los usuarios crear cuentas en su sitio. Es posible que desee habilitar la configuración "authpreventaccountcreation" si utiliza este complemento.";s:20:"createnewlinkedlogin";s:32:"Vincular una nueva cuenta ({$a})";s:16:"emailconfirmlink";s:20:"Vincular sus cuentas";s:20:"emailconfirmlinksent";s:450:"<p>Se encontró una cuenta existente con esta dirección de correo electrónico, pero aún no está vinculada.</p>
+Póngase en contacto con el administrador del sitio de inmediato.";s:30:"confirmlinkedloginemailsubject";s:50:"{$a}: confirmación de inicio de sesión vinculado";s:21:"createaccountswarning";s:191:"Este complemento de autenticación permite a los usuarios crear cuentas en su sitio. Es posible que desee habilitar la configuración "authpreventaccountcreation" si utiliza este complemento.";s:20:"createnewlinkedlogin";s:32:"Vincular una nueva cuenta ({$a})";s:16:"emailconfirmlink";s:20:"Vincular sus cuentas";s:20:"emailconfirmlinksent";s:454:"<p>Se encontró una cuenta existente con esta dirección de correo electrónico, pero aún no está vinculada.</p>
     <p>Las cuentas deben estar vinculadas antes de que pueda iniciar sesión.</p>
     <p>Debería haberse enviado un correo electrónico a su dirección en <b>{$a}</b>.</p>
     <p>Contiene instrucciones sencillas para vincular sus cuentas.</p>
-    <p>Si tiene alguna dificultad, póngase en contacto con el administrador del sitio.</p>";s:23:"emailpasswordchangeinfo";s:345:"Hola, {$a->firstname}:
+    <p>Si tiene alguna dificultad, póngase en contacto con el administrador del sitio.</p>";s:23:"emailpasswordchangeinfo";s:352:"Hola, {$a->firstname}:
 
 Alguien (probablemente usted) ha solicitado una nueva contraseña para su cuenta en '{$a->sitename}'.
 

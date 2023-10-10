@@ -1,4 +1,4 @@
-a:13:{s:6:"copied";s:10:"¡Copiado!";s:4:"copy";s:6:"Copiar";s:15:"copytoclipboard";s:22:"Copiar al portapapeles";s:9:"installer";s:766:"<h3>Configuración de la biblioteca de componentes</h3>
+a:13:{s:6:"copied";s:10:"¡Copiado!";s:4:"copy";s:6:"Copiar";s:15:"copytoclipboard";s:22:"Copiar al portapapeles";s:9:"installer";s:774:"<h3>Configuración de la biblioteca de componentes</h3>
      <p>Antes de que pueda ver el contenido de la biblioteca de componentes, necesitará tener acceso al shell de su instalación de Moodle y poder escribir en la carpeta  /admin/tool/componentlibrary y tener npm instalado en su servidor Moodle.</p>
      <p>Si cumple con estos requisitos, puede navegar a su carpeta raíz de Moodle y ejecutar:</p>
     <pre>$ npm install</pre>
