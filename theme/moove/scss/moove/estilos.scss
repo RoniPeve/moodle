@@ -1,0 +1,98 @@
+/* Estilo para el contenedor del texto superpuesto */
+.banner_texto {
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical según tus necesidades */
+    left: 10%; /* Ajusta la posición horizontal según tus necesidades */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: #fff; /* Color del texto */
+    padding: 10px;
+  padding-bottom: 20px;
+    border-radius: 5px;
+    z-index: 2; /* Asegúrate de que esté por encima del slider */
+    max-width: 45%; /* Ajusta el ancho máximo del texto */
+    /* Agrega cualquier otro estilo que desees */
+  }
+  
+  /* Estilo para el título dentro del contenedor */
+  .banner_texto h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Estilo para el párrafo dentro del contenedor */
+  .banner_texto p {
+    font-size: 16px;
+    margin: 0;
+  }
+  /*********************************/
+  /******BOTON DE TODOS LOS CURSOS *******/
+  /*********************************/
+  .btn-secondary {
+    background-color: #0f47ad;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; // Añadimos subrayado al texto por defecto
+  
+    &:hover {
+      background-color: #092c6d; // Cambia el color de fondo en el estado hover
+      text-decoration: underline; // Subrayado al pasar el mouse
+      color: #fff;
+    }
+  
+    &:focus {
+      outline: none; // Elimina el contorno en el estado enfocado si lo deseas
+    }
+  }
+
+  .enlaces{
+    
+    padding: 0;
+    margin: 0;
+    p{
+      text-align: center;
+      font-size: 1.125rem;
+      color: #69a3d5;
+    }
+    li {
+      list-style: none; // Para quitar los puntos de la lista
+       text-decoration: none; // Quita la subrayado de los enlaces
+       font-size: .8125rem;
+
+    }
+  }
+
+  .ceplan_footer{
+    max-width: 70%;
+    margin: auto;
+    p:first-child {
+      /* Estilos para el primer párrafo */
+      color: #69a3d5;
+      font-size: 1.125rem;
+    }
+  
+    p:nth-child(2) {
+      /* Estilos para el segundo párrafo */
+      font-size: .8125rem;
+    }
+  }
+
+  .contacto{
+      text-align: left;
+      margin-left: 0;
+    p {
+      /* Estilos para el primer párrafo */
+      color: #69a3d5;
+      font-size: 1.125rem;
+    }
+    li {
+      list-style: none; // Para quitar los puntos de la lista
+      text-decoration: none; // Quita la subrayado de los enlaces
+      font-size: .8125rem;
+      margin-left: 0;
+
+    }
+  }

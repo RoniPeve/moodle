@@ -35,37 +35,34 @@
 <footer id="page-footer">
     <div class="moove-container-fluid footer-columns">
         <div class="row">
-            <div class="col-md-4 column-left">
-                <div class="contact">
-                    <h3 class="footer-title">{{#str}}contactus, theme_moove{{/str}}</h3>
-
-                    <ul>
-                        {{#website}}
-                            <li>
-                                <a href="{{{website}}}" target="_blank" class="website btn btn-link">
-                                    <i class="fa fa-globe"></i>
-                                </a>
-                            </li>
-                        {{/website}}
-                        {{#mobile}}
-                            <li>
-                                <a href="tel:{{{mobile}}}" target="_blank" class="mobile btn btn-link">
-                                    <i class="fa fa-phone"></i>
-                                </a>
-                            </li>
-                        {{/mobile}}
-                        {{#mail}}
-                            <li>
-                                <a href="mailto:{{{mail}}}" target="_blank" class="mail btn btn-link">
-                                    <i class="fa fa-envelope"></i>
-                                </a>
-                            </li>
-                        {{/mail}}
-                    </ul>
+            <div class="col-md-4 column-left"> 
+                <div class="ceplan_footer">
+                    <p>CEPLAN</p>
+                    <p>Es el organismo técnico especializado que ejerce la función de órgano rector, orientador y de coordinación del Sistema Nacional de Planeamiento Estratégico; orientado al desarrollo de la planificación estratégica como instrumento técnico de gobierno y gestión para el desarrollo armónico y sostenido del país y el fortalecimiento de la gobernabilidad democrática en el marco del Estado constitucional de derecho.</p>
+                
                 </div>
-
+            </div>
+            <div class="col-md-4 column-center">
+                <div class="enlaces">
+                    <p >Enlaces de Interés</p>
+                    <ul>
+                        <li>
+                            <a href="https://www.gob.pe/ceplan" target="_blank">Página web del Ceplan</a>
+                        
+                        </li>
+                        <li>
+                            <a href="https://geo.ceplan.gob.pe/" target="_blank">Plataforma de información territorial</a>
+                        
+                        </li>
+                        <li>
+                            <a href="https://observatorio.ceplan.gob.pe/inicio" target="_blank">Observatorio Nacional de Prospeciva</a>
+                        
+                        </li>
+                    </ul>
+                    
+                </div>
                 <div class="socialnetworks">
-                    <h3 class="footer-title">{{#str}}followus, theme_moove{{/str}}</h3>
+                    <h3 class="footer-title">Redes Sociales</h3>
 
                     <ul class="mb-0">
                         {{#facebook}}
@@ -125,20 +122,7 @@
                         {{/telegram}}
                     </ul>
                 </div>
-            </div>
-            <div class="col-md-4 column-center">
-                {{# output.supportemail }}
-                    <div class="supportemail">{{{ output.supportemail }}}</div>
-                {{/ output.supportemail }}
-
-                {{{ output.login_info }}}
-
-                {{{ output.standard_footer_html }}}
-
-                <div class="tool_usertours-resettourcontainer"></div>
-            </div>
-            <div class="col-md-4 column-right">
-                {{#enablemobilewebservice}}
+                <!--{{#enablemobilewebservice}}
                     {{#mobilesetuplink}}
                         <a href="{{{mobilesetuplink}}}">{{#str}}getmoodleonyourmobile, tool_mobile{{/str}}</a>
                     {{/mobilesetuplink}}
@@ -157,8 +141,72 @@
                             </a>
                         {{/iosappid}}
                     </div>
-                {{/enablemobilewebservice}}
+                {{/enablemobilewebservice}}-->
             </div>
+            <div class="col-md-4 column-right">
+                
+                <!--<div class="contact">
+                    <h3 class="footer-title">{{#str}}contactus, theme_moove{{/str}}</h3>
+
+                    <ul>
+                        {{#website}}
+                            <li>
+                                <a href="{{{website}}}" target="_blank" class="website btn btn-link">
+                                    <i class="fa fa-globe"></i>
+                                </a>
+                            </li>
+                        {{/website}}
+                        {{#mobile}}
+                            <li>
+                                <a href="tel:{{{mobile}}}" target="_blank" class="mobile btn btn-link">
+                                    <i class="fa fa-phone"></i>
+                                </a>
+                            </li>
+                        {{/mobile}}
+                        {{#mail}}
+                            <li>
+                                <a href="mailto:{{{mail}}}" target="_blank" class="mail btn btn-link">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                            </li>
+                        {{/mail}}
+                    </ul>
+                </div>-->
+                <div class="contacto">
+                    <div>
+                        <p>Contacto</p>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i> Dirección:</li>
+                            <li>Av. Canaval y Moreyra 480 - Piso 21 - Edificio <br> Chocavento. San Isidro, Lima, Perú.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li <img src="icono.png" alt="Icono"><i class="fa fa-clock-o" aria-hidden="true"></i> Horario de Atención al Público:</li>
+                            <li>Lunes a Viernes</li>
+                            <li>8:30 - 13:00h / 14:00 - 17:30h</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li ><i class="fa fa-phone"></i> (+51-1) 211-7800 </li>
+                            <li>geo@ceplan.gob.pe</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-4 column-center">
+                {{# output.supportemail }}
+                    <div class="supportemail">{{{ output.supportemail }}}</div>
+                {{/ output.supportemail }}
+
+                {{{ output.login_info }}}
+
+                {{{ output.standard_footer_html }}}
+
+                <div class="tool_usertours-resettourcontainer"></div>
+            </div>-->
+            
         </div>
     </div>
 
@@ -198,9 +246,9 @@
     <div class="copyright" style="background-color: #282829;">
         <div class="madeby">
             <p>© Centro Nacional de planeamiento estratégico</p>
-            <a href="https://geo.ceplan.gob.pe/"  target="_blank">
+            <!--<a href="https://geo.ceplan.gob.pe/"  target="_blank">-->
                 <img src="{{config.wwwroot}}/Assets/Images/logo_ceplan.svg" alt="Geoceplan" style="height: 40px; filter: invert(1);">
-            </a>
+            <!--</a>-->
         </div>
     </div>
 </footer>
