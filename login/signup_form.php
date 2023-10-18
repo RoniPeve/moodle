@@ -134,7 +134,11 @@ class login_signup_form extends moodleform implements renderable, templatable {
 
         // Extend validation for any form extensions from plugins.
         $errors = array_merge($errors, core_login_validate_extend_signup_form($data));
-
+        // VALIDAD DNI CON SOLO NUMERO Y 8 CARACTERES
+        $username = $data['username'];
+        if (!preg_match('/^\d{8}$/', $username)) {
+            $errors['username'] = get_string('DNI invalido', 'auth'); // Mensaje de error personalizado
+        }
         if (signup_captcha_enabled()) {
             $recaptchaelement = $this->_form->getElement('recaptcha_element');
             if (!empty($this->_form->_submitValues['g-recaptcha-response'])) {

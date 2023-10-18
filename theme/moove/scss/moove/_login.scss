@@ -9,18 +9,25 @@
     }
 }
 
+.login-container{
+    margin-left: auto; /* Mueve el formulario a la derecha */
+}
+
 #page-login-index {
     .login-container {
         background-color: initial;
         box-shadow: none;
         padding: 0;
-
+        
         .loginform {
-            margin: 0 auto;
+            //margin: 0 auto;
             background-color: #fff;
             padding: 2rem;
             box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
             border-radius: 0.5rem;
+            /*****CODIGO NUEVO*******/
+            float: right;
+            margin-right: 20px; /* Ajusta el margen derecho según tus necesidades */
 
             .left-column {
                 padding-right: 2rem;
