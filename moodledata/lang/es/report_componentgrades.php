@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'report_componentgrades', language 'es', version '4.2'.
+ * Strings for component 'report_componentgrades', language 'es', version '4.3'.
  *
  * @package     report_componentgrades
  * @category    string
@@ -25,5 +25,22 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['definition'] = 'Definición';
+$string['eventreportviewed'] = 'Calificaciones del Componente exportadas';
+$string['feedback'] = 'Retroalimentación';
+$string['firstname'] = 'Nombre(s)';
+$string['gradedby'] = 'Calificado por';
+$string['gradinginfo'] = 'Información sobre calificación';
+$string['guidegrades'] = 'Exportar Calificaciones de Guía de Puntaje';
+$string['lastname'] = 'Apellido(s)';
+$string['nogradesenteredguide'] = 'No se han ingresado calificaciones en esta guía para calificar tareas';
+$string['nogradesenteredrubric'] = 'No se han ingresado calificaciones en esta rúbrica de tarea';
+$string['pluginname'] = 'Exportar Calificaciones de Componentes';
+$string['rubricgrades'] = 'Exportar Calificaciones de Rúbricas';
+$string['score'] = 'Puntaje';
 $string['showgroups_desc'] = 'Mostrar grupos en el informe';
 $string['showstudentid_text'] = 'Mostrar ID de estudiante en el informe';
+$string['student'] = 'Estudiante';
+$string['studentid'] = 'ID del estudiante';
+$string['timegraded'] = 'Hora de calificación';
+$string['username'] = 'Nombre_de_usuario';

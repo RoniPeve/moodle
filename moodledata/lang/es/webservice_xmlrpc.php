@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'webservice_xmlrpc', language 'es', version '4.2'.
+ * Strings for component 'webservice_xmlrpc', language 'es', version '4.3'.
  *
  * @package     webservice_xmlrpc
  * @category    string

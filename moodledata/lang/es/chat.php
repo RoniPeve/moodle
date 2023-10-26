@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'chat', language 'es', version '4.2'.
+ * Strings for component 'chat', language 'es', version '4.3'.
  *
  * @package     chat
  * @category    string
@@ -164,7 +164,6 @@ $string['serverip'] = 'IP del servidor';
 $string['servermax'] = 'Número máximo de usuarios';
 $string['serverport'] = 'Puerto del servidor';
 $string['sessions'] = 'Sesiones';
-$string['sessionstart'] = 'La próxima sesión de chat empezará el {$a->date}, (dentro de {$a->fromnow})';
 $string['sessionstartsin'] = 'La siguiente sesión de chat empezará en {$a} desde ahora.';
 $string['strftimemessage'] = '%H:%M';
 $string['studentseereports'] = 'Todos pueden ver las sesiones pasadas';

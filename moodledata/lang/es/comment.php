@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'comment', language 'es', version '4.2'.
+ * Strings for component 'comment', language 'es', version '4.3'.
  *
  * @package     comment
  * @category    string
@@ -26,6 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['comment'] = 'Comentario';
+$string['commenter'] = 'Comentador';
 $string['comments'] = 'Comentarios';
 $string['commentsubcontext'] = 'Comentarios';
 $string['privacy:metadata:comment'] = 'Almacena comentarios de los usuarios.';

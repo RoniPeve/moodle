@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'videofile', language 'es', version '4.2'.
+ * Strings for component 'videofile', language 'es', version '4.3'.
  *
  * @package     videofile
  * @category    string
@@ -26,9 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['captions'] = 'Subtítulos';
-$string['captions_help'] = 'Añadir aquí transcripciones de la conversación en formato WebVTT.
-
-Puede añadir varios archivos para proporcionar subtítulos en varios idiomas. Los nombres de los archivos, sin las correspondientes extensiones, se utilizarán para los títulos del video con la opción de subtítulos. En caso de que los archivos se nombren de acuerdo con la norma ISO 6392 (por ejemplo, eng.vtt y swe.vtt), las opciones se mostrarán como los nombres completos del idioma correspondiente según las preferencias de idioma del usuario (por ejemplo, English y Swedish si el idioma preferido del usuario es el inglés).';
+$string['captions_help'] = 'Añada transcripciones del diálogo en formato WebVTT aquí. Usted puede añadir varios archivos para proporcionar subtítulos en diferentes idiomas. Los nombres de archivo, sin extensiones, serán usados para los títulos de opciones de subtítulos de video. Si los archivos son nombrados de acuerdo a la norma ISO 6392 (por ejemplo: eng.vtt y spa.vtt) las opciones se mostrarán como el nombre completo del idioma de acuerdo a las preferencias de idioma del usuario (por ejemplo: en Inglés y Español, asumiendo que la preferencia de idioma del usuario esté configurada a Español).';
 $string['err_positive'] = 'Debe introducir un número positivo aquí.';
 $string['filearea_captions'] = 'Subtítulos';
 $string['filearea_posters'] = 'Pósteres';
@@ -47,9 +45,7 @@ $string['posters'] = 'Imagen del póster';
 $string['posters_help'] = 'Añadir una imagen aquí que se visualizará antes de que el video comience a reproducirse.';
 $string['responsive'] = '¿Responsivo?';
 $string['responsive_explain'] = 'Especifica si el modo responsivo se debe establecer como predeterminado o no.';
-$string['responsive_help'] = 'Marque esta opción para adaptar el tamaño del video automáticamente al tamaño de la ventana del navegador.
-
-Utilice los campos de ancho y altura para definir las proporciones del video (por ejemplo, 16/9 o 800/450).';
+$string['responsive_help'] = 'Seleccione para hacer que el video cambie de tamaño autométicamente dentro de la ventana del navegador. Use los campos de ancho y alto para definir las proporciones del video (por ejemplo: 16/9 o 800/450).';
 $string['video_fieldset'] = 'Video';
 $string['video_not_playing'] = '¿No se reproduce el video? Pruebe {$a}.';
 $string['videofile:addinstance'] = 'Añadir un nuevo Videofile';
@@ -57,9 +53,7 @@ $string['videofile:view'] = 'Ver Videofile';
 $string['videofile_defaults_heading'] = 'Valores predeterminados para los ajustes de videofile';
 $string['videofile_defaults_text'] = 'Los valores que se establecen aquí definen los valores predeterminados que se utilizan en el formulario de ajustes de videofile al crear un nuevo Videofile.';
 $string['videos'] = 'Videos';
-$string['videos_help'] = 'Añada aquí el archivo de video.
-
-Puede añadir formatos alternativos para asegurarse de que se puedan reproducir independientemente del navegador que se utilice (normalmente, sirven .mp4, .ogv y .webm).';
+$string['videos_help'] = 'Añada aquí el archivo de video. Usted  puede añadir formatos alternos para asegurarse de que pueda reproducirse sin importar cual navegador de internet se use (usualmente .mp4,  .ogv y .webm cubren lo necesario).';
 $string['width'] = 'Ancho';
 $string['width_explain'] = 'Especifica el ancho predeterminado del reproductor de video.';
 $string['width_help'] = 'Introduzca aquí el ancho del video (por ejemplo, 800 para un ancho de 800 píxeles).';

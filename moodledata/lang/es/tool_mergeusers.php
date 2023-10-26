@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_mergeusers', language 'es', version '4.2'.
+ * Strings for component 'tool_mergeusers', language 'es', version '4.3'.
  *
  * @package     tool_mergeusers
  * @category    string
@@ -27,8 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['choose_users'] = 'Escoge los usuarios a fusionar';
 $string['clear_selection'] = 'Deselecciona los usuarios a fusionar';
-$string['cligathering:description'] = 'Introduce pares de identificadores de usuario para fusionar el primero\\n sobre el segundo.
-El primero (fromid) perderá todos sus datos y se pasaran\\n al segundo (toid) que incorporará los datos de ambos.';
+$string['cligathering:description'] = 'Introducir parejas de IDs de usuarios para unir al primero dentro del \\n segundo. la ID del primer usuario (desde_ID) \'perderá\' todos sus datos, que serán migrados\\n al segundo usuario (a_ID). El usuario \'a_ID\' incluirá datos de ambos usuarios.';
 $string['cligathering:fromid'] = 'Id de usuario origen (fromid):';
 $string['cligathering:stopping'] = 'Para finalizar, Ctrl+C o introduce un -1 en el fromid o en el toid.';
 $string['cligathering:toid'] = 'Id de usuario destino  (toid):';

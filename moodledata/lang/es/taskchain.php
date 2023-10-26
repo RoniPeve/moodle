@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'taskchain', language 'es', version '4.2'.
+ * Strings for component 'taskchain', language 'es', version '4.3'.
  *
  * @package     taskchain
  * @category    string
@@ -721,15 +721,96 @@ $string['sourcetype_help'] = 'El tipo de este archivo de orígen';
 $string['startchainattempt'] = 'Iniciar nuevo intento de cadena';
 $string['startofchain'] = 'Inicio de cadena';
 $string['starttaskattempt'] = 'Iniciar nuevo intento de tarea';
+$string['status'] = 'Status';
+$string['stopbutton'] = 'Mostrar botón para detener';
 $string['stopbutton_help'] = 'Si esta configuración está activada, se incluirá un botón de stop en la tarea.
 
 Si un estudiante pulsa el botón stop, los resultados hasta el momento serán devueltos a Moodle y el estado del intento de la tarea será marcado como abandonado.
 
 El texto que se mostrará en el botón stop será una de las frases preestablecidas desde los packs de idioma de Moodle, formateado como componente_cadena (ej. portfolio_volveradondeestabas), o el que profesor indique.';
 $string['stopbuttonlangpack'] = 'Desde el pack de idioma';
+$string['stopbuttonspecific'] = 'Usar texto específico';
+$string['stoptext'] = 'Texto del botón de detener';
+$string['stoptext_help'] = 'Este texto es usado si la configuración para "Mostrar botón detener" especifica "Sí - Usar texto específico"';
+$string['storedetails'] = 'Guardar XML con los detalles crudos de los intentos de TaskChain';
+$string['studentfeedback'] = 'Retroalimentación al estudiante';
+$string['studentfeedbackurl'] = 'URL de retroalimentación al estudiante';
+$string['submits'] = 'Envíos';
+$string['subplugintype_taskchainattempt'] = 'Formato de salida';
+$string['subplugintype_taskchainattempt_plural'] = 'Formatos de salida';
+$string['subplugintype_taskchainreport'] = 'Reporte';
+$string['subplugintype_taskchainreport_plural'] = 'Reportes';
+$string['subplugintype_taskchainsource'] = 'Archivo de orígen';
+$string['subplugintype_taskchainsource_plural'] = 'Archivos de orígen';
+$string['task'] = 'Tarea';
+$string['taskattempt'] = 'Intento de tarea (task)';
+$string['taskattemptnotinprogress'] = 'Intento de tarea NO en progreso';
+$string['taskchain:addinstance'] = 'Añadir una nueva actividad TaskChain';
+$string['taskchain:attempt'] = 'Intentar una actividad TaskChain y enviar resultados';
+$string['taskchain:deleteallattempts'] = 'Eliminar cualquier intento del usuario en una actividad TaskChain';
+$string['taskchain:deletemyattempts'] = 'Eliminar sus propios intentos en una actividad TaskChain';
+$string['taskchain:ignoretimelimits'] = 'Ignorar límites de tiempo en una actividad TaskChain';
+$string['taskchain:manage'] = 'Cambiar las configuraciones de una actividad TaskChain';
+$string['taskchain:preview'] = 'Previsualizar una actividad TaskChain';
+$string['taskchain:regrade'] = 'Re-calificar una actividad TaskChain';
+$string['taskchain:reviewallattempts'] = 'Ver cualquier intento de usuario en una actividad TaskChain';
+$string['taskchain:reviewmyattempts'] = 'Ver sus propios intentos en una actividad TaskChain';
+$string['taskchain:view'] = 'Ver la página de entrada de una actividad TaskChain';
+$string['taskchainname'] = 'Nombre de TaskChain';
+$string['taskclosed'] = 'Lo siento, esta tarea se cerró en {$a}';
+$string['taskname'] = 'Nombre de tarea';
+$string['taskname_help'] = 'texto de ayuda para nombre de Tarea';
+$string['tasknames'] = 'Nombres de Tarea';
 $string['tasknotavailable'] = 'Lo sentimos, esta tarea no está disponible para usted hasta {$a}.';
+$string['taskposition'] = 'Posición de tarea';
+$string['taskrequirepasswordmessage'] = 'Para intentar esta tarea, Usted necesita conocer la contraseña';
+$string['tasks'] = 'Tareas';
+$string['taskscore'] = 'Puntaje de Tarea (Task)';
+$string['tasktype'] = 'Tipo de tarea';
+$string['textsourcefile'] = 'Obtener del archivo orígen';
+$string['textsourcefilename'] = 'Usar nombre del archivo orígen';
+$string['textsourcefilepath'] = 'Usar ruta del archivo orígen';
+$string['textsourcespecific'] = 'Usar texto específico';
+$string['textsourcetaskname'] = 'Usar el nombre de la actividad';
 $string['timeclose'] = 'Disponible hasta';
+$string['timedout'] = 'Se acabó el tiempo';
+$string['timehdr'] = 'Restricciones de tiempo';
+$string['timelimit'] = 'Límite de tiempo';
+$string['timelimitexpired'] = 'El límite de tiempo para este intento ha caducado';
+$string['timelimitspecific'] = 'Usar tiempo específico';
+$string['timelimitsummary'] = 'Límite de tiempo para un intento';
+$string['timelimittemplate'] = 'Usar configuraciones del archivo de orígen/plantilla';
 $string['timeopen'] = 'Disponible desde';
+$string['timeopenclose'] = 'Horas de aperrtura y cierre';
+$string['timeopenclose_help'] = 'Usted puede especificar las horas en que esta tarea sea accesible para quienes hacen intentos. Antes de la hora de apertura, y después de la hora de cierre, la tarea estará no-disponible.';
+$string['title'] = 'Título';
+$string['titleappendsortorder'] = 'Agregar órden';
+$string['titleprependchainname'] = 'Anteponer el nombre de la cadena';
+$string['titletext'] = 'Texto del título';
+$string['titletext_help'] = 'Este texto es usado si la configuración de "Título" es "Usar texto especificado"';
+$string['tnumber'] = 'Intento de tarea';
+$string['toolsindex'] = 'Índice de Herramientas TaskChain';
+$string['totaltaskscores'] = 'Total de puntajes de tarea';
+$string['unansweredtask'] = 'Tarea no contestada';
+$string['unseentask'] = 'Tarea no vista';
+$string['updated'] = 'Actualizada';
+$string['updatinggrades'] = 'Actualizando calificaciones de TaskChain';
+$string['usefilters'] = 'Usar filtros';
+$string['usefilters_help'] = 'Si se habilita esta configuración, el contenido será pasado a través de los filtros de Moodle antes de enviarse al navegador de internet.';
+$string['useglossary'] = 'Usar glosario';
+$string['usemediafilter'] = 'Usar filtro multimedia';
+$string['viewreports'] = 'Ver reportes para {$a} usuario(s)';
+$string['views'] = 'Vistas';
+$string['weighting'] = 'Ponderación';
+$string['weightingequal'] = 'Ponderación igual';
+$string['weightingnone'] = 'Sin ponderación';
+$string['window'] = 'Ventana';
+$string['windowdirectories'] = 'Mostrar los enlaces de directorio';
+$string['windowheight'] = 'Altura por defecto de la ventana (en pixeles)';
+$string['windowlocation'] = 'Mostrar la barra de ubicación';
+$string['windowmenubar'] = 'Mostrar la barra del menú';
+$string['windowmoodlebutton'] = 'Mostrar botón para cerrar ventana';
+$string['windowmoodlefooter'] = 'Mostrar pie de página de Moodle';
 $string['windowmoodleheader'] = 'Mostrar el encabezado de página de Moodle';
 $string['windowmoodlenavbar'] = 'Mostrar la barra de navegación de Moodle';
 $string['windownew'] = 'Nueva ventana';

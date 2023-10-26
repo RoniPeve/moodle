@@ -117,6 +117,18 @@
       'selectedsharingoption' => 2,
       'userinputsharingkey' => '',
     ),
+    'core/hookcallbacks' => 
+    array (
+      'mode' => 1,
+      'simplekeys' => true,
+      'simpledata' => true,
+      'staticacceleration' => false,
+      'canuselocalstore' => true,
+      'component' => 'core',
+      'area' => 'hookcallbacks',
+      'selectedsharingoption' => 2,
+      'userinputsharingkey' => '',
+    ),
     'core/questiondata' => 
     array (
       'mode' => 1,
@@ -772,6 +784,23 @@
       'selectedsharingoption' => 2,
       'userinputsharingkey' => '',
     ),
+    'core/moodlenet_usercanshare' => 
+    array (
+      'mode' => 2,
+      'simplekeys' => true,
+      'simpledata' => true,
+      'ttl' => 1800,
+      'invalidationevents' => 
+      array (
+        0 => 'changesincoursecat',
+        1 => 'changesincategoryenrolment',
+        2 => 'changesincourse',
+      ),
+      'component' => 'core',
+      'area' => 'moodlenet_usercanshare',
+      'selectedsharingoption' => 2,
+      'userinputsharingkey' => '',
+    ),
     'availability_completion/previous_cache' => 
     array (
       'mode' => 4,
@@ -858,6 +887,18 @@
       'selectedsharingoption' => 2,
       'userinputsharingkey' => '',
     ),
+    'mod_bigbluebuttonbn/subplugins' => 
+    array (
+      'mode' => 1,
+      'invalidationevents' => 
+      array (
+        0 => 'mod_bigbluebuttonbn/subpluginschanged',
+      ),
+      'component' => 'mod_bigbluebuttonbn',
+      'area' => 'subplugins',
+      'selectedsharingoption' => 2,
+      'userinputsharingkey' => '',
+    ),
     'mod_forum/forum_is_tracked' => 
     array (
       'mode' => 4,
@@ -906,6 +947,39 @@
       'datasource' => '\\mod_quiz\\cache\\overrides',
       'component' => 'mod_quiz',
       'area' => 'overrides',
+      'selectedsharingoption' => 2,
+      'userinputsharingkey' => '',
+    ),
+    'mod_scorm/elements' => 
+    array (
+      'mode' => 1,
+      'datasource' => '\\mod_scorm\\cache\\elements',
+      'component' => 'mod_scorm',
+      'area' => 'elements',
+      'selectedsharingoption' => 2,
+      'userinputsharingkey' => '',
+    ),
+    'communication_customlink/customlink' => 
+    array (
+      'mode' => 1,
+      'simplekeys' => true,
+      'simpledata' => true,
+      'component' => 'communication_customlink',
+      'area' => 'customlink',
+      'selectedsharingoption' => 2,
+      'userinputsharingkey' => '',
+    ),
+    'communication_matrix/serverversions' => 
+    array (
+      'mode' => 1,
+      'simplekeys' => true,
+      'simpledata' => true,
+      'staticacceleration' => true,
+      'staticaccelerationsize' => 1,
+      'canuselocalstore' => true,
+      'ttl' => 86400,
+      'component' => 'communication_matrix',
+      'area' => 'serverversions',
       'selectedsharingoption' => 2,
       'userinputsharingkey' => '',
     ),

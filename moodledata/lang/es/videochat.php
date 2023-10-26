@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'videochat', language 'es', version '4.2'.
+ * Strings for component 'videochat', language 'es', version '4.3'.
  *
  * @package     videochat
  * @category    string
@@ -36,7 +36,7 @@ $string['advancedCamSettings'] = 'Configuraciones avanzadas de Cámara';
 $string['amfdesc'] = 'RTMP AMF (AMF3 : Red5, Wowza, FMIS3, FMIS3.5)';
 $string['amflabel'] = 'RTMP AMF';
 $string['autoSnapshotsdesc'] = 'Configurar auto instantánea';
-$string['autoSnapshotslabel'] = 'Auto instantánea';
+$string['autoSnapshotslabel'] = 'Auto instantanea';
 $string['background_url'] = 'URL del fondo';
 $string['bufferFullPlaybackdesc'] = 'Configurar Reproducción Buffer lleno';
 $string['bufferFullPlaybacklabel'] = 'Reproducción Buffer lleno';
@@ -105,8 +105,8 @@ $string['showCamSettings'] = 'Mostrar Configuraciones de Cámara';
 $string['slideShow'] = 'Pase de diapositivas';
 $string['snapshotsTimedesc'] = 'Configurar tiempo de instantáneas';
 $string['snapshotsTimelabel'] = 'tiempo de instantáneas';
-$string['users_enabled'] = 'Habilitar usuarios';
-$string['verboselevel'] = 'Nivel de detalle';
+$string['users_enabled'] = 'Usuarios habilitar';
+$string['verboselevel'] = 'Niver verboso';
 $string['videochat'] = 'Video Chat';
 $string['videochat:advancedcamsettings'] = 'Configuraciones avanzadas de cam';
 $string['videochat:configureconnection'] = 'Configurar conexión';

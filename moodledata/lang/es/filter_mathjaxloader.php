@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'filter_mathjaxloader', language 'es', version '4.2'.
+ * Strings for component 'filter_mathjaxloader', language 'es', version '4.3'.
  *
  * @package     filter_mathjaxloader
  * @category    string

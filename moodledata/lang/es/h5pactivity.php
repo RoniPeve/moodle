@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'h5pactivity', language 'es', version '4.2'.
+ * Strings for component 'h5pactivity', language 'es', version '4.3'.
  *
  * @package     h5pactivity
  * @category    string
@@ -30,6 +30,7 @@ $string['answer_checked'] = 'Respuesta comprobada';
 $string['answer_correct'] = 'Su respuesta es correcta';
 $string['answer_fail'] = 'Respuesta incorrecta';
 $string['answer_incorrect'] = 'Su respuesta es incorrecta';
+$string['answer_noanswer'] = 'Nada';
 $string['answer_pass'] = 'Respuesta correcta';
 $string['answer_text'] = 'Texto de respuesta';
 $string['answer_unchecked'] = 'Respuesta sin marcar';

@@ -93,7 +93,7 @@ class course {
                     'id' => $user->id,
                     'fullname' => fullname($user),
                     'userpicture' => $userutil->get_user_picture(),
-                    'role' => $instructor['role']->displayname
+                    'role' => $instructor['role']->displayname,
                 ];
             }
         }
@@ -169,6 +169,6 @@ class course {
      * @return mixed
      */
     public function get_progress($userid = null) {
-        return \core_completion\progress::get_course_progress_percentage($this->course, $userid);
+        return \core_completion\progress::get_course_progress_percentage(get_course($this->course->id), $userid);
     }
 }

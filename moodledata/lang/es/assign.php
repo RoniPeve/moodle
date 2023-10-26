@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'assign', language 'es', version '4.2'.
+ * Strings for component 'assign', language 'es', version '4.3'.
  *
  * @package     assign
  * @category    string
@@ -44,10 +44,8 @@ $string['addsubmission_help'] = 'Todavía no has realizado una entrega.';
 $string['allocatedmarker'] = 'Evaluador asignado';
 $string['allocatedmarker_help'] = 'Evaluador asignado a esta entrega.';
 $string['allowsubmissions'] = 'Permitir al usurio continuar haciendo entregas a esta tarea';
-$string['allowsubmissionsanddescriptionfromdatesummary'] = 'Los detalles de la tarea y el formulario de entregas estarán disponibles en <strong>{$a}</strong>';
 $string['allowsubmissionsfromdate'] = 'Permitir entregas desde';
 $string['allowsubmissionsfromdate_help'] = 'Si está habilitado, los estudiantes no podrán hacer entregas antes de esta fecha. Si está deshabilitado, los estudiantes podrán comenzar las entregas de inmediato.';
-$string['allowsubmissionsfromdatesummary'] = 'Esta tarea aceptará entregas desde el <strong>{$a}</strong>';
 $string['allowsubmissionsshort'] = 'Permitir cambios en la entrega';
 $string['alwaysshowdescription'] = 'Mostrar siempre la descripción';
 $string['alwaysshowdescription_help'] = 'Si está deshabilitada, la descripción de la tarea anterior solo será visible para los estudiantes en la fecha "Permitir envíos desde".';
@@ -139,7 +137,7 @@ $string['collapsegradepanel'] = 'Contraer el panel de calificación';
 $string['collapsereviewpanel'] = 'Contraer el panel de revisión';
 $string['comment'] = 'Comentario';
 $string['completiondetail:submit'] = 'Hacer un envío';
-$string['completionsubmit'] = 'El estudiante debe entregar esta actividad para completarla';
+$string['completionsubmit'] = 'Hacer una entrega';
 $string['configshowrecentsubmissions'] = 'Todos pueden ver las notificaciones de las entregas en los informes de actividad reciente.';
 $string['confirmbatchgradingoperation'] = '¿Está seguro que quiere {$a->operation} a  {$a->count} estudiantes?';
 $string['confirmstart'] = 'Su presentación tendrá un límite de tiempo de {$a}. Cuando empiece, el temporizador comenzará la cuenta atrás y no se puede pausar. Debe finalizar su envío antes de que caduque. ¿Está seguro de que desea comenzar ahora?';
@@ -239,7 +237,7 @@ Puede verlo junto a su envio de la tarea
     {$a->url}';
 $string['feedbackavailablehtml'] = '{$a->username} ha aportado alguna retroalimentación en su entrega de la tarea \'<i>{$a->assignment}</i>\'<br /><br /> Puede verla añadida <a href="{$a->url}">a su entrega</a>.';
 $string['feedbackavailablesmall'] = '{$a->username} ha hecho un comentario en la tarea {$a->assignment}';
-$string['feedbackavailabletext'] = '{$a->username}  ha publicado retroalimentación a su envío de tarea para \'{$a->assignment}\' Usted puede verla incluída en su envío de tarea';
+$string['feedbackavailabletext'] = '{$a->username}  ha publicado retroalimentación a su envío de tarea para \'{$a->assignment}\' Usted puede verla incluída en suenvío de tarea';
 $string['feedbackplugin'] = 'Extensión de retroalimentacion';
 $string['feedbackpluginforgradebook'] = 'Extensión de retroalimentación que sube los comentarios al libro de calificaciones';
 $string['feedbackpluginforgradebook_help'] = 'Solo una extensión de retroalimentación de la tarea puede introducir los comentarios en el libro de calificaciones.';
@@ -264,7 +262,7 @@ $string['gradecanbechanged'] = 'La calificación puede ser cambiada';
 $string['gradechangessaveddetail'] = 'Los cambios a la calificación y a la retroalimentación fueron guardados';
 $string['graded'] = 'Calificado';
 $string['gradedby'] = 'Calificado por';
-$string['gradedfollowupsubmit'] = 'Calificado - envío de seguimiento recibido';
+$string['gradedfollowupsubmit'] = 'Calificado - entrega de seguimiento recibida';
 $string['gradedon'] = 'Calificado sobre';
 $string['gradeitem:submissions'] = 'Entregas';
 $string['gradelocked'] = 'Esta calificación está bloqueada o ha sido modificada en el libro de calificaciones';
@@ -465,8 +463,6 @@ $string['quickgrading_help'] = 'Calificación rápida le permite asignar calific
 $string['quickgradingchangessaved'] = 'Se guardaron los cambios de las calificaciones';
 $string['quickgradingresult'] = 'Calificación rápida';
 $string['recordid'] = 'Identificador';
-$string['relativedatessubmissionduedateafter'] = '{$a->datediffstr} después del inicio del curso';
-$string['relativedatessubmissionduedatebefore'] = '{$a->datediffstr} antes del inicio del curso';
 $string['relativedatessubmissiontimeleft'] = 'Calculado para cada estudiante';
 $string['removeallgroupoverrides'] = 'Eliminar todas las excepciones de grupo';
 $string['removealluseroverrides'] = 'Eliminar todas las excepciones de usuario';

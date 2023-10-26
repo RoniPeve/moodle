@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_usertours', language 'es', version '4.2'.
+ * Strings for component 'tool_usertours', language 'es', version '4.3'.
  *
  * @package     tool_usertours
  * @category    string
@@ -245,6 +245,14 @@ $string['tour_activityinfo_course_teacher_content'] = 'Las nuevas configuracione
 $string['tour_activityinfo_course_teacher_title'] = 'Nuevo: información de la actividad';
 $string['tour_final_step_content'] = 'Este es el final del recorrido. No se mostrará de nuevo a menos que lo restablezca utilizando el enlace en el pie de página.';
 $string['tour_final_step_title'] = 'Fin del tour';
+$string['tour_gradebook_action_content'] = '<div class="text-center">@@PIXICON::tour/tour_grader_report_action_menu::tool_usertours@@</div>Ordenar preguntas y elegir cuáles mostrar. En modo Edición, use este atajo para acceder a tareas frecuentes relacionadas con ver y editar ítems de calificación.';
+$string['tour_gradebook_action_title'] = 'Enlaces rápidos a acciones';
+$string['tour_gradebook_filter_content'] = '<div class="text-center">@@PIXICON::tour/tour_grader_report_initials::tool_usertours@@</div>Filtrar estudiantes por las iniciales de su nombre o apellido.';
+$string['tour_gradebook_filter_title'] = 'Filtrar por nombre';
+$string['tour_gradebook_search_content'] = '<div class="text-center">@@PIXICON::tour/tour_grader_report_search::tool_usertours@@</div>Use la caja de búsqueda para encontrar rápidamente estudiantes específicos.';
+$string['tour_gradebook_search_title'] = 'Encontrar estudiantes fácilmente';
+$string['tour_gradebook_tour_description'] = 'Búsqueda y características de navegación en el informe del calificador del libro';
+$string['tour_gradebook_tour_name'] = 'Informe del calificador del libro';
 $string['tour_navigation_course_announcements_teacher_content'] = '@@PIXICON::tour/tour_course_admin_3::tool_usertours@@<br>Publique noticias importantes aquí.';
 $string['tour_navigation_course_announcements_teacher_title'] = '¿Algo que decir a todos?';
 $string['tour_navigation_course_edit_teacher_content'] = '@@PIXICON::tour/tour_course_admin_1::tool_usertours@@<br>Añadir nuevo contenido o editar el existente.';

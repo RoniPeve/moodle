@@ -184,7 +184,7 @@
         {{#faqenabled}}
             <section id="faq" class="scale-up scale-up-show">
                 <div class="moove-container-fluid">
-                    <h2><!--{{#str}}faq, theme_moove{{/str}}-->Preguntas Frecuentes</h2>
+                    <h2>{{#str}}faq, theme_moove{{/str}}</h2>
 
                     <div class="accordion" id="accordionFaq">
                         {{#faq}}
@@ -217,9 +217,14 @@
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
-    Drawer.init();
-    M.util.js_complete('theme_boost/loader');
-});
+    M.util.js_pending('theme_boost/loader');
+    require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+        Drawer.init();
+        M.util.js_complete('theme_boost/loader');
+    });
+    require(['jquery'], function($) {
+        $('.carousel').carousel({
+            interval: 5000
+        });
+    });
 {{/js}}

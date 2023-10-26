@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_filtered_course_list', language 'es', version '4.2'.
+ * Strings for component 'block_filtered_course_list', language 'es', version '4.3'.
  *
  * @package     block_filtered_course_list
  * @category    string

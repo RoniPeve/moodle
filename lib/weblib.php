@@ -255,7 +255,6 @@ function get_local_referer($stripquery = true) {
  *     - and output the params as hidden fields to be output within a form
  *
  * @copyright 2007 jamiesensei
- * @link http://docs.moodle.org/dev/lib/weblib.php_moodle_url See short write up here
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @package core
  */
@@ -1275,6 +1274,11 @@ function format_text($text, $format = FORMAT_MOODLE, $options = null, $courseidd
     if (!isset($options['trusted'])) {
         $options['trusted'] = false;
     }
+    if ($format == FORMAT_MARKDOWN) {
+        // Markdown format cannot be trusted in trusttext areas,
+        // because we do not know how to sanitise it before editing.
+        $options['trusted'] = false;
+    }
     if (!isset($options['noclean'])) {
         if ($options['trusted'] and trusttext_active()) {
             // No cleaning if text trusted and noclean not specified.
@@ -1376,8 +1380,9 @@ function format_text($text, $format = FORMAT_MOODLE, $options = null, $courseidd
             $text = markdown_to_html($text);
             $filteroptions['stage'] = 'pre_clean';
             $text = $filtermanager->filter_text($text, $context, $filteroptions);
-            // The markdown parser does not strip dangerous html so we need to clean it, even if noclean is set to true.
-            $text = clean_text($text, FORMAT_HTML, $options);
+            if (!$options['noclean']) {
+                $text = clean_text($text, FORMAT_HTML, $options);
+            }
             $filteroptions['stage'] = 'post_clean';
             $text = $filtermanager->filter_text($text, $context, $filteroptions);
             break;
@@ -1712,6 +1717,12 @@ function trusttext_pre_edit($object, $field, $context) {
     $trustfield  = $field.'trust';
     $formatfield = $field.'format';
 
+    if ($object->$formatfield == FORMAT_MARKDOWN) {
+        // We do not have a way to sanitise Markdown texts,
+        // luckily editors for this format should not have XSS problems.
+        return $object;
+    }
+
     if (!$object->$trustfield or !trusttext_trusted($context)) {
         $object->$field = clean_text($object->$field, $object->$formatfield);
     }
@@ -1927,6 +1938,9 @@ function purify_html($text, $options = array()) {
             $def->addElement('algebra', 'Inline', 'Inline', array());                   // Algebra syntax, equivalent to @@xx@@.
             $def->addElement('lang', 'Block', 'Flow', array(), array('lang'=>'CDATA')); // Original multilang style - only our hacked lang attribute.
             $def->addAttribute('span', 'xxxlang', 'CDATA');                             // Current very problematic multilang.
+            // Enable the bidirectional isolate element and its span equivalent.
+            $def->addElement('bdi', 'Inline', 'Flow', 'Common');
+            $def->addAttribute('span', 'dir', 'Enum#ltr,rtl,auto');
 
             // Media elements.
             // https://html.spec.whatwg.org/#the-video-element
@@ -2545,7 +2559,6 @@ function print_collapsible_region_start($classes, $id, $caption, $userpref = '',
 
     // Work out the initial state.
     if (!empty($userpref) and is_string($userpref)) {
-        user_preference_allow_ajax_update($userpref, PARAM_BOOL);
         $collapsed = get_user_preferences($userpref, $default);
     } else {
         $collapsed = $default;
@@ -3196,7 +3209,6 @@ function print_maintenance_message() {
 
     $PAGE->set_pagetype('maintenance-message');
     $PAGE->set_pagelayout('maintenance');
-    $PAGE->set_title(strip_tags($SITE->fullname));
     $PAGE->set_heading($SITE->fullname);
     echo $OUTPUT->header();
     echo $OUTPUT->heading(get_string('sitemaintenance', 'admin'));

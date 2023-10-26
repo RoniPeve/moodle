@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_course_modulenavigation', language 'es', version '4.2'.
+ * Strings for component 'block_course_modulenavigation', language 'es', version '4.3'.
  *
  * @package     block_course_modulenavigation
  * @category    string
@@ -33,5 +33,14 @@ $string['config_onesection_label'] = 'Muestra solo una sección en caso de activ
 $string['course_modulenavigation:addinstance'] = 'Añadir un bloque de contenidos de nuevo curso.';
 $string['notusingsections'] = 'Este formato de curso no utiliza secciones.';
 $string['pluginname'] = 'Módulo de Navegación de Curso.';
+$string['privacy:null_reason'] = 'El Bloque de Navegación del Módulo de Blog del curso solamente muestra datos almacenados en otros sitios.';
+$string['toggleclickontitle'] = 'Haciendo clic en el título';
+$string['toggleclickontitle_desc'] = '\'Muestra el menú\' o \'Va a esa página\'';
+$string['toggleclickontitle_menu'] = 'Muestra el menú';
+$string['toggleclickontitle_page'] = 'Va a esa página';
+$string['togglecollapse'] = 'Colapsar pestañas';
+$string['togglecollapse_desc'] = 'Elegir si es que se muestran o no todas las pestañas no colapsadas';
 $string['toggleshowlabels'] = 'Mostrar etiquetas';
+$string['toggleshowlabels_desc'] = 'Elegir si es que se muestran o no etiquetas';
 $string['toggletitles'] = 'Mostrar solo los títulos';
+$string['toggletitles_desc'] = 'Elegir si es que se muestran solamente títulos o títulos y contenidos';

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'qbank_columnsortorder', language 'es', version '4.2'.
+ * Strings for component 'qbank_columnsortorder', language 'es', version '4.3'.
  *
  * @package     qbank_columnsortorder
  * @category    string
@@ -25,11 +25,25 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['addcolumn'] = 'Añadir columna "{$a}"';
+$string['addcolumns'] = 'Añadir columnas';
+$string['auto'] = 'Automático';
+$string['columnwidth'] = 'Ancho de columna (píxels)';
+$string['invalidwidth'] = 'El ancho debe ser al menos {$a}.';
+$string['movecolumn'] = 'Mover columna "{$a}".';
 $string['pluginname'] = 'Ordenamiento de columnas';
-$string['privacy:metadata'] = 'El complemento Ordenamiento de columnas del banco de preguntas no almacena ningún dato personal.';
-$string['qbankcolumnname'] = '({$a})';
+$string['privacy:metadata:preference:colsize'] = 'El plugin guarda las preferencias de tamaño de columna del usuario.';
+$string['privacy:metadata:preference:enabledcol'] = 'El plugin guarda las preferencias de orden de columna del usuario.';
+$string['privacy:metadata:preference:hiddencols'] = 'El plugin guarda las preferencias de usuario de columnas ocultas.';
+$string['qbankcolumnname'] = '{$a}';
 $string['qbankcolumnsdisabled'] = 'Complementos del banco de preguntas actualmente deshabilitados:';
 $string['qbankcolumnsortorder'] = 'Ordenamiento de columnas';
 $string['qbankgotocolumnsort'] = 'Puede cambiar el orden de las columnas en el banco de preguntas en la página {$a}.';
 $string['qbankgotomanageqbanks'] = 'Puede eliminar una columna desactivando el complemento en <a href=\'{$a}\'>Administrar complementos del banco de preguntas</a>.';
 $string['qbanksortdescription'] = 'El orden en que se enumeran los complementos a continuación determina el orden de las columnas en el banco de preguntas.';
+$string['removecolumn'] = 'Quitar columna "{$a}"';
+$string['resetcolumns'] = 'Resetear columnas';
+$string['resize'] = 'Reajustar';
+$string['resizecolumn'] = 'Reajustar columna {$a}';
+$string['showhidecolumn'] = 'Ocultar/Mostrar columna';
+$string['width'] = 'Ancho de "{$a}" en píxels';

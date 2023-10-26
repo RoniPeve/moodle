@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'contenttype_repurpose', language 'es', version '4.2'.
+ * Strings for component 'contenttype_repurpose', language 'es', version '4.3'.
  *
  * @package     contenttype_repurpose
  * @category    string
@@ -62,9 +62,7 @@ $string['previewquestion'] = 'Previsualizar pregunta';
 $string['previewquestion_help'] = 'Un enlace es proporcionado para previsualizar la pregunta seleccionada si usted tiene permiso para hacerlo. Hacer clic en el enlace debería abrir unanueva ventana';
 $string['privacy:metadata'] = 'El plugin para Reciclar contenido no almacena ninguna información personal';
 $string['question'] = 'pregunta';
-$string['question_help'] = 'Si usted ha creado o importado preguntas
-en el Banco de contenido, debería poder seleccionarlas individualmente y
-convertirlas a H5P';
+$string['question_help'] = 'Si usted ha creado o importado preguntas en el Banco de contenido, usted debería de poder seleccionarlas individualmente y convertirlas a H5P';
 $string['repurpose:access'] = 'Acceder a recursos reciclados en el Banco de contenido';
 $string['repurpose:upload'] = 'Subir recursos para usar en contenido';
 $string['repurpose:useeditor'] = 'Crear contenido usando las herramientas para reciclar recursos';

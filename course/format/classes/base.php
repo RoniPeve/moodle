@@ -383,7 +383,7 @@ abstract class base {
      * This method ensures that 3rd party course format plugins that still use 'numsections' continue to
      * work but at the same time we no longer expect formats to have 'numsections' property.
      *
-     * @return int
+     * @return int The last section number, or -1 if sections are entirely missing
      */
     public function get_last_section_number() {
         $course = $this->get_course();
@@ -392,6 +392,12 @@ abstract class base {
         }
         $modinfo = get_fast_modinfo($course);
         $sections = $modinfo->get_section_info_all();
+
+        // Sections seem to be missing entirely. Avoid subsequent errors and return early.
+        if (count($sections) === 0) {
+            return -1;
+        }
+
         return (int)max(array_keys($sections));
     }
 
@@ -738,6 +744,37 @@ abstract class base {
             $url->set_anchor('section-'.$sectionno);
         }
         return $url;
+    }
+
+    /**
+     * Return the old non-ajax activity action url.
+     *
+     * BrowserKit behats tests cannot trigger javascript events,
+     * so we must translate to an old non-ajax url while non-ajax
+     * course editing is still supported.
+     *
+     * @param string $action action name the reactive action
+     * @param cm_info $cm course module
+     * @return moodle_url
+     */
+    public function get_non_ajax_cm_action_url(string $action, cm_info $cm): moodle_url {
+        $nonajaxactions = [
+            'cmDelete' => 'delete',
+            'cmDuplicate' => 'duplicate',
+            'cmHide' => 'hide',
+            'cmShow' => 'show',
+            'cmStealth' => 'stealth',
+        ];
+        if (!isset($nonajaxactions[$action])) {
+            throw new coding_exception('Unknown activity action: ' . $action);
+        }
+        $nonajaxaction = $nonajaxactions[$action];
+        $nonajaxurl = new moodle_url(
+            '/course/mod.php',
+            ['sesskey' => sesskey(), $nonajaxaction => $cm->id]
+        );
+        $nonajaxurl->param('sr', $this->get_section_number());
+        return $nonajaxurl;
     }
 
     /**
@@ -1429,6 +1466,21 @@ abstract class base {
             $capabilities = ['moodle/course:manageactivities'];
         }
         return $PAGE->user_is_editing() && has_all_capabilities($capabilities, $coursecontext);
+    }
+
+    /**
+     * Check if the group mode can be displayed.
+     * @param cm_info $cm the activity module
+     * @return bool
+     */
+    public function show_groupmode(cm_info $cm): bool {
+        if (!plugin_supports('mod', $cm->modname, FEATURE_GROUPS, false)) {
+            return false;
+        }
+        if (!has_capability('moodle/course:manageactivities', $cm->context)) {
+            return false;
+        }
+        return true;
     }
 
     /**

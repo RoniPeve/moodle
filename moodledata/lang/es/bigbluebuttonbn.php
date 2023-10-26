@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'bigbluebuttonbn', language 'es', version '4.2'.
+ * Strings for component 'bigbluebuttonbn', language 'es', version '4.3'.
  *
  * @package     bigbluebuttonbn
  * @category    string
@@ -50,13 +50,14 @@ $string['bigbluebuttondisablednotification_subject'] = 'Módulo de actividad Big
 $string['cachedef_currentfetch'] = 'Datos para enumerar cualquier grabación recuperada recientemente.';
 $string['cachedef_recordings'] = 'Grabación de metadatos';
 $string['cachedef_serverinfo'] = 'Información de servidor remoto';
+$string['cachedef_subplugins'] = 'Caché usada por rutinas de subplugin para acelerar cuando haga falta el proceso de descubrimiento del plugin.';
 $string['cachedef_validatedurls'] = 'Caché de comprobaciones de URL validadas';
 $string['calendarstarts'] = '{$a} está programado para';
 $string['cannotperformaction'] = 'No se puede realizar la acción {$a} en esta grabación';
-$string['completionattendance'] = 'El estudiante debe asistir a la reunión durante un mínimo de:';
+$string['completionattendance'] = 'Requiere asistencia (minutos)';
 $string['completionattendance_desc'] = 'Entre y permanezca en la sala durante al menos {$a} minuto(s).';
 $string['completionattendance_event_desc'] = 'El estudiante ha entrado a la sala y permaneció en la sesión durante al menos {$a} minuto(s)';
-$string['completionattendancegroup'] = 'Requerir asistencia';
+$string['completionattendancegroup'] = 'Requerir asistencia (minutos)';
 $string['completionattendancegroup_help'] = 'Se requiere la asistencia a la reunión durante (n) minutos para completar.';
 $string['completionengagement_desc'] = 'Participar en actividades durante la reunión.';
 $string['completionengagementchats'] = 'Chats';
@@ -80,7 +81,7 @@ $string['completionupdatestate'] = 'Estado de actualización completa';
 $string['completionvalidatestate'] = 'Validar finalización';
 $string['completionvalidatestatetriggered'] = 'Se ha activado la finalización de la validación.';
 $string['completionview'] = 'Requerir vista';
-$string['completionview_desc'] = 'El estudiante debe unirse a una sala para completarlo.';
+$string['completionview_desc'] = 'Ver en la sala';
 $string['completionview_event_desc'] = 'Se ha unido a la sala.';
 $string['config_checksum_algorithm'] = 'Algoritmo de suma de comprobación del servidor BigBlueButton';
 $string['config_checksum_algorithm_description'] = 'SHA1 es compatible con servidores más antiguos. SHA256 y SHA512 son más seguros. SHA512 cumple con FIPS 140-2.';
@@ -321,6 +322,7 @@ $string['instance_type_default'] = 'Sala con grabaciones';
 $string['instance_type_recording_only'] = 'Solo grabaciones';
 $string['instance_type_room_only'] = 'Sólo sala';
 $string['instanceprofilewithoutrecordings'] = 'Este perfil de instancia no puede mostrar grabaciones';
+$string['managebbbextplugins'] = 'Gestionar plugins de extensión de BigBlueButton';
 $string['messageprovider:instance_updated'] = 'Sesión BigBlueButton actualizado';
 $string['messageprovider:recording_ready'] = 'Grabación BigBlueButton disponible';
 $string['minute'] = 'minuto';
@@ -444,6 +446,8 @@ $string['sendnotification'] = 'Enviar notificación';
 $string['settings'] = 'Configuración de BigBlueButton';
 $string['started_at'] = 'Empezado';
 $string['starts_at'] = 'Empieza';
+$string['subplugintype_bbbext'] = 'Extensión de actividad BigBlueButton';
+$string['subplugintype_bbbext_plural'] = 'Extensiones de actividad BigBlueButton';
 $string['taskname:check_dismissed_recordings'] = 'Buscar grabaciones que aún no se hayan encontrado';
 $string['taskname:check_pending_recordings'] = 'Obtener grabaciones pendientes';
 $string['userlimitreached'] = 'El número máximo de usuarios permitidos en la sala se ha alcanzado';

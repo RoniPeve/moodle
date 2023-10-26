@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'gradereport_singleview', language 'es', version '4.2'.
+ * Strings for component 'gradereport_singleview', language 'es', version '4.3'.
  *
  * @package     gradereport_singleview
  * @category    string
@@ -68,7 +68,6 @@ $string['removeoverridesave'] = 'Eliminar anulaciones';
 $string['save'] = 'Guardar';
 $string['savegrades'] = 'Guardando calificaciones';
 $string['savegradessuccess'] = 'Calificaciones aplicadas a {$a} elemento/s';
-$string['searchgrades'] = 'Buscar ítems de calificación';
 $string['selectagrade'] = 'Seleccione un ítem de calificación';
 $string['selectgradeitemlink'] = 'Seleccione un ítem de calificación';
 $string['singleview:view'] = 'Ver vista simple';
@@ -83,5 +82,5 @@ $string['unsaveddatawarning'] = 'Aviso de datos no guardados';
 $string['userselect'] = 'Seleccionar actividad';
 $string['viewby'] = 'Ver por';
 $string['viewsinglegradeitem'] = 'Seleccione un ítem de calificación arriba';
-$string['viewsingleuser'] = 'Seleccione un usuario arriba para ver todas sus calificaciones';
+$string['viewsingleuser'] = 'Busque un usuario para ver todas sus calificaciones';
 $string['viewsingleuserorgradeitem'] = 'Ver todas las calificaciones de un único usuario o de un ítem de calificación.';

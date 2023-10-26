@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_blog_menu', language 'es', version '4.2'.
+ * Strings for component 'block_blog_menu', language 'es', version '4.3'.
  *
  * @package     block_blog_menu
  * @category    string

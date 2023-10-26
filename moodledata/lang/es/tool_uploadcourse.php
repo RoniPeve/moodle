@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_uploadcourse', language 'es', version '4.2'.
+ * Strings for component 'tool_uploadcourse', language 'es', version '4.3'.
  *
  * @package     tool_uploadcourse
  * @category    string
@@ -86,6 +86,7 @@ $string['encoding_help'] = 'Codificación del archivo CSV';
 $string['errorcannotcreateorupdateenrolment'] = 'No se puede crear o actualizar el método de matriculación \'{$a}\'';
 $string['errorcannotdeleteenrolment'] = 'No se puede borrar el método de matriculación \'{$a}\'';
 $string['errorcannotdisableenrolment'] = 'No se puede deshabilitar el método de matriculación \'{$a}\'';
+$string['errorunsupportedmethod'] = 'El método de matriculación \'{$a}\' no se admite en la carga de csv';
 $string['errorwhiledeletingcourse'] = 'Error al eliminar el curso';
 $string['errorwhilerestoringcourse'] = 'Error al restaurar el curso';
 $string['generatedshortnamealreadyinuse'] = 'El nombre corto generado ya está en uso';

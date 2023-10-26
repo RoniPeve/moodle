@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_o365', language 'es', version '4.2'.
+ * Strings for component 'local_o365', language 'es', version '4.3'.
  *
  * @package     local_o365
  * @category    string
@@ -285,7 +285,7 @@ $string['ucp_general_intro_notconnected_nopermissions'] = 'Para conectarse a Mic
 $string['ucp_index_aadlogin_title'] = 'Ingreso a Microsoft 365';
 $string['ucp_index_calendar_desc'] = 'Aquí usted puede configurar la sincronización entre sus calendarios de Moodle y de Outlook. Puede exportar eventos del calendario de Moodle a Outlook, y llevar eventos de Outlook a Moodle.';
 $string['ucp_index_calendar_title'] = 'Configuraciones de sincronización de Calendario de Outlook';
-$string['ucp_index_connection_desc'] = 'Configurar como conectarse a Microsoft 365.';
+$string['ucp_index_connection_desc'] = 'Configurar cómo conectarse a Microsoft 365.';
 $string['ucp_index_connection_title'] = 'Configuraciones de Conexión de Microsoft 365';
 $string['ucp_index_connectionstatus_connect'] = 'Haga clic aquí para conectarse';
 $string['ucp_index_connectionstatus_connected'] = 'Usted está actualmente conectado a Microsoft 365';

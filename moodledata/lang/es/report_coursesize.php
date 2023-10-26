@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'report_coursesize', language 'es', version '4.2'.
+ * Strings for component 'report_coursesize', language 'es', version '4.3'.
  *
  * @package     report_coursesize
  * @category    string
@@ -25,8 +25,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['allcourses'] = 'Todos los cursos';
 $string['backupsize'] = 'Tamaño de la copia de seguridad';
+$string['cachedef_topuserdata'] = 'Información cacheada acerca de los usuarios con la mayor cantidad total de datos';
 $string['calcmethod'] = 'Actualizar informe principal';
+$string['calcmethodcron'] = 'Trabajo agendado';
+$string['calcmethodhelp'] = 'Si es calculado por trabajo agendado, el reporte se  actualizará  la hora agendada y caceará los resultados para su vista posterior. Esto es recomendado sobre los cálculos instantáneos porque puede seer una consulta muy intensiva/lenta de ejecutar.';
+$string['calcmethodlive'] = 'En carga de página';
 $string['catsystembackupuse'] = 'El uso de la copia de seguridad del sistema y categorías es {$a}.';
 $string['catsystemuse'] = 'El uso del sistema y categorías sin contar usuarios y cursos es {$a}.';
 $string['coursebackupbytes'] = '{$a->backupbytes} bytes usados para la copia de seguridad del curso {$a->shortname}';
@@ -39,6 +44,9 @@ $string['coursesummary'] = '(ver estadísticas)';
 $string['diskusage'] = 'Total';
 $string['emptycourseshidden'] = 'Los cursos que no tienen ningún archivo almacenado han sido excluidos de este informe.';
 $string['exportcsv'] = 'Exportar CSV';
+$string['filearea'] = 'Área de archivos';
+$string['lastupdate'] = '(Última actualización {$a})';
+$string['lastupdatenever'] = 'Esperando a que el trabajo agendado genere las estadísticas';
 $string['nouserfiles'] = 'No existen archivos de usuario';
 $string['pluginname'] = 'Tamaño del curso';
 $string['privacy:metadata'] = 'El plugin Course size no almacena ninguna información personal.';

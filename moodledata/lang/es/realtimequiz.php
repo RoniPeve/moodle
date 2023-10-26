@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'realtimequiz', language 'es', version '4.2'.
+ * Strings for component 'realtimequiz', language 'es', version '4.3'.
  *
  * @package     realtimequiz
  * @category    string
@@ -101,8 +101,7 @@ $string['questions'] = 'Preguntas';
 $string['questionslist'] = 'Preguntas en este cuestionario en tiempo real:';
 $string['questiontext'] = 'Enunciado de la pregunta:';
 $string['questiontime'] = 'Tiempo predeterminado de la pregunta';
-$string['questiontime_help'] = 'El tiempo predeterminado (en segundos) durante el cual se visualizará cada pregunta.<br />
-Se puede invalidar con las preguntas individuales.';
+$string['questiontime_help'] = 'El tiempo por defecto (en segundos) para mostrar cada pregunta.<br /> Esto puede anularse para preguntas individuales.';
 $string['quizfinished'] = 'No hay más preguntas';
 $string['quiznotrunning'] = 'El cuestionario no se está ejecutando en este momento. Espere a que el profesor lo empiece';
 $string['realtimequiz:addinstance'] = 'Añadir un nuevo cuestionario en tiempo real';

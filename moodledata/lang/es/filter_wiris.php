@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'filter_wiris', language 'es', version '4.2'.
+ * Strings for component 'filter_wiris', language 'es', version '4.3'.
  *
  * @package     filter_wiris
  * @category    string
@@ -94,6 +94,7 @@ $string['rendertype_help'] = 'Especifica cómo renderizar las fórmulas<br>- PHP
 $string['securitysettings'] = 'Ajustes de seguridad';
 $string['securitysettings_text'] = '&nbsp;';
 $string['tinymce'] = 'TinyMCE';
+$string['tinymceincompatibility'] = 'MathType para TinyMCE (obsoleto) no está soportado en Moodle 4.2 o superior. Debe desinstalar el plugin localizado en "./lib/editor/tinymce/plugins/tiny_mce_wiris" e instalar el plugin MathType para TinyMCE 6';
 $string['title'] = 'Página de prueba de filtro MathType';
 $string['version'] = 'versión';
 $string['versionsdontmatch'] = 'las versiones no coinciden';

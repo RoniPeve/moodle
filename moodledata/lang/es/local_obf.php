@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_obf', language 'es', version '4.2'.
+ * Strings for component 'local_obf', language 'es', version '4.3'.
  *
  * @package     local_obf
  * @category    string
@@ -285,7 +285,7 @@ $string['saveconfiguration'] = 'Continuar';
 $string['savecriteria'] = 'Guardar';
 $string['savesettings'] = 'Guardar';
 $string['selectactivity'] = 'Seleccionar actividad';
-$string['selectatleastonerecipient'] = 'Selecionar al menos un recipiente';
+$string['selectatleastonerecipient'] = 'Seleccionar al menos un recipiente';
 $string['selectbadge'] = 'Seleccionar insignia';
 $string['selectbadgestoexport'] = 'Seleccionar las insignias que desea exportar a la Fábrica de Insignia Abierta';
 $string['selectcompletionmethod'] = 'Seleccionar método de finalización';

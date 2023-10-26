@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'capquizreport_attempts', language 'es', version '4.2'.
+ * Strings for component 'capquizreport_attempts', language 'es', version '4.3'.
  *
  * @package     capquizreport_attempts
  * @category    string

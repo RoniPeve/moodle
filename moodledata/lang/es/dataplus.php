@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'dataplus', language 'es', version '4.2'.
+ * Strings for component 'dataplus', language 'es', version '4.3'.
  *
  * @package     dataplus
  * @category    string

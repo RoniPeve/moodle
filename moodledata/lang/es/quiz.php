@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'quiz', language 'es', version '4.2'.
+ * Strings for component 'quiz', language 'es', version '4.3'.
  *
  * @package     quiz
  * @category    string
@@ -35,6 +35,7 @@ $string['add'] = 'Agregar';
 $string['addaquestion'] = 'una nueva pregunta';
 $string['addarandomquestion'] = 'una pregunta aleatoria';
 $string['addarandomquestion_help'] = 'Cuando se añade una pregunta aleatoria, se traduce en que en el cuestionario se inserta una pregunta seleccionada aleatoriamente de entre las que componen la categoría. Esto significa que los distintos alumnos tendrán probablemente una selección distinta de preguntas. Por otra parte, cuando el cuestionario permite múltiples intentos, cada uno de ellos probablemente contendrá una nueva selección de preguntas.';
+$string['addarandomquestion_success'] = 'Se han añadido preguntas aleatorias';
 $string['addarandomselectedquestion'] = 'Agregar una pregunta seleccionada aleatoria ...';
 $string['addasection'] = 'un nuevo encabezado para la sección';
 $string['adddescriptionlabel'] = 'Agregar una descripción/etiqueta';
@@ -187,13 +188,12 @@ $string['comment'] = 'Comentario';
 $string['commentorgrade'] = 'Hacer comentario o evitar calificación';
 $string['comments'] = 'Comentarios';
 $string['completedon'] = 'Finalizado en';
-$string['completionattemptsexhausted'] = 'O todos los intentos disponibles completados';
+$string['completionattemptsexhausted'] = 'Aprobado o completados todos los intentos posibles';
 $string['completionattemptsexhausted_help'] = 'Marcar el cuestionario como completo cuando el estudiante haya agotado el máximo número de intentos.';
-$string['completionattemptsexhausteddesc'] = 'Completar si se agotan todos los intentos disponibles';
 $string['completiondetail:minattempts'] = 'Hacer intentos: {$a}';
 $string['completiondetail:passgrade'] = 'Recibir una calificación aprobatoria';
 $string['completiondetail:passorexhaust'] = 'Recibir una calificación aprobatoria o completar todos los intentos disponibles';
-$string['completionminattempts'] = 'Número mínimo de intentos:';
+$string['completionminattempts'] = 'Número mínimo de intentos';
 $string['completionminattemptsdesc'] = 'Número mínimo de intentos requerido: {$a}';
 $string['completionminattemptserror'] = 'El número mínimo de intentos debe ser menor o igual a los intentos permitidos.';
 $string['completionminattemptsgroup'] = 'Intentos requeridos';
@@ -543,8 +543,6 @@ $string['layoutasshown'] = 'Diseño de página como se muestra.';
 $string['layoutasshownwithpages'] = 'Diseño de página como se muestra. <small>(Página nueva automática cada {$a} preguntas.)</small>';
 $string['layoutshuffledandpaged'] = 'Preguntas presentadas aleatoriamente, {$a} en cada página.';
 $string['layoutshuffledsinglepage'] = 'Preguntas presentadas aleatoriamente, todas en en una sola página.';
-$string['legacyquizaccessrulescron'] = 'Reglas de acceso de pruebas cron heredadas';
-$string['legacyquizreportscron'] = 'Informes de pruebas cron heredadas';
 $string['link'] = 'Enlace';
 $string['listitems'] = 'Lista de elementos en el cuestionario';
 $string['literal'] = 'Literal';
@@ -556,12 +554,14 @@ $string['manualgrading'] = 'Calificación';
 $string['mark'] = 'Enviar';
 $string['markall'] = 'Enviar página';
 $string['marks'] = 'Puntos';
-$string['marks_help'] = 'Las marcas numéricas de cada pregunta, y la puntuación del intento global.';
+$string['marks_help'] = 'La puntuación obtenida en cada pregunta, y la puntuación del intento global. Usted sólo puede seleccionar puntuación si se ha seleccionado una puntuación máxima.';
 $string['match'] = 'Emparejamiento';
 $string['matchanswer'] = 'Respuesta emparejada';
 $string['matchanswerno'] = 'Respuesta emparejada {$a}';
 $string['max'] = 'Máx';
 $string['maxmark'] = 'Nota máxima';
+$string['maxmarks'] = 'Puntuación máxima';
+$string['maxmarks_help'] = 'La puntuación máxima disponible para cada pregunta.';
 $string['messageprovider:attempt_grading_complete'] = 'Notificación de que su intento se ha calificado';
 $string['messageprovider:attempt_overdue'] = 'Advertencia cuando su intento de resolver el cuestionario se retrase';
 $string['messageprovider:confirmation'] = 'Confirmación de su envío del cuestionario';
@@ -860,6 +860,8 @@ $string['randomfromexistingcategory'] = 'Pregunta aleatoria desde una categoría
 $string['randomfromunavailabletag'] = '{$a} (no disponible)';
 $string['randomnosubcat'] = 'Preguntas sólo de esta categoría, no de sus sub-categorías.';
 $string['randomnumber'] = 'Número de preguntas aleatorias';
+$string['randomqname'] = 'Pregunta aleatoria basada en la condición de filtro';
+$string['randomqnametags'] = 'Pregunta aleatoria basada en la condición de filtro con las etiquetas: {$a}';
 $string['randomquestion'] = 'Pregunta aleatoria';
 $string['randomquestion_help'] = 'Una pregunta aleatoria es una forma de añadir una pregunta seleccionada al azar de una categoría o una por una marca específica dentro de una actividad.';
 $string['randomquestiontags'] = 'Marcas';
@@ -1093,6 +1095,8 @@ $string['unfinished'] = 'abierto';
 $string['ungraded'] = 'Sin calificar';
 $string['unit'] = 'Unidad';
 $string['unknowntype'] = 'Tipo de pregunta no permitida en la línea {$a}. La pregunta no se tendrá en cuenta';
+$string['updatefilterconditon'] = 'Actualizar condiciones de filtro';
+$string['updatefilterconditon_success'] = 'Condiciones de filtro actualizadas con éxito';
 $string['updateoverdueattemptstask'] = 'Actualizando intentos de cuestionario vencidos';
 $string['updatequizslotswithrandomxofy'] = 'Actualizando espacios de cuestionarios con datos de preguntas "aleatorias" ({$a->done}/{$a->total})';
 $string['updatesettings'] = 'Actualizar ajustes del cuestionario';

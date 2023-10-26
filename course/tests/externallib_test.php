@@ -366,6 +366,44 @@ class externallib_test extends externallib_advanced_testcase {
     }
 
     /**
+     * Test update_categories method for moving categories
+     */
+    public function test_update_categories_moving() {
+        $this->resetAfterTest();
+
+        // Create data.
+        $categorya  = self::getDataGenerator()->create_category([
+            'name' => 'CAT_A',
+        ]);
+        $categoryasub = self::getDataGenerator()->create_category([
+            'name' => 'SUBCAT_A',
+            'parent' => $categorya->id
+        ]);
+        $categoryb  = self::getDataGenerator()->create_category([
+            'name' => 'CAT_B',
+        ]);
+
+        // Create a new test user.
+        $testuser = self::getDataGenerator()->create_user();
+        $this->setUser($testuser);
+
+        // Set the capability for CAT_A only.
+        $contextcata = context_coursecat::instance($categorya->id);
+        $roleid = $this->assignUserCapability('moodle/category:manage', $contextcata->id);
+
+        // Then we move SUBCAT_A parent: CAT_A => CAT_B.
+        $categories = [
+            [
+                'id' => $categoryasub->id,
+                'parent' => $categoryb->id
+            ]
+        ];
+
+        $this->expectException('required_capability_exception');
+        core_course_external::update_categories($categories);
+    }
+
+    /**
      * Test create_courses numsections
      */
     public function test_create_course_numsections() {
@@ -1110,6 +1148,15 @@ class externallib_test extends externallib_advanced_testcase {
         $CFG->forum_allowforcedreadtracking = 1;
         list($course, $forumcm, $datacm, $pagecm, $labelcm, $urlcm) = $this->prepare_get_course_contents_test();
 
+        // Create a resource with all the appearance options enabled. By default it's a text file and will be added to section 1.
+        $record = (object) [
+            'course' => $course->id,
+            'showsize' => 1,
+            'showtype' => 1,
+            'showdate' => 1,
+        ];
+        $resource = self::getDataGenerator()->create_module('resource', $record);
+
         // We first run the test as admin.
         $this->setAdminUser();
         $sections = core_course_external::get_course_contents($course->id, array());
@@ -1126,9 +1173,13 @@ class externallib_test extends externallib_advanced_testcase {
                 $this->assertEquals($formattedtext, $module['description']);
                 $this->assertEquals($forumcm->instance, $module['instance']);
                 $this->assertEquals(context_module::instance($forumcm->id)->id, $module['contextid']);
-                $this->assertStringContainsString('1 unread post', $module['afterlink']);
                 $this->assertFalse($module['noviewlink']);
                 $this->assertNotEmpty($module['description']);  // Module showdescription is on.
+                // Afterlink for forums has been removed; it has been moved to the new activity badge content.
+                $this->assertEmpty($module['afterlink']);
+                $this->assertEquals('1 unread post', $module['activitybadge']['badgecontent']);
+                $this->assertEquals('badge-dark', $module['activitybadge']['badgestyle']);
+
                 $testexecuted = $testexecuted + 2;
             } else if ($module['id'] == $labelcm->id and $module['modname'] == 'label') {
                 $cm = $modinfo->cms[$labelcm->id];
@@ -1145,6 +1196,12 @@ class externallib_test extends externallib_advanced_testcase {
                 $this->assertFalse($module['noviewlink']);
                 $this->assertArrayNotHasKey('description', $module);
                 $testexecuted = $testexecuted + 1;
+            } else if ($module['instance'] == $resource->id && $module['modname'] == 'resource') {
+                // Resources have both, afterlink for the size and the update date and activitybadge for the file type.
+                $this->assertStringContainsString('32 bytes', $module['afterlink']);
+                $this->assertEquals('TXT', $module['activitybadge']['badgecontent']);
+                $this->assertEquals('badge-none', $module['activitybadge']['badgestyle']);
+                $testexecuted = $testexecuted + 1;
             }
         }
         foreach ($sections[2]['modules'] as $module) {
@@ -1157,10 +1214,10 @@ class externallib_test extends externallib_advanced_testcase {
         $CFG->forum_allowforcedreadtracking = 0;    // Recover original value.
         forum_tp_count_forum_unread_posts($forumcm, $course, true);    // Reset static cache for further tests.
 
-        $this->assertEquals(5, $testexecuted);
+        $this->assertEquals(6, $testexecuted);
         $this->assertEquals(0, $sections[0]['section']);
 
-        $this->assertCount(6, $sections[0]['modules']);
+        $this->assertCount(7, $sections[0]['modules']);
         $this->assertCount(1, $sections[1]['modules']);
         $this->assertCount(1, $sections[2]['modules']);
         $this->assertCount(1, $sections[3]['modules']); // One module for the section with availability restrictions.
@@ -2617,7 +2674,7 @@ class externallib_test extends externallib_advanced_testcase {
             foreach ($course['options'] as $option) {
                 $navoptions->{$option['name']} = $option['available'];
             }
-            $this->assertCount(8, $course['options']);
+            $this->assertCount(9, $course['options']);
             if ($course['id'] == SITEID) {
                 $this->assertTrue($navoptions->blogs);
                 $this->assertFalse($navoptions->notes);
@@ -2627,6 +2684,7 @@ class externallib_test extends externallib_advanced_testcase {
                 $this->assertFalse($navoptions->grades);
                 $this->assertFalse($navoptions->search);
                 $this->assertTrue($navoptions->competencies);
+                $this->assertFalse($navoptions->communication);
             } else {
                 $this->assertTrue($navoptions->blogs);
                 $this->assertFalse($navoptions->notes);
@@ -2636,6 +2694,7 @@ class externallib_test extends externallib_advanced_testcase {
                 $this->assertTrue($navoptions->grades);
                 $this->assertFalse($navoptions->search);
                 $this->assertTrue($navoptions->competencies);
+                $this->assertFalse($navoptions->communication);
             }
         }
     }

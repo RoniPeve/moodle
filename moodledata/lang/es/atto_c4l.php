@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'atto_c4l', language 'es', version '4.2'.
+ * Strings for component 'atto_c4l', language 'es', version '4.3'.
  *
  * @package     atto_c4l
  * @category    string
@@ -42,6 +42,7 @@ $string['gradingvalue'] = 'Peso de la nota';
 $string['helper'] = 'Auxiliar';
 $string['inlinetag'] = 'Etiqueta en línea';
 $string['keyconcept'] = 'Concepto clave';
+$string['learningoutcomes'] = 'Resultados de aprendizaje';
 $string['pluginname'] = 'Componentes para el aprendizaje (c4l)';
 $string['privacy:metadata'] = 'El plugin de Componentes Atto para el aprendizaje no almacena ningún dato personal.';
 $string['procedural'] = 'Procedimental';

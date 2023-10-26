@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'blog', language 'es', version '4.2'.
+ * Strings for component 'blog', language 'es', version '4.3'.
  *
  * @package     blog
  * @category    string
@@ -34,6 +34,7 @@ $string['associatewithmodule'] = 'Blog sobre {$a->modtype}: {$a->modname}';
 $string['association'] = 'Asociación';
 $string['associations'] = 'Asociaciones';
 $string['associationunviewable'] = 'Esta entrada no puede ser vista por otros hasta que se asocie un curso con ella o se cambie el campo \'Publicar a\'';
+$string['author'] = 'Autoría';
 $string['autotags'] = 'Añadir estas marcas';
 $string['autotags_help'] = 'Ecriba una o más marcas locales (separadas por comas) que quiera añadir automáticamente a cada entrada de blog copiadas de un blog externo a su blog local.';
 $string['backupblogshelp'] = 'Si se habilita esta opción, los blogs se incluirán en las copias automatizadas del SITIO';

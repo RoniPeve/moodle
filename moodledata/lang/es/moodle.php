@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'moodle', language 'es', version '4.2'.
+ * Strings for component 'moodle', language 'es', version '4.3'.
  *
  * @package     moodle
  * @category    string
@@ -130,7 +130,6 @@ $string['afterresource'] = 'Después del recurso "{$a}"';
 $string['aftersection'] = 'Después de la sección "{$a}"';
 $string['again'] = 'de nuevo';
 $string['agelocationverification'] = 'Verificación de localización y edad';
-$string['aimid'] = 'ID AIM';
 $string['ajaxuse'] = 'AJAX y Javascript';
 $string['all'] = 'Todos';
 $string['allactions'] = 'Todas las acciones';
@@ -230,7 +229,9 @@ $string['blocksuccess'] = 'Las tablas de {$a} han sido instaladas correctamente'
 $string['brief'] = 'Resumen';
 $string['bulkactions'] = 'Acciones masivas';
 $string['bulkactionselect'] = '{$a} selección acción masiva';
+$string['bulkcancel'] = 'Cerrar edición masiva';
 $string['bulkmovecoursessuccess'] = 'Movidos con éxito {$a->courses} cursos a {$a->category}';
+$string['bulkselection'] = '{$a} seleccionado';
 $string['bycourseorder'] = 'Por orden de curso';
 $string['byname'] = 'por {$a}';
 $string['bypassed'] = 'Evitado';
@@ -328,6 +329,9 @@ $string['contentexport_footersummary'] = 'Este archivo es parte del contenido de
 $string['contentexport_modulesummary'] = 'Este archivo descargado forma parte del contenido de <a href="{$a->modulelink}">{$a->modulename}</a> el {$a->date}. Tenga en cuenta que contenido o archivos con tamaño superior a  {$a->maxfilesize} no serán descargados.';
 $string['contentexport_viewfilename'] = 'Visualizar el archivo {$a}';
 $string['context'] = 'Contexto';
+$string['contextlevel'] = 'Nivel de contexto';
+$string['contextname'] = 'Nombre de contexto';
+$string['contextparent'] = 'Padre';
 $string['contexturl'] = 'URL de contexto';
 $string['continue'] = 'Continuar';
 $string['continuetocourse'] = 'Haga clic aquí para entrar a su curso';
@@ -427,7 +431,6 @@ $string['courseoverviewfiles_help'] = 'El archivo de imagen del curso se muestra
 $string['courseoverviewfilesext'] = 'Extensiones de los archivos de resumen del curso';
 $string['courseoverviewfileslimit'] = 'Límite de archivos en el resumen del curso';
 $string['courseoverviewgraph'] = 'Gráfico global del curso';
-$string['coursepreferences'] = 'Preferencias del curso';
 $string['courseprofiles'] = 'Perfiles de curso';
 $string['coursereasonforrejecting'] = 'Razones para rechazar esta solicitud';
 $string['coursereasonforrejectingemail'] = 'Esto se enviará al solicitante';
@@ -822,6 +825,8 @@ $string['enable'] = 'Habilitar';
 $string['encryptedcode'] = 'Código encriptado';
 $string['enddate'] = 'Fecha de finalización del curso';
 $string['enddate_help'] = 'La fecha de finalización del curso no restringe el acceso de estudiantes al curso. Determina si un curso se lista como finalizado en "Mis cursos".';
+$string['enddatewithtaskenabled'] = 'Fecha fin de curso';
+$string['enddatewithtaskenabled_help'] = 'La fecha en que el curso se ocultará a estudiantes, que ya no podrán acceder a él.';
 $string['english'] = 'Inglés';
 $string['enrolmentmethods'] = 'Métodos de matriculación';
 $string['entercourse'] = 'Haga clic aquí para entrar al curso';
@@ -848,6 +853,7 @@ $string['eventcoursecategoryviewed'] = 'Categorías vistas';
 $string['eventcoursecontentdeleted'] = 'Contenido del curso eliminado';
 $string['eventcoursecreated'] = 'Curso creado';
 $string['eventcoursedeleted'] = 'Curso eliminado';
+$string['eventcourseended'] = 'Curso finalizado';
 $string['eventcourseinformationviewed'] = 'Sumarios de cursos vistos';
 $string['eventcoursemodulecreated'] = 'Módulo de curso creado';
 $string['eventcoursemoduledeleted'] = 'Módulo de curso eliminado';
@@ -861,6 +867,7 @@ $string['eventcoursesectioncreated'] = 'Sección del curso creada';
 $string['eventcoursesectiondeleted'] = 'Sección de curso eliminada';
 $string['eventcoursesectionupdated'] = 'Sección de curso actualizado';
 $string['eventcoursessearched'] = 'Cursos buscados';
+$string['eventcoursestarted'] = 'Curso comenzado';
 $string['eventcourseupdated'] = 'Curso actualizado';
 $string['eventcourseuserreportviewed'] = 'Informe usuario del curso visto';
 $string['eventcourseviewed'] = 'Curso visto';
@@ -875,6 +882,7 @@ $string['eventrecentactivityviewed'] = 'Actividad reciente vista';
 $string['eventsearchindexed'] = 'Datos de búsqueda indexados';
 $string['eventsearchresultsviewed'] = 'Resultados de búsqueda vistos';
 $string['eventunknownlogged'] = 'Evento desconocido';
+$string['eventurlblocked'] = 'La URL fue bloqueada';
 $string['eventusercreated'] = 'Usuario creado';
 $string['eventuserdeleted'] = 'Usuario eliminado';
 $string['eventuserfeedbackgiven'] = 'Entrar en el enlace de comentarios';
@@ -998,23 +1006,21 @@ $string['general'] = 'General';
 $string['geolocation'] = 'latitud - longitud';
 $string['gettheselogs'] = 'Conseguir estos registros';
 $string['go'] = 'Ir';
-$string['gpl'] = 'Copyright (C) 1999 en adelante, Martin Dougiamas (http://moodle.com)
+$string['gpl'] = 'Copyright (C) 1999 en adelante, Martin Dougiamas (https://moodle.com)
 
-Este programa es software libre; usted puede redistribuirlo y /o modificarlo bajo los términos de la GNU (General Public License) publicada por The Free Software Foundation; incluso de la versión 2 de la Licencia, o (a su elección) alguna posterior.
+Este programa es software libre; usted puede redistribuirlo y /o modificarlo bajo los términos de la GNU (General Public License) publicada por The Free Software Foundation; tanto la versión 2 de la Licencia, o (a su elección) alguna posterior.
 
 Este programa se distribuye con la esperanza de que resulte útil, pero SIN GARANTÍA ALGUNA; incluso sin la garantía implícita de DISTRIBUCIÓN MERCANTIL o AJUSTE A UN PROPÓSITO PARTICULAR.
 
-Para más detalles, vea la página de información de Licencia de Moodle: http://docs.moodle.org/dev/License';
-$string['gpl3'] = 'Copyright (C) 1999 en adelante, Martin Dougiamas (http://moodle.com)
+Para más detalles, vea la página de información de Licencia de Moodle: https://moodledev.io/general/license';
+$string['gpl3'] = 'Copyright (C) 1999 en adelante, Martin Dougiamas (https://moodle.com)
 
-Este programa es software libre: usted puede redistribuirlo y
-/o modificarlo bajo los términos de la GNU (General Public License) publicada por la Fundación para el Software Libre, ya sea la versión 3 de dicha Licencia, o (a su elección) cualquier versión posterior.
+Este programa es software libre: usted puede redistribuirlo y/o modificarlo bajo los términos de la GNU (General Public License) publicada por la Fundación para el Software Libre, ya sea la versión 3 de dicha Licencia, o (a su elección) cualquier versión posterior.
 
 Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
 
-Vea la página de información de Licencia de Moodle para más detalles: http://docs.moodle.org/en/License';
+Vea la página de información de Licencia de Moodle para más detalles: https://moodledev.io/general/license';
 $string['gpllicense'] = 'Licencia GPL';
-$string['grade'] = 'Calificación';
 $string['gradenoun'] = 'Calificación';
 $string['grades'] = 'Calificaciones';
 $string['gradeverb'] = 'Calificar';
@@ -1066,7 +1072,6 @@ $string['hideadvancedsettings'] = 'Ocultar ajustes avanzados';
 $string['hidechartdata'] = 'Ocultar datos del gráfico';
 $string['hidefromstudents'] = 'Ocultar en la página del curso';
 $string['hideoncoursepage'] = 'Hacerlo disponible pero no mostrarlo en la página del curso';
-$string['hidepicture'] = 'Ocultar imagen';
 $string['hidepopoverwindow'] = 'Ocultar ventana emergente';
 $string['hidesection'] = 'Ocultar sección {$a}';
 $string['hidesettings'] = 'Ocultar ajustes';
@@ -1090,7 +1095,6 @@ $string['htmleditordisabledbrowser'] = 'El editor de HTML no está disponible po
 $string['htmlfilesonly'] = 'Sólo archivos HTML';
 $string['htmlformat'] = 'Formato HTML';
 $string['icon'] = 'Icono';
-$string['icqnumber'] = 'Número de ICQ';
 $string['idnumber'] = 'Número de ID';
 $string['idnumbercourse'] = 'Número ID del curso';
 $string['idnumbercourse_help'] = 'Sólo usado para conectar el curso con sistemas externos. Déjelo en blanco si no tiene un ID oficial de curso.';
@@ -1124,6 +1128,7 @@ $string['includeneededusers'] = 'Incluir usuarios necesarios';
 $string['includenoneusers'] = 'No incluir usuarios';
 $string['includeroleassignments'] = 'Incluir asignaciones de rol';
 $string['includesitefiles'] = 'Incluir archivos del sitio usados en este curso';
+$string['includesubcategories'] = 'Incluir subcategorías';
 $string['includeuserfiles'] = 'Incluir los archivos de los usuarios';
 $string['increasesections'] = 'Aumentar el número de secciones';
 $string['indicator:accessesafterend'] = 'Acceso al curso después de la fecha límite';
@@ -1249,6 +1254,7 @@ $string['mailteachers'] = 'Informar a profesores';
 $string['maincoursepage'] = 'Página principal del curso';
 $string['makeafolder'] = 'Crear un directorio';
 $string['makeavailable'] = 'Hacer disponible';
+$string['makeavailablecmtitle'] = 'Hacer disponible la actividad';
 $string['makeeditable'] = 'Si hace a \'{$a}\' editable por el proceso del servidor web (por ejemplo, apache), entonces podría editar este archivo directamente desde esta página';
 $string['makethismyhome'] = 'Hacer de esta mi página de inicio';
 $string['makeunavailable'] = 'Hacer que no esté disponible';
@@ -1352,6 +1358,7 @@ $string['moddoesnotsupporttype'] = 'El módulo {$a->modname} no soporta subida d
 $string['modhide'] = 'Ocultar';
 $string['modified'] = 'Modificado';
 $string['modshow'] = 'Mostrar';
+$string['modshowcmtitle'] = 'Mostrar actividad';
 $string['moduleintro'] = 'Descripción';
 $string['modulesetup'] = 'Instalando el módulo de tablas';
 $string['modulesuccess'] = 'El módulo de tablas {$a} se instaló correctamente';
@@ -1372,19 +1379,31 @@ $string['moodledocs'] = 'Moodle Docs';
 $string['moodledocslink'] = 'Ayuda y documentación';
 $string['moodlelogo'] = 'Logo de Moodle';
 $string['moodlenet:cannotconnecttoserver'] = 'No se puede conectar a servidor MoodleNet';
+$string['moodlenet:columnname'] = 'Nombre';
+$string['moodlenet:columnsenddate'] = 'Fecha de envío';
+$string['moodlenet:columnsendstatus'] = 'Estado de envío';
+$string['moodlenet:columntype'] = 'Tipo';
 $string['moodlenet:configoauthservice'] = 'Seleccionar un servicio de OAuth 2 MoodleNet para habilitar compertir a ese sitio Moodle. Si el servicio aun no existe, usted necesitará  <a href="{$a}">crear</a>lo.';
+$string['moodlenet:deletedactivity'] = 'Actividad borrada';
+$string['moodlenet:deletedcourse'] = 'Curso borrado';
 $string['moodlenet:eventresourceexported'] = 'Recurso exportado';
 $string['moodlenet:gotomoodlenet'] = 'Ir a borradores MoodleNet';
 $string['moodlenet:issuerisnotauthorized'] = 'Emisor MoodleNet no está autorizado';
 $string['moodlenet:issuerisnotenabled'] = 'Emisor MoodleNet no está habilitado';
 $string['moodlenet:issuerisnotset'] = 'Emisor MoodleNet no está configurado en administración del sitio';
+$string['moodlenet:nosharedresources'] = 'No hay recursos compartidos para mostrar en este momento.';
 $string['moodlenet:outboundsettings'] = 'Configuraciones de salida de MoodleNet';
 $string['moodlenet:packagingandsending'] = 'Empacando su archivo y enviándolo a MoodleNet...';
 $string['moodlenet:sharefailtext'] = 'Hubo un error al compartir su contenido a MoodleNet.<br>Por favor inténtelo de nuevo después.';
 $string['moodlenet:sharefailtextwithsitesupport'] = 'Hubo un error al compartir su contenido a MoodleNet.<br>Por favor inténtelo de nuevo después o <a href="{$a}">póngase en contacto con el soporte del sitio</a>.';
 $string['moodlenet:sharefailtitle'] = 'Algo salió mal';
 $string['moodlenet:sharefilesizelimitexceeded'] = 'El tamaño del recurso que está siendo compartido ({$a->filesize} bytes) excede el límite de {$a->filesizelimit} bytes.';
-$string['moodlenet:sharenotice'] = 'Usted está compartiendo esto a MoodleNet como un {$a}';
+$string['moodlenet:sharenoticeactivity'] = 'Esta actividad se está compartiendo con MoodleNet como un recurso.';
+$string['moodlenet:sharenoticecourse'] = 'Este curso se está compartiendo con MoodleNet como un recurso.';
+$string['moodlenet:sharenoticepartial'] = 'Las actividades seleccionadas se están compartiendo con MoodleNet como un recurso.';
+$string['moodlenet:sharenoticepartialactivitynumber'] = '{$a} actividades se incluirán en el curso.';
+$string['moodlenet:shareprogress'] = 'Progreso de compartición de MoodleNet';
+$string['moodlenet:shareprogressinfo'] = 'La lista muestra cursos y actividades que usted ha compartido en MoodleNet. <br>Clique en el nombre del recurso para verlo en MoodleNet.';
 $string['moodlenet:sharesuccesstext'] = '¡Casi terminamos! Visite sus borradores en MoodleNet para terminar de compartir su contenido.';
 $string['moodlenet:sharesuccesstitle'] = 'Guardado a borradores de MoodleNet';
 $string['moodlenet:sharetomoodlenet'] = 'Compartir a MoodleNet';
@@ -1430,7 +1449,6 @@ $string['moveselectedcategoriesto'] = 'Mover las categorías seleccionadas a';
 $string['moveselectedcoursesto'] = 'Mover los cursos seleccionados a...';
 $string['movetoanotherfolder'] = 'Mover a otro directrorio';
 $string['moveup'] = 'Mover hacia arriba';
-$string['msnid'] = 'ID MSN';
 $string['mustchangepassword'] = 'La nueva contraseña debe ser diferente a la actual';
 $string['mustconfirm'] = 'Necesita confirmar su cuenta';
 $string['mycourses'] = 'Mis cursos';
@@ -1559,6 +1577,7 @@ $string['noreplybouncesubject'] = '{$a} - correo devuelto.';
 $string['noreplyname'] = 'No contestar a este correo';
 $string['noresetrecord'] = 'No hay constancia de esa solicitud. Por favor haga una nueva solicitud de restablecimiento de contraseña.';
 $string['noresults'] = 'No hay resultados';
+$string['noresultsfor'] = 'No hay resultados para "{$a}"';
 $string['normal'] = 'Normal';
 $string['normalfilter'] = 'Búsqueda normal';
 $string['nosite'] = 'No se encontró curso en el nivel de sitio';
@@ -1741,6 +1760,14 @@ $string['privacy:metadata:log:module'] = 'módulo';
 $string['privacy:metadata:log:time'] = 'El momento en el que tuvo lugar la acción';
 $string['privacy:metadata:log:url'] = 'La URL asociada al evento';
 $string['privacy:metadata:log:userid'] = 'El ID del usuario que realizó la acción';
+$string['privacy:metadata:moodlenet_share_progress'] = 'Detalles de progreso de compartición MoodleNet';
+$string['privacy:metadata:moodlenet_share_progress:cmid'] = 'El ID del módulo de curso asociado';
+$string['privacy:metadata:moodlenet_share_progress:courseid'] = 'El ID del curso asociado';
+$string['privacy:metadata:moodlenet_share_progress:resourceurl'] = 'La URL devuelta por MoodleNet tras una compartición satisfactoria';
+$string['privacy:metadata:moodlenet_share_progress:status'] = 'El estado resultante de la compartición';
+$string['privacy:metadata:moodlenet_share_progress:timecreated'] = 'El momento en que se hizo la compartición';
+$string['privacy:metadata:moodlenet_share_progress:type'] = 'El tipo de compartición que se realizó';
+$string['privacy:metadata:moodlenet_share_progress:userid'] = 'El usuario que realizó la compartición';
 $string['privacy:metadata:oauth2_refresh_token'] = 'Actualizar el token utilizado en la comunicación OAuth 2.0';
 $string['privacy:metadata:oauth2_refresh_token:issuerid'] = 'La ID del emisor a quien corresponde el token';
 $string['privacy:metadata:oauth2_refresh_token:scopehash'] = 'La ID del usuario a quien corresponde el token';
@@ -1806,7 +1833,6 @@ Moodle.</p>
 <p>Si lo desea, puede escribir el nombre de su sitio, país y URL para que aparezca en la lista pública de los sitios que usan Moodle.</p>
 <p>Todos los registros son verificados manualmente antes de ser colocados en la lista, pero una vez en ella, puede actualizar su registro (y sus datos en la lista pública) en cualquier momento rellenando de nuevo este formulario.</p>';
 $string['registrationinfotitle'] = 'Información de registro';
-$string['registrationno'] = 'No, no quiero recibir ningún correo electrónico de Moodle HQ';
 $string['registrationsend'] = 'Enviar mi información de registro a moodle.org';
 $string['registrationyes'] = 'Sí, envíeme notificaciones de nuevos lanzamientos de Moodle, alertas de seguridad y otras noticias importantes.';
 $string['reject'] = 'Rechazar';
@@ -1891,8 +1917,8 @@ $string['role'] = 'Rol';
 $string['roleassignments'] = 'Asignaciones de roles';
 $string['rolemappings'] = 'Mapeos de rol';
 $string['rolerenaming'] = 'Renombrar rol';
-$string['rolerenaming_help'] = 'Esta configuración permite cambiar los nombres mostrados en los roles usados en el curso. <P>Sólo se cambia el nombre mostrado - los permisos de los roles no se vean afectados. <P>Los nuevos nombres de los roles aparecerán en la página de participantes en el curso y allá donde se muestren estos.
-<P>Si el rol renombrado corresponde a un rol de gestor del curso, asignado por el administardor, el nuevo nombre del rol también aparecerá como parte de las listas de cursos.';
+$string['rolerenaming_help'] = 'Cambiar los nombres a mostrar de los roles de este curso.';
+$string['rolerenaming_success'] = 'Nombres de roles de curso actualizados';
 $string['roles'] = 'Roles';
 $string['rss'] = 'RSS';
 $string['rssarticles'] = 'Número de artículos recientes RSS';
@@ -1936,8 +1962,11 @@ $string['searchbyemail'] = 'Buscar por dirección email';
 $string['searchbyusername'] = 'Buscar por nombre de usuario';
 $string['searchcoursecategories'] = 'Buscar categorías';
 $string['searchcourses'] = 'Buscar cursos';
+$string['searchgroups'] = 'Buscar grupos';
+$string['searchitems'] = 'Buscar ítems';
 $string['searchoptions'] = 'Opciones de búsqueda';
 $string['searchresults'] = 'Resultados de la búsqueda';
+$string['searchusers'] = 'Buscar usuarios';
 $string['sec'] = 'segundos';
 $string['seconds'] = 'segundos';
 $string['secondsleft'] = '{$a} segundos';
@@ -1987,6 +2016,7 @@ Haga doble clic en el nombre de una actividad o recurso para añadirla de forma 
 $string['selectnos'] = 'Seleccione todos \'no\'';
 $string['selectperiod'] = 'Seleccionar período';
 $string['senddetails'] = 'Enviar detalles por correo electrónico';
+$string['sent'] = 'Enviar';
 $string['separate'] = 'Separar';
 $string['separateandconnected'] = 'Vías de conocimiento separadas y conectadas';
 $string['separateandconnectedinfo'] = 'La escala está basada en la teoría de las vías de conocimiento separadas (aprendizaje individual)  y conectadas (aprendizaje colaborativo). Esta teoría describe dos maneras diferentes con las que podemos evaluar y aprender a partir de lo que vemos y oímos. <li><strong> Conocedores separados (individulaistas) </strong> se mantiene lo la más objetivso posible, sin incluir sentimientos y emociones. En una discusión con otras personas, les gusta defender sus propias ideas, usando la lógica para encontrar fisuras en las ideas del adversario. </li> <li> <strong> Conocedores conectados (colaborativos) </strong> son más sensibles a otras personas. Son expertos en empatía y tienden a escuchar y hacer preguntas hasta que sienten que pueden conectar y "entender las cosas desde otros punto de vista". Aprenden tratando de compartir experiencias lo que les permite encontrar el conocimiento en las demás personas.';
@@ -2027,8 +2057,10 @@ $string['showgrades'] = 'Mostrar libro de calificaciones a los estudiantes';
 $string['showgrades_help'] = 'Permitir a los estudiantes ver una lista de todas sus calificaciones en el curso.';
 $string['showingacourses'] = 'Mostrando todos {$a} cursos';
 $string['showingxofycourses'] = 'Mostrando cursos {$a->start} a {$a->end} de {$a->total} cursos';
+$string['showless'] = 'Mostrar menos';
 $string['showlistofcourses'] = 'Mostrar listas de cursos';
 $string['showmodulecourse'] = 'Mostrar lista de cursos que contienen actividad';
+$string['showmore'] = 'Mostrar más';
 $string['showoncoursepage'] = 'Mostrar en la página del curso';
 $string['showonly'] = 'Mostrar solamente';
 $string['showperpage'] = 'Mostrar {$a} por página';
@@ -2073,7 +2105,6 @@ $string['skipped'] = 'Pasado por alto';
 $string['skiptocategorylisting'] = 'Ir a la lista de categorías';
 $string['skiptocoursedetails'] = 'Ir a la información detallada del curso';
 $string['skiptocourselisting'] = 'Ir a la lista de cursos';
-$string['skypeid'] = 'ID Skype';
 $string['socialheadline'] = 'Foro social, últimos temas';
 $string['someallowguest'] = 'Algunos cursos permiten el acceso de invitados';
 $string['someerrorswerefound'] = 'Falta alguna información o es incorrecta. Abajo aparecen más detalles.';
@@ -2090,6 +2121,10 @@ $string['startdate'] = 'Fecha de inicio del curso';
 $string['startdate_help'] = 'Este ajuste determina el comienzo de la primera semana para un curso en formato semanal. También determina la fecha más temprana para la que existirá registro de las actividades del curso.
 
 Si se reinicia el curso y la fecha de inicio del curso se modifica, todas las fechas en el curso se trasladarán en relación a la nueva fecha de inicio.';
+$string['startdatewithtaskenabled'] = 'Fecha de comienzo del curso';
+$string['startdatewithtaskenabled_help'] = 'La fecha en que el curso se vuelve visible para estudiantes. Antes de esta fecha no podrán acceder a él.
+
+Esta fecha también determina el comienzo de la primera semana de un curso en formato semanal, y es la fecha de comienzo de registro de actividades del curso. Si reinicia el curso y cambia esta fecha, todas las fechas del curso se desplazarán en relación a la nueva fecha de comienzo.';
 $string['startingfrom'] = 'Comienzo en';
 $string['startsignup'] = 'Crear nueva cuenta';
 $string['state'] = 'Estado/Municipio';
@@ -2324,6 +2359,7 @@ Por favor, cuide sus datos personales y considere IMPORTANTE tener la precaució
 $string['userdetails'] = 'Detalles de usuario';
 $string['userfiles'] = 'Archivos del usuario';
 $string['userlist'] = 'Lista de usuarios';
+$string['usermatchedon'] = 'Este usuario coincide con la búsqueda mediante el siguiente campo';
 $string['usermenu'] = 'Menú de usuario';
 $string['usermenugoback'] = 'Ir atrás al menú de usuario';
 $string['username'] = 'Nombre de usuario';
@@ -2339,7 +2375,10 @@ $string['userpreferences'] = 'Preferencias del usuario';
 $string['users'] = 'Usuarios';
 $string['userselectorautoselectunique'] = 'Si sólo un usuario coincide con la búsqueda, seleccionarlo automáticamente';
 $string['userselectorpreserveselected'] = 'Mantener los usuarios seleccionados, incluso si no coinciden más con la búsqueda';
-$string['userselectorsearchanywhere'] = 'Coincidencia del texto de búsqueda en cualquier parte del los campos visibles';
+$string['userselectorsearchanywhere'] = 'Cualquier parte';
+$string['userselectorsearchexactmatchonly'] = 'sólo coincidencias exactas';
+$string['userselectorsearchfromstart'] = 'desde el principio';
+$string['userselectorsearchmatching'] = 'Coincidiendo:';
 $string['usersnew'] = 'Usuarios nuevos';
 $string['usersnoaccesssince'] = 'Mostrar usuarios que han estado inactivos durante más de';
 $string['userswithfiles'] = 'Usuarios con archivos';
@@ -2353,11 +2392,13 @@ $string['version'] = 'Versión';
 $string['view'] = 'Vista';
 $string['viewallcourses'] = 'Ver todos los cursos';
 $string['viewallcoursescategories'] = 'Ver todos los cursos y categorías';
+$string['viewallresults'] = 'Ver todos los resultados ({$a})';
 $string['viewallsubcategories'] = 'Ver todas las subcategorías';
 $string['viewfileinpopup'] = 'Ver archivo en ventana desplegable';
 $string['viewing'] = 'Viendo:';
 $string['viewmore'] = 'Ver más';
 $string['viewprofile'] = 'Ver perfil';
+$string['viewresults'] = 'Ver resultados de {$a}';
 $string['views'] = 'Vistas';
 $string['viewsolution'] = 'ver solución';
 $string['visible'] = 'Visible';
@@ -2418,7 +2459,6 @@ $string['writingmoduleinfo'] = 'Escribiendo información del módulo';
 $string['writingscalesinfo'] = 'Escribiendo información de escalas';
 $string['writinguserinfo'] = 'Escribiendo información del usuario';
 $string['wrongpassword'] = 'Contraseña incorrecta para este nombre de usuario';
-$string['yahooid'] = 'ID Yahoo';
 $string['year'] = 'año';
 $string['years'] = 'años';
 $string['yes'] = 'Sí';

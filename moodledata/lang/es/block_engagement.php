@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_engagement', language 'es', version '4.2'.
+ * Strings for component 'block_engagement', language 'es', version '4.3'.
  *
  * @package     block_engagement
  * @category    string
@@ -25,4 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['engagement:addinstance'] = 'Añadir un bloque de compromiso (\'\'engagement\'\')';
+$string['pluginname'] = 'Análisis de compromisos';
+$string['subheading'] = 'Nombre y nivel de riesgo';
 $string['viewcoursereport'] = 'Ver informe de curso';

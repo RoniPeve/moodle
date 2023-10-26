@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'autoattendmod', language 'es', version '4.2'.
+ * Strings for component 'autoattendmod', language 'es', version '4.3'.
  *
  * @package     autoattendmod
  * @category    string
@@ -54,9 +54,7 @@ $string['misconfigured'] = 'El curso no está configurado correctamente';
 $string['modidincorrect'] = 'El ID del Módulo del Curso es incorrecto';
 $string['modincorrect'] = 'El módulo curso es incorrecto<br />Es posible que el bloque de Control de asistencia no esté instalado';
 $string['modulename'] = 'Control de Asistencia';
-$string['modulename_help'] = 'Solo es posible añadir un módulo Control de asistencia por curso. Si posteriormente elimina el módulo las asistencias guardadas no se verán afectadas! <br />
-Este módulo se puede usar solamente junto con el bloque de Control de asistencia. Por favor añada un bloque de Control de Asistencia antes de añadir este módulo.<br />
-El módulo es necesario para el ser configurado con distintos modos para realizar el control de asistencia y las calificaciones serán incluidas en las generales del curso.';
+$string['modulename_help'] = 'Usted puede añadir un módulo de AutoAsistencia por curso, Si Usted remueve este módulo, no se afecta la asistencia <br /> Usted puede usar este módulo solamente en conjunto con el bloque de AutoAsistencia. Por favor, añada el bloque de AutoAsistencia antes de añadir este módulo.<br /> Este modulo trata de Asistencia semi-automática e incluye calificaciones por asistencia en las calificaciones del curso principal.';
 $string['modulenameplural'] = 'Control de asistencia';
 $string['modulenamesimple'] = 'Control de asistencia';
 $string['name'] = 'Nombre';

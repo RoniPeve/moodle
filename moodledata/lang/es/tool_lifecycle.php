@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_lifecycle', language 'es', version '4.2'.
+ * Strings for component 'tool_lifecycle', language 'es', version '4.3'.
  *
  * @package     tool_lifecycle
  * @category    string
@@ -158,15 +158,12 @@ $string['workflow'] = 'Ver pasos de flujo de trabajo';
 $string['workflow_active'] = 'Activo';
 $string['workflow_definition_heading'] = 'Definiciones de flujo de trabajo';
 $string['workflow_delayforallworkflows'] = '¿Retraso para todos los flujos de trabajo?';
-$string['workflow_delayforallworkflows_help'] = 'Si está marcada, las duraciones en la parte superior no solo retrasan la ejecución
-de este flujo de trabajo para un curso, sino también para todos los demás flujos de trabajo. Así, hasta que transcurra el tiempo no se podrá iniciar ningún proceso.
-para el curso respectivo.';
+$string['workflow_delayforallworkflows_help'] = 'Si se activa, la duración no solamente retrasa la ejecución de este flujograma para un curso, sino que lo hace para todos los demás flujogramas también. Así, hasta que pase el tiempo no puede iniciarse ningún proceso para el curso respectivo.';
 $string['workflow_displaytitle'] = 'Título del flujo de trabajo mostrado';
 $string['workflow_displaytitle_help'] = 'Este título se muestra a los usuarios cuando administran sus cursos.';
 $string['workflow_duplicate_title'] = '{$a} (Copy)';
 $string['workflow_finishdelay'] = 'Retraso en caso de curso terminado';
-$string['workflow_finishdelay_help'] = 'Si un curso ha terminado una instancia de proceso de este flujo de trabajo,
-este valor describe el tiempo hasta que se puede iniciar de nuevo un proceso para esta combinación de curso y flujo de trabajo.';
+$string['workflow_finishdelay_help'] = 'Si un curso ha terminado una instancia del proceso de este flujograma, este valor describe el tiempo hasta que un proceso para esta combinación de curso y flujograma pueda ser iniciada de nuevo.';
 $string['workflow_is_running'] = 'El flujo de trabajo se está ejecutando.';
 $string['workflow_not_removeable'] = 'No es posible eliminar esta instancia de flujo de trabajo. ¿Tal vez todavía tiene procesos en ejecución?';
 $string['workflow_processes'] = 'Procesos activos';

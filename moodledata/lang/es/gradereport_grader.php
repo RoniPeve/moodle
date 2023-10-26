@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'gradereport_grader', language 'es', version '4.2'.
+ * Strings for component 'gradereport_grader', language 'es', version '4.3'.
  *
  * @package     gradereport_grader
  * @category    string
@@ -31,8 +31,10 @@ $string['ajaxclicktoclose'] = 'Haga clic en esta casilla para eliminarla';
 $string['ajaxerror'] = 'Error';
 $string['ajaxfailedupdate'] = 'Imposible actualizar [1] para [2]';
 $string['ajaxfieldchanged'] = 'El campo que está editando actualmente ha cambiado. ¿Desea utilizar el valor actualizado?';
+$string['aria:dropdowncolumns'] = 'Se han encontrado columnas colapsadas';
 $string['cellactions'] = 'Acciones de la celda';
-$string['clearsearch'] = 'Limpiar usuarios seleccionados';
+$string['clearall'] = 'Limpiar todo';
+$string['clearsearch'] = 'Limpiar usuarios buscados';
 $string['collapsedcolumns'] = 'Columnas colapsadas <span class="badge badge-pill badge-primary ml-1" data-collapse="count">{$a}</span>';
 $string['eventgradereportviewed'] = 'Informe del calificador visto';
 $string['grader:manage'] = 'Gestionar informe del calificador';
@@ -62,9 +64,7 @@ $string['privacy:metadata:preference:grade_report_showranges'] = 'Si se muestra 
 $string['privacy:metadata:preference:grade_report_showuserimage'] = 'Si se muestra la imagen del perfil del usuario junto a su nombre';
 $string['privacy:metadata:preference:grade_report_studentsperpage'] = 'El número de estudiantes mostrados por página en el informe del calificador';
 $string['privacy:request:preference:grade_report_grader_collapsed_categories'] = 'Tiene algunas categorías del Libro de calificaciones colapsadas en el curso "{$a->name}"';
-$string['reopencolumn'] = 'Reabrir columna {$a}';
+$string['reopencolumn'] = 'Expandir columna {$a}';
 $string['summarygrader'] = 'Una tabla con los nombres de los estudiantes en la primera columna, con actividades a calificar agrupadas por curso y categoría en la parte superior.';
 $string['useractivityfeedback'] = '{$a} retroalimentación';
 $string['useractivitygrade'] = '{$a} calificado';
-$string['viewallresults'] = 'Ver todos los resultados ({$a})';
-$string['viewresultsuser'] = 'Ver todos resultados para ({$a})';

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'scorm', language 'es', version '4.2'.
+ * Strings for component 'scorm', language 'es', version '4.3'.
  *
  * @package     scorm
  * @category    string
@@ -79,6 +79,7 @@ $string['browse'] = 'Vista previa';
 $string['browsed'] = 'Navegado';
 $string['browsemode'] = 'Modo de presentación preliminar';
 $string['browserepository'] = 'Navegar por el repositorio';
+$string['cachedef_elements'] = 'Caché del elemento';
 $string['calculatedweight'] = 'Peso calculado';
 $string['calendarend'] = '{$a} cierre';
 $string['calendarstart'] = '{$a} abre';
@@ -100,7 +101,7 @@ $string['completionscorerequired_help'] = 'Al habilitar este parámetro se reque
 $string['completionscorerequireddesc'] = 'Se requiere un puntaje mínimo de {$a} para completarse.';
 $string['completionstatus_completed'] = 'Finalizado';
 $string['completionstatus_passed'] = 'Pasado';
-$string['completionstatusallscos'] = 'Requiere que todos los scos devuelvan el estado de finalización';
+$string['completionstatusallscos'] = 'Todos los SCOs deben devolver estado de completado';
 $string['completionstatusallscos_help'] = 'Algunos paquetes SCORM contienen múltiples componentes o "scos": cuando está habilitado, todos los "scos" dentro del paquete deben devolver el "estado de la lección" correspondiente para que esta actividad se marque como completada.';
 $string['completionstatusrequired'] = 'Se requiere estado';
 $string['completionstatusrequired_help'] = 'Al comprobar uno o más estados se requerirá que el alumno cumpla al menos con uno de esos estados para que se marque como finalizada esta  actividad SCORM, así como cualquier otro requerimiento de Finalización de Actividad';
@@ -234,6 +235,7 @@ $string['invalidmanifestresource'] = 'ADVERTENCIA: Los siguientes recursos son m
 $string['invalidstatus'] = 'Estado inválido';
 $string['invalidurl'] = 'Se ha especificado una URL no válida';
 $string['invalidurlhttpcheck'] = 'Se ha especificado una URL no válida. Mensaje de debug:<pre>{$a->cmsg}</pre>';
+$string['largetrackupgrade'] = 'Este próximo paso de la actualización puede llevar algún tiempo para completarse. Su sitio tiene registros de seguimiento {$a} SCORM que necesitan migrarse a la nueva estructura de tabla. Por favor, sea paciente, ya que no se puede mostrar una barra de progreso.';
 $string['last'] = 'Último acceso en';
 $string['lastaccess'] = 'Último acceso';
 $string['lastattempt'] = 'Último intento finalizado';
@@ -360,7 +362,7 @@ $string['privacy:metadata:attempt'] = 'El número de intento';
 $string['privacy:metadata:scoes_track:element'] = 'El nombre del elemento a rastrear';
 $string['privacy:metadata:scoes_track:value'] = 'El valor del elemento dado';
 $string['privacy:metadata:scorm_aicc_session'] = 'La información de sesión del protocolo AICC HACP';
-$string['privacy:metadata:scorm_scoes_track'] = 'Los datos rastreados de las SCOes pertenecientes a la actividad.';
+$string['privacy:metadata:scorm_attempt'] = 'Los intentos SCORM realizados por un usuario';
 $string['privacy:metadata:timemodified'] = 'La hora en que el elemento rastreado se modificó por última vez';
 $string['privacy:metadata:userid'] = 'El ID del usuario que accedió a la actividad SCORM.';
 $string['protectpackagedownloads'] = 'Descarga de paquete protegido';

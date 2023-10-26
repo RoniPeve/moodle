@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_migratehvp2h5p', language 'es', version '4.2'.
+ * Strings for component 'tool_migratehvp2h5p', language 'es', version '4.3'.
  *
  * @package     tool_migratehvp2h5p
  * @category    string

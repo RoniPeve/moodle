@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'forum', language 'es', version '4.2'.
+ * Strings for component 'forum', language 'es', version '4.3'.
  *
  * @package     forum
  * @category    string
@@ -114,15 +114,16 @@ $string['closegrader'] = 'Cerrar calificador';
 $string['completiondetail:discussions'] = 'Iniciar temas: {$a}';
 $string['completiondetail:posts'] = 'Hacer publicaciones en el foro: {$a}';
 $string['completiondetail:replies'] = 'Publicar respuestas: {$a}';
-$string['completiondiscussions'] = 'El usuario debe crear debates:';
+$string['completiondiscussions'] = 'Crear debates';
 $string['completiondiscussionsdesc'] = 'El estudiante debe crear al menos {$a} discusión(es)';
 $string['completiondiscussionsgroup'] = 'Requiere debates';
 $string['completiondiscussionshelp'] = 'se requieren debates para completar';
-$string['completionposts'] = 'El usuario debe aportar debates o réplicas:';
+$string['completionposts'] = 'Crear debates o réplicas';
 $string['completionpostsdesc'] = 'El estudiante debe publicar al menos {$a} discusión(es) o respuesta(s)';
 $string['completionpostsgroup'] = 'Requerir mensajes';
 $string['completionpostshelp'] = 'se requieren debates o réplicas para completar';
-$string['completionreplies'] = 'El usuario debe enviar réplicas:';
+$string['completionpostsinforums'] = 'Publicar en foros';
+$string['completionreplies'] = 'Enviar réplicas';
 $string['completionrepliesdesc'] = 'El estudiante debe publicar al menos {$a} respuesta(s)';
 $string['completionrepliesgroup'] = 'Requerir réplicas';
 $string['completionreplieshelp'] = 'se requieren réplicas para completar';
@@ -258,6 +259,7 @@ $string['eventassessableuploaded'] = 'Algún contenido ha sido publicado.';
 $string['eventcoursesearched'] = 'Curso buscado';
 $string['eventdiscussioncreated'] = 'Tema creado';
 $string['eventdiscussiondeleted'] = 'Tema borrado';
+$string['eventdiscussionlockupdated'] = 'Bloqueo de discusión actualizado';
 $string['eventdiscussionmoved'] = 'Tema movido';
 $string['eventdiscussionpinned'] = 'Debate fijado';
 $string['eventdiscussionsubscriptioncreated'] = 'Se ha suscrito a esta discusión';
@@ -265,6 +267,7 @@ $string['eventdiscussionsubscriptiondeleted'] = 'Se ha borrado la suscripción d
 $string['eventdiscussionunpinned'] = 'Debate no fijado';
 $string['eventdiscussionupdated'] = 'Discusión actualizada';
 $string['eventdiscussionviewed'] = 'Tema visto';
+$string['eventforumsubscriptionupdated'] = 'Modo de suscripción actualizado';
 $string['eventpostcreated'] = 'Mensaje creado';
 $string['eventpostdeleted'] = 'Mensaje borrado';
 $string['eventpostupdated'] = 'Mensaje actualizado';
@@ -299,6 +302,7 @@ $string['forum:addinstance'] = 'Añadir un nuevo foro';
 $string['forum:addnews'] = 'Añadir noticias';
 $string['forum:addquestion'] = 'Añadir pregunta';
 $string['forum:allowforcesubscribe'] = 'Permitir la suscripción forzosa.';
+$string['forum:canmailnow'] = 'Puede escribir en foro de preguntas y respuestas sin demora';
 $string['forum:canoverridecutoff'] = 'Publicar en foros después de su fecha límite';
 $string['forum:canoverridediscussionlock'] = 'Contestar a discusiones bloqueadas';
 $string['forum:canposttomygroups'] = 'Puede publicar en todos los grupos a los que tiene acceso';

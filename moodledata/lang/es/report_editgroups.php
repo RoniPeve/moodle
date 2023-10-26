@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'report_editgroups', language 'es', version '4.2'.
+ * Strings for component 'report_editgroups', language 'es', version '4.3'.
  *
  * @package     report_editgroups
  * @category    string
@@ -25,5 +25,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['activityfilter'] = 'Filtro de vista de actividad <small>(el cambiar este filtro no guardará los datos restantes del formato)</small>';
 $string['activitytypefilter'] = 'Tipo de actividad';
+$string['activitytypefilter_help'] = 'Use el filtro para seleccionar actividades para ver y modificar. Al aplicar el filtro se cambiará la vista del formato, pero no se guardara ningún cambio existente.';
 $string['applyactivitytypefilter'] = 'Aplicar filtro de tipo de actividad';
+$string['editgroups'] = 'Grupos';
+$string['editgroups:view'] = 'Ver reporte de editor de grupos de cursos';
+$string['event:reportviewed'] = 'Reporte de edición de grupos visto';
+$string['page-report-editdates-index'] = 'Configuraciones de editor de grupos de curso';
+$string['pluginname'] = 'Grupos';
+$string['privacy:metadata'] = 'El plugin  Grupos no almacena ningún dato personal.';

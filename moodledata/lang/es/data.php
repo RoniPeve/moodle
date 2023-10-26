@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'data', language 'es', version '4.2'.
+ * Strings for component 'data', language 'es', version '4.3'.
  *
  * @package     data
  * @category    string
@@ -83,7 +83,7 @@ $string['commentsn'] = '{$a} comentario(s)';
 $string['commentsoff'] = 'La opción comentarios no está habilitada';
 $string['completiondetail:entries'] = 'Realizar entradas: {$a}';
 $string['completionentries'] = 'Entradas requeridas';
-$string['completionentriescount'] = 'Número de entradas';
+$string['completionentriescount'] = 'Añadir entradas';
 $string['completionentriesdesc'] = 'Número mínimo de entradas requeridas: {$a}';
 $string['configenablerssfeeds'] = 'Esta opción habilita la posibilidad de canales RSS para todas las bases de datos. Aún así necesitará activar manualmente los canales en los ajustes de cada base de datos.';
 $string['confirmdeletefield'] = 'Está a punto de eliminar este campo. ¿Está seguro?';
@@ -94,7 +94,7 @@ $string['createfields'] = 'Crear campos para recoger diferentes tipos de datos.'
 $string['createtemplates'] = 'Las plantillas definen la interfaz de su actividadd. Una vez creados los campos, las plantillas se crearán automáticamente. Alternativamente, puede usar un ajuste predefinido, que incluye campos y plantillas.';
 $string['csstemplate'] = 'CSS personalizado';
 $string['csvfailed'] = 'No se pueden leer los datos del archivo CSV';
-$string['csvfile'] = 'Archivo CSV';
+$string['csvfile'] = 'Archivo CSV o ZIP que contiene un archivo CSV';
 $string['csvimport'] = 'Importar archivo CSV';
 $string['csvimport_help'] = '<p align="center"><strong>Importar de un archivo CSV</strong></p>
 
@@ -173,6 +173,7 @@ $string['entrieslefttoadd'] = 'Debe añadir {$a->entriesleft} entrada(s) más pa
 $string['entrieslefttoaddtoview'] = 'Debe añadir {$a->entrieslefttoview} entrada(s) antes de poder ver las entradas de otros participantes.';
 $string['entry'] = 'Entrada';
 $string['entrysaved'] = 'Su entrada se ha guardado';
+$string['errordatafilenotfound'] = 'El archivo no pudo importarse. Los tipos de archivo aceptados son CSV o un ZIP que contenga un archivo CSV con el formato usado para exportar entradas.';
 $string['errormustbeteacher'] = 'Necesita ser un profesor para usar esta página';
 $string['errormustsupplyvalue'] = 'Debe proporcionar un valor aquí.';
 $string['errorpresetexists'] = 'Ya existe un elemento con el nombre seleccionado';
@@ -257,6 +258,7 @@ $string['importpreset_desc'] = 'El ajuste predefinido se aplicará para esta act
 $string['importpresetmissingcapability'] = 'Usted no tiene permiso para importar un ajuste predefinido.';
 $string['importsuccess'] = 'Ajuste predefinido aplicado.';
 $string['includeapproval'] = 'Incluya el estado de aprobación';
+$string['includefiles'] = 'Incluir archivos en exportación';
 $string['includetags'] = 'Incluir marcas';
 $string['includetime'] = 'Incluya fecha añadido / modificado';
 $string['includeuserdetails'] = 'Incluya detalles del usuario';
@@ -482,18 +484,14 @@ $string['todatabase'] = 'a esta base de datos.';
 $string['type'] = 'Tipo de campo';
 $string['undefinedprocessactionmethod'] = 'No se ha definido método de acción en Data_Preset para manejar la acción "{$a}".';
 $string['unknown'] = 'Campo desconocido';
-$string['unsupportedexport'] = '({$a->fieldtype}) no se puede exportar.';
 $string['unsupportedfields'] = 'Campos no soportados';
 $string['unsupportedfieldslist'] = 'Los siguientes campos no se pueden exportar:';
 $string['updatefield'] = 'Actualizar un campo existente';
 $string['uploadfile'] = 'Subir archivo';
-$string['uploadrecords'] = 'Subir entradas de un archivo';
-$string['uploadrecords_help'] = 'Las entradas pueden ser cargadas a través de un archivo de texto. El formato del archivo debe ser el siguiente:
-* Cada línea del archivo contiene un registro
-* Cada registro contiene una serie de datos separados por el delimitador seleccionado
-* El primer registro contiene una lista de nombres de campos que definen el formato del resto del fichero
+$string['uploadrecords'] = 'Importar entradas';
+$string['uploadrecords_help'] = 'Importe entradas que haya exportado desde otra base de datos, o bien mediante CSV o ZIP que contenga un archivo CSV (si hay archivos incluidos en la exportación).
 
-El campo enmarcado es un carácter que separa cada campo dentro de cada registro. Normalmente se puede dejar sin definir.';
+Alternativamente, para crear un archivo CSV para importar, añada una entrada a la base de datos expórtela. Edite el archivo CSV y añada más entrada.';
 $string['uploadrecords_link'] = 'mod/data/import';
 $string['url'] = 'URL';
 $string['usedate'] = 'Incluir en la búsqueda';

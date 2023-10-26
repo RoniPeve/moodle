@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'qbank_bulkmove', language 'es', version '4.2'.
+ * Strings for component 'qbank_bulkmove', language 'es', version '4.3'.
  *
  * @package     qbank_bulkmove
  * @category    string

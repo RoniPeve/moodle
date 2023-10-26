@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'courseformat', language 'es', version '4.2'.
+ * Strings for component 'courseformat', language 'es', version '4.3'.
  *
  * @package     courseformat
  * @category    string
@@ -31,8 +31,8 @@ $string['availability_show'] = 'Mostrar en página de curso';
 $string['availability_show_help'] = 'Disponible para estudiantes (sujeto a cualquier restricción de acceso que pudiera estar configurada).';
 $string['availability_stealth'] = 'Hacer disponible pero no mostrado en página del curso';
 $string['availability_stealth_help'] = 'Disponible para estudiantes si usted proporciona un enlace. Las actividades seguirán apareciendo en el Libro de calificaciones y otros reportes.';
-$string['bulkcancel'] = 'Cerrar edición masiva';
-$string['bulkedit'] = 'Edición masiva';
+$string['bulkcancel'] = 'Cerrar acciones masivas';
+$string['bulkedit'] = 'Acciones masivas';
 $string['bulkeditingcourse'] = 'Editar curso masivamente: {$a}';
 $string['bulkselection'] = '{$a} seleccionados';
 $string['bulkselection_plural'] = '{$a} seleccionado';
@@ -49,6 +49,7 @@ $string['cmsmove'] = 'Mover actividades';
 $string['cmsmove_info'] = 'Mover {$a} actividades después de';
 $string['cmsmove_title'] = 'Mover actividades seleccionadas';
 $string['courseindex'] = 'Índice del curso';
+$string['courseindexoptions'] = 'Opciones de índice de cursos';
 $string['nobulkaction'] = 'No hay acciones masivas disponibles';
 $string['preference:coursesectionspreferences'] = 'Preferencias de usuario de la sección para el curso {$a}';
 $string['privacy:metadata:preference:coursesectionspreferences'] = 'Preferencias de usuario de sección como contraída y expandida.';

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'gradereport_user', language 'es', version '4.2'.
+ * Strings for component 'gradereport_user', language 'es', version '4.3'.
  *
  * @package     gradereport_user
  * @category    string
@@ -35,4 +35,4 @@ $string['tablesummary'] = 'La tabla está ordenada como una lista de elementos q
 $string['user:view'] = 'Ver informe de usuario';
 $string['userreport_user'] = 'Reporte del usuario';
 $string['userreportdesc'] = 'Los informes incluyen las calificaciones, la retroalimentación y el total del curso del usuario.';
-$string['userreports'] = 'Seleccione un usuario arriba para ver su informe';
+$string['userreports'] = 'Busque un usuario para ver su informe';

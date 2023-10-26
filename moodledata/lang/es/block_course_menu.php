@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_course_menu', language 'es', version '4.2'.
+ * Strings for component 'block_course_menu', language 'es', version '4.3'.
  *
  * @package     block_course_menu
  * @category    string
@@ -41,6 +41,7 @@ $string['correcturlmsg'] = '*La URL debe escribirse como una URL absoluta, que t
 $string['courseadministration'] = 'Administración del curso';
 $string['coursemainpage'] = 'Página principal del curso';
 $string['customlink'] = 'Enlace Personalizado';
+$string['defaultelements'] = 'Elementos por defecto';
 $string['defaultgrouping'] = 'Agrupamiento por defecto';
 $string['defaultheight'] = 'Altura de la ventana por defecto (en pixeles)';
 $string['defaultwidth'] = 'Ancho de la ventana por defecto (en pixeles)';
@@ -82,13 +83,16 @@ $string['participants'] = 'Participantes';
 $string['pluginname'] = 'Menú del curso';
 $string['reports'] = 'Informes';
 $string['samewindow'] = 'Misma ventana';
+$string['sections'] = 'Secciones';
 $string['show'] = 'Mostrar';
+$string['showallsections'] = 'Mostrar Todas las Secciones';
 $string['showdirectorylinks'] = 'Mostrar los enlaces del directorio';
 $string['showlocationbar'] = 'Mostrar la barra de localización';
 $string['showmenubar'] = 'Mostrar barra de menú';
 $string['showstatusbar'] = 'Mostrar barra de estado';
 $string['showtoolbar'] = 'Mostrar barra de herramientas';
 $string['sitepages'] = 'Páginas del sitio';
+$string['structure'] = 'Estructura';
 $string['subchapter'] = 'Subcapítulo';
 $string['subchaptering'] = 'Activar Agrupamiento de Subcapítulo';
 $string['subchapters'] = 'Subcapítulos';

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_blurnames', language 'es', version '4.2'.
+ * Strings for component 'block_blurnames', language 'es', version '4.3'.
  *
  * @package     block_blurnames
  * @category    string
@@ -25,4 +25,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['blurnames'] = 'Hacer borrosos los nombres';
 $string['blurnames:addinstance'] = 'Ofuscar nombres de alumnos en informes de usuario y de calificaciones y en módulos de foro y elección';
+$string['pluginname'] = 'Hacer borrosos los nombres';

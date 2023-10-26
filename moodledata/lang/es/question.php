@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'question', language 'es', version '4.2'.
+ * Strings for component 'question', language 'es', version '4.3'.
  *
  * @package     question
  * @category    string
@@ -166,6 +166,8 @@ $string['errorprocessingresponses'] = 'Ha ocurrido un error al procesar sus resp
 $string['errorsavingcomment'] = 'Error al guardar el comentario para la pregunta {$a->name} en la base de datos.';
 $string['errorsavingflags'] = 'Error al guardar el estado.';
 $string['errorupdatingattempt'] = 'Error al actualizar el intento {$a->id} en la base de datos.';
+$string['eventqbankdisabled'] = 'Plugin de banco de preguntas deshabilitado';
+$string['eventqbankenabled'] = 'Plugin de banco de preguntas habilitado';
 $string['eventquestioncategorycreated'] = 'Categoría de preguntas creada';
 $string['eventquestioncategorydeleted'] = 'Categoría de preguntas borrada';
 $string['eventquestioncategorymoved'] = 'Categoría de preguntas movida';
@@ -335,6 +337,7 @@ $string['movingquestionsandfiles'] = '¿Está seguro de que quiere mover la(s) p
 $string['movingquestionsnofiles'] = '¿Está seguro de que quiere mover la(s) pregunta(s) {$a->questions} al contexto de <strong>"{$a->tocontext}"</strong>?<br /> No hay <strong>ningún archivo</strong> enlazado desde esta(s) pregunta(s) en {$a->fromareaname}.';
 $string['needtochoosecat'] = 'Necesita elegir una categoría para mover esta pregunta o presionar \'cancelar\'.';
 $string['nocate'] = 'No existe esa categoría {$a}';
+$string['noconditionspecified'] = 'Por favor especifique una condición';
 $string['nopermissionadd'] = 'No tiene permiso para agregar preguntas aquí.';
 $string['nopermissionedit'] = 'No tiene permisos para editar preguntas desde aquí.';
 $string['nopermissionmove'] = 'Usted no tiene permiso para trasladar preguntas desde este lugar. Debe guardar la pregunta en esta categoría o guardarla como pregunta nueva.';
@@ -454,7 +457,7 @@ $string['questionx'] = 'Pregunta {$a}';
 $string['requiresgrading'] = 'Requiere calificación';
 $string['responsehistory'] = 'Historial de respuestas';
 $string['restart'] = 'Comenzar de nuevo';
-$string['restartwiththeseoptions'] = 'Comenzar de nuevo con estas opciones';
+$string['restartwiththeseoptions'] = 'Guardar opciones de vista previa y empezar de nuevo';
 $string['restoremultipletopcats'] = 'El archivo de respaldo contiene más de una categoría de pregunta de nivel superior para el contexto {$a}.';
 $string['reviewresponse'] = 'Revisar respuesta';
 $string['rightanswer'] = 'Respuesta correcta';
@@ -469,7 +472,9 @@ $string['selectcategoryabove'] = 'Seleccione una categoría';
 $string['selectquestionsforbulk'] = 'Seleccionar preguntas de acciones en masa';
 $string['settingsformultipletries'] = 'Múltiples intentos';
 $string['shareincontext'] = 'Compartir en contexto para {$a}';
-$string['showhidden'] = 'Mostrar también preguntas antiguas';
+$string['shortversioninfo'] = 'v{$a->version} (de {$a->latestversion})';
+$string['shortversioninfolatest'] = 'v{$a->version} (última)';
+$string['showhidden'] = 'Mostrar preguntas ocultas';
 $string['showmarkandmax'] = 'Mostrar puntuacion y máximo';
 $string['showmaxmarkonly'] = 'Mostrar solo puntuación máxima';
 $string['shown'] = 'Mostrada/o';
@@ -521,6 +526,8 @@ $string['upgradeproblemcategoryloop'] = 'Se ha detectado un problema al actualiz
 $string['upgradeproblemcouldnotupdatecategory'] = 'No se ha podido actualizar la categoría de pregunta {$a->name} ({$a->id}).';
 $string['upgradeproblemunknowncategory'] = 'Se ha detectado un problema al actualizar las categorías de preguntas. La catogoría {$a->id} se refiere al padre {$a->parent}, que no existe. Se ha cambiado el padre para solucionar el problema.';
 $string['version_selection'] = 'Versión {$a->version}';
+$string['versioninfo'] = 'Versión {$a->version} (de {$a->latestversion})';
+$string['versioninfolatest'] = 'Versión {$a->version} (última)';
 $string['whethercorrect'] = 'Si fue correcta';
 $string['whethercorrect_help'] = 'Esto cubre tanto la descripción textual \'Correcta\' , \'Parcialmente correcta\' o \'Incorrecta\', y cualquier resaltado coloreado que transmita la misma información.';
 $string['whichtries'] = 'Que intentos';

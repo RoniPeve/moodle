@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_editrolesbycap', language 'es', version '4.2'.
+ * Strings for component 'tool_editrolesbycap', language 'es', version '4.3'.
  *
  * @package     tool_editrolesbycap
  * @category    string
@@ -25,10 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['capabilityandname'] = '{$a->name}
-({$a->capabilityname})';
-$string['capabilitynamewithrisks'] = '{$a->name}
-({$a->capabilityname}) {$a->risks}';
+$string['capabilityandname'] = '{$a->name} ({$a->capabilityname})';
+$string['capabilitynamewithrisks'] = '{$a->name} ({$a->capabilityname}) {$a->risks}';
 $string['checkandeditroles'] = 'Comprobar y editar definiciones de rol';
 $string['editrolesfor'] = 'Editar definiciones de roles para la capacidad {$a}';
 $string['nonematch'] = 'Ninguna capacidad coincide con el filtro';

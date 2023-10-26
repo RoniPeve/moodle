@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'filter_jmol', language 'es', version '4.2'.
+ * Strings for component 'filter_jmol', language 'es', version '4.3'.
  *
  * @package     filter_jmol
  * @category    string

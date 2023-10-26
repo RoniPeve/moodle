@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'report_coursestats', language 'es', version '4.2'.
+ * Strings for component 'report_coursestats', language 'es', version '4.3'.
  *
  * @package     report_coursestats
  * @category    string
@@ -32,6 +32,7 @@ $string['lb_category'] = 'Categoría';
 $string['lb_chart_series_types_of_use'] = 'Estadísticas de uso de los cursos';
 $string['lb_chart_series_used_courses'] = 'Estadísticas generales de los cursos';
 $string['lb_choose_category'] = 'Elija una categoría';
+$string['lb_course_fullname'] = 'Nombre completo';
 $string['lb_course_name'] = 'Nombre del Curso';
 $string['lb_courses_amount'] = 'Cantidad de cursos';
 $string['lb_courses_created_amount'] = '<b>Cantidad de cursos creados</b>';

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'attendance', language 'es', version '4.2'.
+ * Strings for component 'attendance', language 'es', version '4.3'.
  *
  * @package     attendance
  * @category    string
@@ -109,8 +109,7 @@ $string['backtoparticipants'] = 'Volver a la lista de participantes';
 $string['below'] = 'Inferior {$a}%';
 $string['calclose'] = 'Cerrar';
 $string['calendarevent'] = 'Crear un evento de calendario por sesión';
-$string['calendarevent_help'] = 'Si está habilitado, se creará un evento de calendario para esta sesión.
-Si está deshabilitado, se eliminará cualquier evento de calendario existente para esta sesión.';
+$string['calendarevent_help'] = 'Si se habilita, será creado un evento del calendario para esta sesión. Si se deshabilita, cualquier evento de calendario existente para esta sesión será eliminado.';
 $string['caleventcreated'] = 'Evento del calendario para la sesión creado con éxito';
 $string['caleventdeleted'] = 'Evento del calendario para la sesión eliminado con éxito';
 $string['calmonths'] = 'Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre';
@@ -421,11 +420,11 @@ $string['preventsharediptime_help'] = 'Permitir que una dirección IP se reutili
 $string['preview'] = 'Vista previa del archivo';
 $string['previewhtml'] = 'Vista previa del formato HTML';
 $string['priorto'] = 'La fecha de la sesión es anterior a la fecha de inicio del curso ({$ a}) para que las nuevas sesiones programadas antes de esta fecha se oculten (no accesibles). Puede cambiar la fecha de inicio del curso en cualquier momento (consulte la configuración del curso) para tener acceso a las sesiones anteriores. <br> <br> Por favor cambie la fecha de la sesión o simplemente haga clic en el botón "Añadir sesión" de nuevo para confirmar.';
-$string['privacy:metadata:attendancelog'] = '';
-$string['privacy:metadata:attendancesessions'] = '';
-$string['privacy:metadata:attendancewarningdone'] = '';
+$string['privacy:metadata:attendancelog'] = 'Bitácora de asistencias del usuario grabada.';
+$string['privacy:metadata:attendancesessions'] = 'Sesiones cuyas asistencias serán grabadas.';
+$string['privacy:metadata:attendancewarningdone'] = 'Bitácora de advertencias enviadas a usuarios acerca de sus registros de asistencias.';
 $string['privacy:metadata:duration'] = 'Duración de la sesión (en segundos)';
-$string['privacy:metadata:groupid'] = '';
+$string['privacy:metadata:groupid'] = 'ID del grupo asociada con la sesión.';
 $string['privacy:metadata:ipaddress'] = 'Dirección IP desde donde se marcó la asistencia.';
 $string['privacy:metadata:lasttaken'] = 'Sello de tiempo de cuando se tomó por última vez la asistencia a sesión.';
 $string['privacy:metadata:lasttakenby'] = 'ID del último usuario en tomar asistencia en esta sesión.';

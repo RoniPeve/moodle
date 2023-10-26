@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'webexactivity', language 'es', version '4.2'.
+ * Strings for component 'webexactivity', language 'es', version '4.3'.
  *
  * @package     webexactivity
  * @category    string
@@ -83,7 +83,7 @@ $string['externallinktext'] = '<p>Este enlace es para participantes que no está
 $string['externalpassword'] = 'Los participantes también necesitan conocer la contraseña de la reunión: <b>{$a}</b>';
 $string['getexternallink'] = '<a href="{$a->url}">Obtener enlace de participante externo</a>';
 $string['host'] = 'Alojar (Host)';
-$string['hostmeetinglink'] = '<a href="{$a->url}">Alojar (Host) Reunión</a>';
+$string['hostmeetinglink'] = '<a href="{$a->url}">Celebrar reunión</a>';
 $string['hostschedulingexception'] = 'El usuario no puede agendar una reunión para este Host.';
 $string['inprogress'] = 'En progreso';
 $string['invalidtype'] = 'Tipo inválido';

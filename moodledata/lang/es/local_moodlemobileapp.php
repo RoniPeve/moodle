@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_moodlemobileapp', language 'es', version '4.2'.
+ * Strings for component 'local_moodlemobileapp', language 'es', version '4.3'.
  *
  * @package     local_moodlemobileapp
  * @category    string
@@ -281,7 +281,7 @@ $string['assets.mimetypes.application/vnd.google-apps.script'] = 'Google Apps Sc
 $string['assets.mimetypes.application/vnd.google-apps.site'] = 'Google Sites';
 $string['assets.mimetypes.application/vnd.google-apps.spreadsheet'] = 'Hojas de cálculo de Google';
 $string['assets.mimetypes.application/vnd.google-apps.video'] = 'Google Drive video';
-$string['core.ajaxendpointnotfound'] = '<p>Endpoint de AJAX no encontrado. Esto puede pasar si el sitio Moodle es muy antiguo o si bloquea el acceso a este endpoint. La App de Moodle solamente soporta sistemas Moodle con la versión {{$a}} y en adelante.';
+$string['core.ajaxendpointnotfound'] = '<p>AJAX endpoint no encontrado. Esto puede pasar si el sitio Moodle es muy antiguo o si bloquea el acceso a este endpoint. La App Moodle solamente soporta sistemas Moodle de {{$a}} en adelante.';
 $string['core.browser'] = 'Navegador.';
 $string['core.calculating'] = 'Calculando';
 $string['core.cannotconnect'] = 'No se puede conectar';
@@ -295,7 +295,7 @@ $string['core.captureaudio'] = 'Grabar audio';
 $string['core.capturedimage'] = 'Foto tomada.';
 $string['core.captureimage'] = 'Tomar foto';
 $string['core.capturevideo'] = 'Grabar video';
-$string['core.certificaterror'] = 'El certificado de este sitio no es de confianza para su dispositivo: {{detalles}}.';
+$string['core.certificaterror'] = '<p>El certificado de este sitio no puede ser considerado como confiable por su dispositivo: {{details}}';
 $string['core.clearsearch'] = 'Limpiar búsqueda';
 $string['core.clearstoreddata'] = 'Eliminar datos {{$a}}';
 $string['core.clicktoseefull'] = 'Clic para ver el contenido al completo';
@@ -507,7 +507,7 @@ $string['core.login.faqwhereisqrcodeanswer'] = '<p>Si su organización lo ha hab
 $string['core.login.findyoursite'] = 'Encuentre su sitio';
 $string['core.login.helpmelogin'] = '<p>Existen muchos sitios Moodle en el mundo. Esta aplicación solamente puede conectar a sitios Moodle que tengan específicamente habilitado el acceso por la aplicación Moodle.</p><p>Si no puede conectarse a su sitio Moodle, póngase en contacto con el administrador del sitio y pídale que lea <a href="http://docs.moodle.org/en/Mobile_app" target="_blank">http://docs.moodle.org/en/Mobile_app</a></p><p>Para probar la aplicación en un sitio Moodle de muestra, escriba <i>teacher</i> o <i>student</i> en el campo de la <i>Dirección del sitio</i> y haga click en el <b>Botón de conectar</b>.</p>';
 $string['core.login.invalidaccount'] = 'Por favor, compruebe sus datos de acceso y vuelva a intentarlo.';
-$string['core.login.invalidmoodleversion'] = 'La versión de Moodle de este sitio es demasiado antigua. La App de Moodle funciona con sitios que utilizan la versión {{$a}} o posteriores.';
+$string['core.login.invalidmoodleversion'] = 'La versión inválida de este sitio Moodle es demasiado antigua. La App Moodle solamente funciona con sitios que usan {{$a}} o más nuevos.';
 $string['core.login.invalidsite'] = 'La URL del sitio es inválida.';
 $string['core.login.invalidtime'] = 'Hora incorrecta';
 $string['core.login.invalidvaluemax'] = 'El valor máximo es {{$a}}';

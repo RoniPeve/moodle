@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'repository_s3links', language 'es', version '4.2'.
+ * Strings for component 'repository_s3links', language 'es', version '4.3'.
  *
  * @package     repository_s3links
  * @category    string

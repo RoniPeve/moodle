@@ -125,6 +125,11 @@ class moodle_page {
     const STATE_DONE = 3;
 
     /**
+     * The separator used for separating page title elements.
+     */
+    const TITLE_SEPARATOR = ' | ';
+
+    /**
      * @var int The current state of the page. The state a page is within
      * determines what actions are possible for it.
      */
@@ -1298,7 +1303,7 @@ class moodle_page {
      * in the standard theme.
      *
      * For an idea of the common page layouts see
-     * {@link http://docs.moodle.org/dev/Themes_2.0#The_different_layouts_as_of_August_17th.2C_2010}
+     * {@link https://docs.moodle.org/dev/Themes_overview#Layouts}
      * But please keep in mind that it may be (and normally is) out of date.
      * The only place to find an accurate up-to-date list of the page layouts
      * available for your version of Moodle is {@link theme/base/config.php}
@@ -1367,14 +1372,47 @@ class moodle_page {
 
     /**
      * Sets the title for the page.
+     *
      * This is normally used within the title tag in the head of the page.
      *
+     * Some tips for providing a meaningful page title:
+     * - The page title must be accurate and informative.
+     * - If the page causes a change of context (e.g. a search functionality), it should describe the result or change of context
+     *   to the user.
+     * - It should be concise.
+     * - If possible, it should uniquely identify the page.
+     * - The most identifying information should come first. (e.g. Submit assignment | Assignment | Moodle)
+     *
+     * For more information, see
+     * {@link https://www.w3.org/WAI/WCAG21/Understanding/page-titled Understanding Success Criterion 2.4.2: Page Titled}
+     *
      * @param string $title the title that should go in the <head> section of the HTML of this page.
+     * @param bool $appendsitename Appends site name at the end of the given title. It is encouraged to append the site name as this
+     *                              especially helps with accessibility. If it's necessary to override this, please keep in mind
+     *                              to ensure that the title provides a concise summary of the page being displayed.
      */
-    public function set_title($title) {
+    public function set_title($title, bool $appendsitename = true) {
+        global $CFG;
+
         $title = format_string($title);
         $title = strip_tags($title);
         $title = str_replace('"', '&quot;', $title);
+
+        if ($appendsitename) {
+            // Append the site name at the end of the page title.
+            $sitenamedisplay = 'shortname';
+            if (!empty($CFG->sitenameintitle)) {
+                $sitenamedisplay = $CFG->sitenameintitle;
+            }
+            $site = get_site();
+            if (empty(trim($site->{$sitenamedisplay} ?? ''))) {
+                // If for some reason the site name is not yet set, fall back to 'Moodle'.
+                $title .= self::TITLE_SEPARATOR . 'Moodle';
+            } else {
+                $title .= self::TITLE_SEPARATOR . format_string($site->{$sitenamedisplay});
+            }
+        }
+
         $this->_title = $title;
     }
 
@@ -1778,11 +1816,7 @@ class moodle_page {
                     '/settings.php?section=maintenancemode">' . get_string('maintenancemode', 'admin') .
                     '</a> ' . $this->button);
 
-            $title = $this->title;
-            if ($title) {
-                $title .= ' - ';
-            }
-            $this->set_title($title . get_string('maintenancemode', 'admin'));
+            $this->set_title(get_string('maintenancemode', 'admin'));
         }
 
         $this->initialise_standard_body_classes();
@@ -1896,22 +1930,17 @@ class moodle_page {
             }
         }
 
-        $devicetheme = core_useragent::get_device_type_theme($this->devicetypeinuse);
-
-        // The user is using another device than default, and we have a theme for that, we should use it.
-        $hascustomdevicetheme = core_useragent::DEVICETYPE_DEFAULT != $this->devicetypeinuse && !empty($devicetheme);
-
         foreach ($themeorder as $themetype) {
 
             switch ($themetype) {
                 case 'course':
-                    if (!empty($CFG->allowcoursethemes) && !empty($this->_course->theme) && !$hascustomdevicetheme) {
+                    if (!empty($CFG->allowcoursethemes) && !empty($this->_course->theme)) {
                         return $this->_course->theme;
                     }
                 break;
 
                 case 'category':
-                    if (!empty($CFG->allowcategorythemes) && !empty($this->_course) && !$hascustomdevicetheme) {
+                    if (!empty($CFG->allowcategorythemes) && !empty($this->_course)) {
                         $categories = $this->categories;
                         foreach ($categories as $category) {
                             if (!empty($category->theme)) {
@@ -1928,7 +1957,7 @@ class moodle_page {
                 break;
 
                 case 'user':
-                    if (!empty($CFG->allowuserthemes) && !empty($USER->theme) && !$hascustomdevicetheme) {
+                    if (!empty($CFG->allowuserthemes) && !empty($USER->theme)) {
                         if ($mnetpeertheme) {
                             return $mnetpeertheme;
                         } else {
@@ -1938,7 +1967,7 @@ class moodle_page {
                 break;
 
                 case 'cohort':
-                    if (!empty($CFG->allowcohortthemes) && !empty($USER->cohorttheme) && !$hascustomdevicetheme) {
+                    if (!empty($CFG->allowcohortthemes) && !empty($USER->cohorttheme)) {
                         return $USER->cohorttheme;
                     }
                 break;
@@ -1947,16 +1976,12 @@ class moodle_page {
                     if ($mnetpeertheme) {
                         return $mnetpeertheme;
                     }
-                    // First try for the device the user is using.
-                    if (!empty($devicetheme)) {
-                        return $devicetheme;
+
+                    // Use theme if it is set in config.
+                    if (!empty($CFG->theme)) {
+                        return $CFG->theme;
                     }
-                    // Next try for the default device (as a fallback).
-                    $devicetheme = core_useragent::get_device_type_theme(core_useragent::DEVICETYPE_DEFAULT);
-                    if (!empty($devicetheme)) {
-                        return $devicetheme;
-                    }
-                    // The default device theme isn't set up - use the overall default theme.
+                    // Use the overall default theme.
                     return theme_config::DEFAULT_THEME;
             }
         }

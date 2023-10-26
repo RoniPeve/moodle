@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'vitero', language 'es', version '4.2'.
+ * Strings for component 'vitero', language 'es', version '4.3'.
  *
  * @package     vitero
  * @category    string
@@ -28,7 +28,7 @@ defined('MOODLE_INTERNAL') || die();
 $string['adminlogin'] = 'Ingresar al área de administración';
 $string['adminpassword'] = 'Contraseña del Administrador';
 $string['adminpassword_desc'] = 'Contraseña del usuario superior';
-$string['adminusername'] = 'Nombre de usuario del Administrador';
+$string['adminusername'] = 'Nombre_de_usuario del Administrador';
 $string['adminusername_desc'] = 'Nombres_de_usuarios Vitero de usuarios con permisos para añadir sesiones, usuarios, etc.';
 $string['alreadyover'] = 'Esta cita ya ha pasado.';
 $string['appointmentfields'] = 'Campos de Cita';

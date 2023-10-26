@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_common_courses', language 'es', version '4.2'.
+ * Strings for component 'block_common_courses', language 'es', version '4.3'.
  *
  * @package     block_common_courses
  * @category    string
@@ -25,6 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['common_courses:addinstance'] = 'Añadir una nueva instancia de Cursos Comunes';
+$string['common_courses:myaddinstance'] = 'Mi añadir Cursos Comunes';
 $string['commoncourses'] = 'Cursos Compartidos';
 $string['pluginname'] = 'Cursos Compartidos';
 $string['privacy:metadata'] = 'El bloque de cursos compartidos solo muestra los cursos compartidos existentes con otros usuarios.';

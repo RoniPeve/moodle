@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'role', language 'es', version '4.2'.
+ * Strings for component 'role', language 'es', version '4.3'.
  *
  * @package     role
  * @category    string
@@ -166,6 +166,8 @@ $string['confirmunassignno'] = 'Cancelar';
 $string['confirmunassigntitle'] = 'Confirmar cambio de rol';
 $string['confirmunassignyes'] = 'Eliminar';
 $string['contentbank:access'] = 'Acceder al banco de contenido';
+$string['contentbank:copyanycontent'] = 'Copiar cualquier contenido en el banco de contenido';
+$string['contentbank:copycontent'] = 'Copiar contenido en el banco de contenido';
 $string['contentbank:deleteanycontent'] = 'Eliminar cualquier contenido del banco de contenido';
 $string['contentbank:deleteowncontent'] = 'Eliminar contenido del banco de contenido propio';
 $string['contentbank:downloadcontent'] = 'Descargar contenido del banco de contenido';
@@ -184,6 +186,7 @@ $string['course:changeidnumber'] = 'Cambiar el número ID del curso';
 $string['course:changelockedcustomfields'] = 'Cambiar campos personalizados bloqueados';
 $string['course:changeshortname'] = 'Cambiar el nombre corto del curso';
 $string['course:changesummary'] = 'Cambiar el resumen del curso';
+$string['course:configurecoursecommunication'] = 'Configurar ajustes de comunicación del curso';
 $string['course:configurecustomfields'] = 'Configurar campos personalizados del curso';
 $string['course:configuredownloadcontent'] = 'Configurar descargar contenido del curso';
 $string['course:create'] = 'Crear cursos';
@@ -293,6 +296,7 @@ $string['grade:unlock'] = 'Desbloquear calificaciones o elementos';
 $string['grade:view'] = 'Ver calificaciones propias';
 $string['grade:viewall'] = 'Ver calificaciones de otros usuarios';
 $string['grade:viewhidden'] = 'Ver calificaciones ocultas al usuario';
+$string['group:configurecustomfields'] = 'Configurar grupos de campos personalizados';
 $string['h5p:deploy'] = 'Desplegar contenido H5P';
 $string['h5p:setdisplayoptions'] = 'Configurar opciones de visualización de H5P';
 $string['h5p:updatelibraries'] = 'Gestionar tipos de contenidos H5P';
@@ -320,6 +324,7 @@ $string['managerdescription'] = 'Los gestores pueden acceder a los cursos y modi
 $string['manageroles'] = 'Gestionar roles';
 $string['maybeassignedin'] = 'Tipos de contexto en que puede asignarse este rol';
 $string['moodlenet:shareactivity'] = 'Compartir actividades en MoodleNet';
+$string['moodlenet:sharecourse'] = 'Compartir curso con MoodleNet';
 $string['morethan'] = 'Más de {$a}';
 $string['multipleroles'] = 'Roles múltiples';
 $string['my:configsyspages'] = 'Configurar plantillas del sistema para las páginas del Área personal';

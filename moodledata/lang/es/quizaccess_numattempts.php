@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'quizaccess_numattempts', language 'es', version '4.2'.
+ * Strings for component 'quizaccess_numattempts', language 'es', version '4.3'.
  *
  * @package     quizaccess_numattempts
  * @category    string

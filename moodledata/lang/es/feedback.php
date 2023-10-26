@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'feedback', language 'es', version '4.2'.
+ * Strings for component 'feedback', language 'es', version '4.3'.
  *
  * @package     feedback
  * @category    string
@@ -58,7 +58,7 @@ $string['completed'] = 'Completada';
 $string['completed_feedbacks'] = 'Respuestas enviadas';
 $string['completedon'] = 'Completada en {$a}';
 $string['completiondetail:submit'] = 'Enviar retroalimentación';
-$string['completionsubmit'] = 'Ver como "completado" si se envía la encuesta';
+$string['completionsubmit'] = 'Enviar retroalimentación';
 $string['configallowfullanonymous'] = 'Si se establece a "sí", los usuarios pueden pueden completar una encuesta en la página principal del sitio sin necesidad de que inicien sesión.';
 $string['confirmdeleteentry'] = '¿Está seguro que quiere borrar esta entrada?';
 $string['confirmdeleteitem'] = '¿Está seguro que quiere borrar este elemento?';

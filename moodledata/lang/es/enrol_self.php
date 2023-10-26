@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'enrol_self', language 'es', version '4.2'.
+ * Strings for component 'enrol_self', language 'es', version '4.3'.
  *
  * @package     enrol_self
  * @category    string
@@ -81,7 +81,7 @@ $string['maxenrolled'] = 'Número máximo de usuarios matriculados';
 $string['maxenrolled_help'] = 'Especifique el número máximo de usuarios que pueden auto-matricularse.El 0 significa sin límite.';
 $string['maxenrolledreached'] = 'Se alcanzó el número máximo de usuarios permitidos para auto-matriculación.';
 $string['messageprovider:expiry_notification'] = 'Notificaciones de expiración del periodo de auto-matrícula';
-$string['newenrols'] = 'Permitir nuevas autommatriculaciones';
+$string['newenrols'] = 'Permitir nuevas automatriculaciones';
 $string['newenrols_desc'] = 'Permitir a los usuarios la auto matricula en nuevos cursos de forma predeterminada.';
 $string['newenrols_help'] = 'Este ajuste determina si un usuario puede inscribirse en el curso.';
 $string['nopassword'] = 'No se requiere clave de matriculación';

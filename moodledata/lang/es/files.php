@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'files', language 'es', version '4.2'.
+ * Strings for component 'files', language 'es', version '4.3'.
  *
  * @package     files
  * @category    string
@@ -25,7 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['contenthash'] = 'Contenido hash';
 $string['eventfileaddedtodraftarea'] = 'Archivo agregado al área de borrador';
+$string['eventfiledeletedfromdraftarea'] = 'Archivo eliminado de la zona de borrador';
 $string['privacy:metadata:core_userkey'] = 'Una ficha (token) privada es generada y almacenada. Este token puede ser usado para acceder a archivos de Moodle sin que necesite iniciar sesión.';
 $string['privacy:metadata:file_conversion:usermodified'] = 'El usuario que inició la conversión de archivos.';
 $string['privacy:metadata:file_conversions'] = 'Un registro de las conversiones de archivos realizadas por un usuario.';

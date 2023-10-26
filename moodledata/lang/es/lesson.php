@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'lesson', language 'es', version '4.2'.
+ * Strings for component 'lesson', language 'es', version '4.3'.
  *
  * @package     lesson
  * @category    string
@@ -400,7 +400,7 @@ $string['nameapproved'] = 'Nombre aprobado';
 $string['namereject'] = 'Lo sentimos, su nombre ha sido rechazado por el filtro.<br>Por favor, pruebe con otro nombre.';
 $string['new'] = 'nueva';
 $string['nextpage'] = 'Página siguiente';
-$string['noanswer'] = 'Una o más preguntas no se han contestado. Por favor regrese y de una respuesta.';
+$string['noanswer'] = 'No ha contestado a una o más preguntas. Por favor, regrese y responda a todas las preguntas.';
 $string['noattemptrecordsfound'] = 'No se encontraron registros de intentos. Sin calificación';
 $string['nobranchtablefound'] = 'No se ha encontrado página de contenido';
 $string['noclose'] = 'Sin fecha de cierre';

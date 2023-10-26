@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'auth_lti', language 'es', version '4.2'.
+ * Strings for component 'auth_lti', language 'es', version '4.3'.
  *
  * @package     auth_lti
  * @category    string
@@ -49,7 +49,7 @@ $string['privacy:metadata:auth_lti:sub'] = 'La cadena de caracteres del asunto q
 $string['privacy:metadata:auth_lti:sub256'] = 'La hash SHA256 de la cadena de caracteres del asunto que  identifica al usuario en el emisor.';
 $string['privacy:metadata:auth_lti:tableexplanation'] = 'Cuentas LTI enlazadas a una cuenta de usuario Moodle.';
 $string['privacy:metadata:auth_lti:timecreated'] = 'El sello de tiempo de cuando la cuenta del usuario fue enlazada al ingreso LTI.';
-$string['privacy:metadata:auth_lti:timemodified'] = 'La marca de tiempo del momento en que este registro fue modificado.';
+$string['privacy:metadata:auth_lti:timemodified'] = 'El sello de tiempo de cuando este registro fue modificado.';
 $string['privacy:metadata:auth_lti:userid'] = 'La ID de la cuenta del usuario a donde está enlazado el ingreso LTI';
 $string['provisioningmodeauto'] = 'Cuentas nuevas solamente (automático)';
 $string['provisioningmodeexistingonly'] = 'Cuentas existentes solamente (solicitud)';

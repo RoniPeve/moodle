@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_coursearchiver', language 'es', version '4.2'.
+ * Strings for component 'tool_coursearchiver', language 'es', version '4.3'.
  *
  * @package     tool_coursearchiver
  * @category    string
@@ -25,9 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['accessafter'] = 'Accedido por última vez después de';
-$string['accessbefore'] = 'Accedido por última vez antes de';
-$string['accessbeforeafter'] = 'Accedido antes de / después de';
+$string['accessafter'] = 'Último accesado después de';
+$string['accessbefore'] = 'Último accesado antes de';
+$string['accessbeforeafter'] = 'Accesado  Antes de / Después de';
 $string['anycategory'] = 'Cualquier Categoría';
 $string['archive'] = 'Archivar Cursos';
 $string['archivedeletesetting'] = 'Retraso de eliminación de archivo';
@@ -45,22 +45,22 @@ $string['archivewarningsubject'] = 'Aviso: Los cursos serán archivados pronto.'
 $string['back'] = 'Iniciar de nuevo';
 $string['cannotdeletecoursenotexist'] = 'No se puede borrar un curso que no existe';
 $string['category'] = 'Categoría';
-$string['cli_cannot_continue'] = '\\nDETENIDO: No hay datos suficientes para continuar.\\n';
+$string['cli_cannot_continue'] = 'DETENIDO: No hay datos suficientes para continuar.\\n';
 $string['cli_question_archive'] = '¿Archivar y eliminar estos {$a} cursos?';
-$string['cli_question_archiveemail'] = '¿Mandar a estos {$a} usuarios  un Email de "Curso a ser archivado"?';
+$string['cli_question_archiveemail'] = 'Mandar a estos {$a} usuarios  un Email de "Curso a ser archivado"?';
 $string['cli_question_delete'] = '¿Borrar estos {$a} cursos?';
 $string['cli_question_hide'] = '¿Ocultar estos {$a} cursos?';
-$string['cli_question_hideemail'] = '¿Mandar a estos {$a} usuarios un Email de "Curso a ser ocultado"?';
+$string['cli_question_hideemail'] = 'Mandar a estos {$a} usuarios un Email de "Curso a ser ocultado"?';
 $string['confirm'] = 'Continuar';
 $string['confirmdelete'] = '¿Estás seguro de querer borrar?';
-$string['confirmmessage'] = '¿Está seguro de que quiere {$a}';
+$string['confirmmessage'] = '¿Está Usted seguro de que quiere {$a}';
 $string['confirmmessagearchive'] = 'archivar y quitar estos {$a} cursos?';
 $string['confirmmessagearchiveemail'] = 'mandarles un Email a estos  {$a} propietarios de curso?';
-$string['confirmmessagedelete'] = 'quitar completamente estos {$a} cursos?';
+$string['confirmmessagedelete'] = '¿quitar completamente estos {$a} cursos?';
 $string['confirmmessagehide'] = '¿Ocultar estos {$a} cursos?';
 $string['confirmmessagehideemail'] = 'mandarles un Email a estos {$a} propietarios de cursos?';
-$string['confirmmessageoptout'] = 'salida a estos {$a} cursos?';
-$string['confirmrestore'] = '¿Restaurar eliminación de archivo pendiente ?';
+$string['confirmmessageoptout'] = '¿ salida a estos {$a} cursos?';
+$string['confirmrestore'] = '¿Restaurar eliminación de archivo pendiente =';
 $string['course_readded'] = '{$a->fullname} ha sido quitado de la lista de Optar_por_no. Gracias.';
 $string['course_skipped'] = '{$a->fullname} será saltado por los próximos  {$a->optoutmonths}  mes(es). Gracias.';
 $string['coursearchiver'] = 'Archivador de Cursos';
@@ -99,11 +99,11 @@ $string['errorarchivepath'] = 'No pudo crearse la ruta para archivar.';
 $string['errorarchivingcourse'] = 'El curso: ({$a->id}) {$a->fullname} no pudo ser archivado.';
 $string['errorbackup'] = 'Fallo al Respaldar.';
 $string['errordeletingcourse'] = 'Curso: ({$a->id}) {$a->fullname} no pudo ser eliminado.';
-$string['erroremptysearch'] = 'No se proporcionó criterio para la búsqueda.';
+$string['erroremptysearch'] = 'No se dió criterio para búsqueda.';
 $string['errorhidingcourse'] = 'El curso: ({$a->id}) {$a->fullname} no pudo ocultarse.';
 $string['errorinsufficientdata'] = 'No hay suficiente información para realizar esta acción';
 $string['errormissingcourses'] = 'Falta la variable %courses en la plantilla del Email. Esta es una lista de los cursos.';
-$string['errormissingto'] = 'Falta la variable %to en la plantilla del Email. Este es el nombre del destinatario.';
+$string['errormissingto'] = 'Falta la variable %toen la plantilla del Email. Este es el nombre del destinatario.';
 $string['errornoform'] = 'Formato no dado.';
 $string['errornonnumericid'] = 'La ID del curso debe ser numérica';
 $string['errornonnumerictimestamp'] = 'El sello de tiempo debe ser numérico (sello de tiempo UNIX)';

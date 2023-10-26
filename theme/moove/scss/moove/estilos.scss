@@ -100,3 +100,22 @@
 .usertour {
     display: none;
 }
+
+.login-container{
+  margin-left: auto; /* Mueve el formulario a la derecha */
+}
+
+#page-login-index {
+  .login-container {
+      background-color: initial;
+      box-shadow: none;
+      padding: 0;
+      
+      .loginform {
+          //margin: 0 auto;
+          /*****CODIGO NUEVO*******/
+          float: right;
+          margin-right: 20px; /* Ajusta el margen derecho según tus necesidades */
+      }
+    }
+  }

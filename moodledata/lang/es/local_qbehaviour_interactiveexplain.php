@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_qbehaviour_interactiveexplain', language 'es', version '4.2'.
+ * Strings for component 'local_qbehaviour_interactiveexplain', language 'es', version '4.3'.
  *
  * @package     local_qbehaviour_interactiveexplain
  * @category    string

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tiny_recordrtc', language 'es', version '4.2'.
+ * Strings for component 'tiny_recordrtc', language 'es', version '4.3'.
  *
  * @package     tiny_recordrtc
  * @category    string
@@ -31,7 +31,7 @@ $string['attachrecording'] = 'Adjuntar grabación';
 $string['audioandvideo'] = 'Audio y vídeo';
 $string['audiobitrate'] = 'Bitrate de audio';
 $string['audiobitrate_desc'] = 'Calidad de la grabación de audio (números más altos significan mayor calidad)';
-$string['audiobuttontitle'] = 'Grebar audio';
+$string['audiobuttontitle'] = 'Grabar audio';
 $string['audiotimelimit'] = 'Tiempo límite de audio';
 $string['audiotimelimit_desc'] = 'Duración máxima permitida para los clips de audio';
 $string['audiotitle'] = 'Grabar audio';

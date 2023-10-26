@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'allocationform', language 'es', version '4.2'.
+ * Strings for component 'allocationform', language 'es', version '4.3'.
  *
  * @package     allocationform
  * @category    string
@@ -72,8 +72,8 @@ $string['defaultrole'] = 'Rol por defecto';
 $string['defaultrole_help'] = 'Configure el rol por defecto a usarse para seleccionar usuarios que serán asignados usando la actividad';
 $string['deleteuserdata'] = 'Borrar datos de usuario';
 $string['disallow_list'] = 'Lista de no-permitidos';
-$string['disallow_list_help'] = 'Todos los usuarios marcados NO podrán seleccionar {$a->option_name}';
-$string['duplicate_choice'] = 'Usted puede realizar una única elección por vez';
+$string['disallow_list_help'] = 'Todos los usuarios seleccionados NO podrán seleccionar {$a->option_name}';
+$string['duplicate_choice'] = 'Usted solamente puede seleccionar una elección una vez';
 $string['duplicateoption'] = 'Sus cambios no pudieron ser guardados en la base de datos. Esto muy probablemente sea debido a un nombre de opción duplicado ingresado';
 $string['editingmode'] = 'Edición';
 $string['editingoption'] = 'Editando opción';
@@ -92,8 +92,8 @@ $string['incorrectnumberofchoices'] = 'El formato no tiene el número correcto d
 $string['instructions'] = 'Usted debe rankear {$a->choices} opciones; Usted será asignado a {$a->allocation} de las opciones.';
 $string['instructionsnotwant'] = 'Usted debe rankear {$a->choices} opciones; Usted será asignado a {$a->allocation} de las opciones. Usted puede seleccionar 1 opción a la cual no desea ser asignado.';
 $string['invalidstate'] = 'Se pasó un cambio de estado inválido al formato de asignación';
-$string['invalidstatechange'] = 'Se intentó un cambio de estado inválido';
-$string['make_active'] = 'Activar el formulario';
+$string['invalidstatechange'] = 'Cambio de estado invalido intentado';
+$string['make_active'] = 'Hacer el formato activo';
 $string['makechoice'] = 'Haga su elección';
 $string['modulename'] = 'Formato de Asignación';
 $string['modulenameplural'] = 'Formatos de Asignación';
@@ -112,7 +112,7 @@ $string['numberofallocations'] = 'Asignación por usuario';
 $string['numberofallocations_help'] = 'El número de opciones a las que será asignado un usuario';
 $string['numberofchoices'] = 'Numero de opciones';
 $string['numberofchoices_help'] = 'El Numero de opciones entre las que tendrá que decidir un usuario';
-$string['ok_to_continue'] = '¿Está seguro de querer continuar?';
+$string['ok_to_continue'] = '¿Está Usted seguro de querer continuar?';
 $string['option_form_header'] = 'Opción nueva';
 $string['option_heading'] = 'Encabezado';
 $string['option_heading_help'] = 'Un encabezado a mostrar inmediatamente arriba de esta opción.';

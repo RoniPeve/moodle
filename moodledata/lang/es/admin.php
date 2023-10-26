@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'admin', language 'es', version '4.2'.
+ * Strings for component 'admin', language 'es', version '4.3'.
  *
  * @package     admin
  * @category    string
@@ -26,7 +26,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['accessdenied'] = 'Acceso denegado';
+$string['accountlocked'] = 'Su cuenta ha sido bloqueada. Se han enviado un enlace de desbloqueo al correo electrónico asociado a su cuenta.';
 $string['accounts'] = 'Cuentas';
+$string['accountunlocked'] = 'Su cuenta se ha desbloqueado con éxito. Ahora puede iniciar sesión.';
 $string['addcategory'] = 'Añadir una categoría';
 $string['additionalhtml'] = 'HTML adicional';
 $string['additionalhtml_desc'] = 'Estas opciones permiten especificar el código HTML a añadir en todas las páginas. Puede establecer el código HTML que se añadirá dentro de la etiqueta HEAD de la página, inmediatamente después de que se haya abierto la etiqueta BODY o inmediatamente antes de que  la etiqueta BODY se cierre. <br /> Hacer esto le permite agregar encabezados o pies de página personalizados en cada página o añadir fácilmente, con independencia del tema elegido, soporte para servicios como Google Analytics.';
@@ -212,7 +214,6 @@ $string['configautologinguests'] = '¿Deberá permitirse a los visitantes autom�
 $string['configbloglevel'] = 'Esta opción le permite restringir el nivel en el que pueden verse los blogs de los usuarios en este sitio. Advierta que se especifica el contexto máximo de quien los ve, pero no de quien envía mensajes ni de los tipos de mensaje enviados al blog. Los blogs pueden también deshabilitarse completamente si así lo desea.';
 $string['configcalendarcustomexport'] = 'Habilitar exportación personalizada de un rango de fechas del calendario';
 $string['configcalendarexportsalt'] = 'Esta cadena de caracteres aleatorios se utiliza para mejorar las claves de seguridad (tokens) de identificación utilizadas para la exportación de los calendarios. Tenga en cuenta que todas las claves de seguridad actuales quedarán invalidadas si modifica esta sal.';
-$string['configcookiehttponly'] = 'Habilita la nueva característica de PHP 5.2.0: se instruye a los navegadores para que envíen una \'cookie\' sólo a petición de http reales. Las \'cookies\' no deberían ser accesibles desde lenguajes de script. No todos los navegadores pueden ejecutar esta opción, y podría no ser compatible con el código actual. Ayuda a prevenir algunos tipos de ataques XSS.';
 $string['configcookiesecure'] = 'Si el servidor solo acepta conexiones https, se recomienda habilitar el envío de \'cookies\' seguras. Si la opción está habilitada, por favor asegúrese que el servidor web no acepte http:// ni ha fijado una redirección permanente a direcciones https:// e idealmente envíe encabezados HSTS. Cuando una dirección <em>wwwroot</em> no comienza con https:// esta configuración es ignorada.';
 $string['configcountry'] = 'Si selecciona un país, dicho país quedará como valor por defecto para nuevos usuarios o cuentas. Para forzar a los usuarios a elegir un país, deje la opción sin seleccionar.';
 $string['configcoursegraceperiodafter'] = 'Clasificar cursos pasados como en progreso por este número de días después de la fecha de fin del curso.';
@@ -264,7 +265,6 @@ $string['configemaildkimselector'] = 'El selector DKIM es arbitrario y sus regis
 $string['configemailfromvia'] = 'Agregar información de origen (nombre corto del sitio) en la sección "De" del correo saliente.  Se informa al receptor de donde proviene el correo y además ayuda a evitar que los receptores accidentalmente respondan a una dirección de correo de "no responder" (no-reply en inglés).';
 $string['configemailheaders'] = 'Los encabezados de correo electrónico sin procesar se agregarán literalmente a todos los correos electrónicos salientes.';
 $string['configemailsubjectprefix'] = 'Texto a ser prefijado a la línea de asunto de todo el correo saliente.';
-$string['configenableactivitychooser'] = 'El selector de actividad es una caja de diálogo con una breve descripción de cada actividad y recurso. Si está deshabilitada, habrá menús desplegables de recursos y actividades por separado.';
 $string['configenableanalytics'] = 'Los modelos analíticos, tal como \'Riesgo de que los estudiantes abandonen\' o \'Vencimiento de próximas actividades\', pueden generar predicciones, enviar notificaciones de advertencia y ofrecer más acciones como contactar a los usuarios.';
 $string['configenableblogs'] = 'Esta configuración les proporciona a todos los usuarios su propio blog.';
 $string['configenablecalendarexport'] = 'Habilitar la exportación o suscripción a los calendarios.';
@@ -337,7 +337,6 @@ $string['configminpasswordlength'] = 'Las contraseñas deben tener al menos este
 $string['configminpasswordlower'] = 'Las contraseñas deben tener al menos este número de minúsculas.';
 $string['configminpasswordnonalphanum'] = 'Las contraseñas deben tener al menos este número de caracteres no alfanuméricos.';
 $string['configminpasswordupper'] = 'Las contraseñas deben tener al menos este número de mayúsculas.';
-$string['configmodchooserdefault'] = '¿Se presentará por defecto a los usuarios el selector de actividad?';
 $string['configmycoursesperpage'] = 'Número máximo de cursos que se mostrará en cualquier lista de cursos propios de un usuario';
 $string['configmymoodleredirect'] = 'Esta opción fuerza a los no administradores a dirigirse a /my al ingresar y reemplaza la navegación de nivel superior del sitio con /my';
 $string['configmypagelocked'] = 'Este ajuste impide que la página por defecto sea editada por cualquiera que no sea administrador';
@@ -445,7 +444,6 @@ $string['contextlockappliestoadmin'] = 'Congelar el contexto afecta a administra
 $string['contextlockappliestoadmin_desc'] = 'Si se habilita, los administradores permanecen con acceso a cambiar a cualquier contexto que esté congelado.';
 $string['contextlocking'] = 'Congelamiento de contexto';
 $string['contextlocking_desc'] = 'Esta configuración le permite configurar acceso de solo lectura para  categorías, cursos, actividades o bloques seleccionados.';
-$string['cookiehttponly'] = 'Sólo \'cookies\' http';
 $string['cookiesecure'] = 'Sólo \'cookies\' seguras';
 $string['country'] = 'País por defecto';
 $string['course_customfield'] = 'Campos personalizados del curso';
@@ -603,11 +601,12 @@ $string['emoticons_desc'] = 'Este formulario define los \'emoticons\' (o iconos 
 $string['emoticonsreset'] = 'Reconfigurar los emoticonos a los valores predeterminados';
 $string['emoticontext'] = 'Texto';
 $string['emptysettingvalue'] = 'Vacío';
-$string['enableactivitychooser'] = 'Habilitar selector de actividad';
 $string['enableanalytics'] = 'Analítica';
 $string['enableblogs'] = 'Habilitar blogs';
 $string['enablecalendarexport'] = 'Habilitar exportación de calendario';
 $string['enablecomments'] = 'Habilitar comentarios';
+$string['enablecommunicationsubsystem'] = 'Habilitar proveedores de comunicación';
+$string['enablecommunicationsubsystem_desc'] = 'Permitir proveedores de comunicación como Matrix para que profesores y estudiantes puedan comunicarse con mayor facilidad. Usted puede gestionar estas integraciones en <a href="settings.php?section=managecommunicationproviders">Plugins</a>.';
 $string['enablecourserelativedates'] = 'Habilitar fechas de curso relativas';
 $string['enablecourserelativedates_desc'] = 'Permitir a los cursos ser configurados para mostrar fechas relativas a la fecha de inicio del usuario dentro del curso.';
 $string['enablecourserequests'] = 'Habilitar solicitudes de curso';
@@ -627,7 +626,7 @@ $string['enablerecordcache'] = 'Habilitar caché de registro';
 $string['enablerssfeeds'] = 'Habilitar canales RSS';
 $string['enablesearchareas'] = 'Habilitar áreas de búsqueda';
 $string['enablesharingtomoodlenet'] = 'Habilitar compartir en MoodleNet (salida)';
-$string['enablesharingtomoodlenet_desc'] = 'Permitirle a usuarios el compartir contenido del curso a una instancia configurada MoodleNet si ellos tienen la capacidad relevante.';
+$string['enablesharingtomoodlenet_desc'] = 'Permitirle a usuarios el compartir contenido del curso a una instancia configurada MoodelNet si ellos tienen la capacidad relevante.';
 $string['enablestats'] = 'Habilitar estadísticas';
 $string['enabletrusttext'] = 'Habilitar contenido confiable';
 $string['enableuserfeedback'] = 'Habilitar el envío de comentarios sobre este software';
@@ -721,8 +720,10 @@ $string['gradebookroles'] = 'Roles calificados';
 $string['gradeexport'] = 'Principales métodos de exportación de calificaciones';
 $string['gravatardefaulturl'] = 'URL para imagen por defecto de Gravatar';
 $string['gravatardefaulturl_help'] = 'Gravatar necesita una imagen por defecto para utilizar en caso de que no se pueda localizar la imagen de un determinado usuario. Si dejas esta opción vacía, Moodle intentará usar la imagen por defecto más adecuada para la página que estés viendo. Ten en cuenta que Gravatar dispone de una serie de parámetros que pueden ser usados para <a href="https://es.gravatar.com/site/implement/images/#default-image">generar imágenes por defecto</a>.';
+$string['group_customfield'] = 'Agrupar campos personalizados';
 $string['groupenrolmentkeypolicy'] = 'Política de matriculación de grupos';
 $string['groupenrolmentkeypolicy_desc'] = 'Si está habilitado, las claves de inscripción de grupo se compararán con la política de contraseñas como se especifica en la configuración anterior.';
+$string['grouping_customfield'] = 'Agrupar campos personalizados';
 $string['guestroleid'] = 'Rol para invitado';
 $string['guestroleid_help'] = 'Este rol se le asigna automáticamente a los invitados. También se asigna, temporalmente, por medio del plugin de matriculación de invitados a los usuarios que no están inscritos en un curso.';
 $string['h5pgetcontenttypestask'] = 'Descargar tipos de contenido disponibles desde h5p.org';
@@ -741,6 +742,24 @@ $string['hiddenuserfields'] = 'Ocultar campos de usuario';
 $string['hidefromall'] = 'Ocultar a todos los usuarios';
 $string['hidefromnone'] = 'No ocultar a nadie';
 $string['hidefromstudents'] = 'Ocultar a estudiantes';
+$string['hookcallbacknotcallable'] = 'No se puede llamar a esta retrollada. Esto puede ser porque la clase o el método no existan, o porque el método no sea público.';
+$string['hookcallbacks'] = 'Retrollamadas';
+$string['hookcallbacks_help'] = 'La lista de retrollamadas que serán llamadas cuando se despache el hook.
+
+El orden mostrado es el orden en que se llama a las retrollamadas.
+
+Se llamará antes a una llamada de prioridad mayor que a una con prioridad menor.';
+$string['hookclassmissing'] = 'No se ha encontrado la clase de hook';
+$string['hookclassmissing_desc'] = 'El agente que descubre el hook ha devuelto una clase que no existe.';
+$string['hookconfigoverride'] = 'Anulado';
+$string['hookconfigoverride_help'] = 'La definición de esta retrollamada ha sido anulada en el archivo de configuración del sitio, config.php';
+$string['hookdeprecates'] = 'Retrollamadas de lib.php obsoletas';
+$string['hookdescription'] = 'Descripción';
+$string['hookdescriptionmissing'] = 'El hook no tiene un método de descripción';
+$string['hookname'] = 'Hook';
+$string['hooksoverview'] = 'Vista general de hooks';
+$string['hookunknown'] = 'No se ha encontrado el hook';
+$string['hookunknown_desc'] = 'El objeto al que escucha esta retrollamada no está disponible. Puede haber sido eliminado o renombrado, o puede que no esté disponible en esta versión de Moodle.';
 $string['hostname'] = 'Nombre del host';
 $string['htmleditor'] = 'Editor HTML';
 $string['htmleditorsettings'] = 'Ajustes del editor HTML';
@@ -908,8 +927,7 @@ $string['mnetrestore_extusers_noadmin'] = '<strong> Nota: </strong> Este archivo
 $string['mnetrestore_extusers_switchuserauth'] = 'El usuario remoto de Moodle Network {$a->username} (proveniente de {$a->mnethosturl}) ha cambiado a usuario identificado {$a->auth} local.';
 $string['mobilenotconfiguredwarning'] = 'Moodle para móviles no está habilitado.';
 $string['modassignmentinuse'] = 'Su sitio todavía está usando el plugin de Tarea 2.2. Antes de actualizar usted necesita 1) respaldar cualquier actividad de Tarea 2.2 que quiera conservar y restaurarlas como actividades de Tarea, y 2) eliminar todos los datos de Tarea 2.2 de la base de datos.';
-$string['modassignmentsubpluginsexist'] = 'Podrían estar presentes subplugins de Tarea 2.2. La carpeta mod/assignment y todos sus subplugins necesitan ser eliminados antes de la actualización.';
-$string['modchooserdefault'] = 'Selector de actividades por defecto';
+$string['modassignmentsubpluginsexist'] = 'Podrían estar presentes subplugins de Tarea 2.2. La carpeta mod/assignment y  todos sus subplugins necesitan ser eliminados antes de la actualización.';
 $string['modeditdefaults'] = 'Valores predeterminados para la configuración de la actividad';
 $string['modsettings'] = 'Gestionar actividades';
 $string['modulesecurity'] = 'Seguridad del módulo';
@@ -958,6 +976,7 @@ $string['neverdeleteruns'] = 'Nunca eliminar ejecuciones';
 $string['newestdocindexed'] = 'Documento más reciente indexado';
 $string['nobookmarksforuser'] = 'No tiene ninguna marca.';
 $string['nodatabase'] = 'Ninguna base de datos';
+$string['noemaileverwarning'] = '<strong>Nota:</strong> Se han deshabilitado todos los correos electrónicos de salida';
 $string['nohttpsformobilewarning'] = 'Se recomienda que se habilite HTTPS con un certificado válido. La aplicación Moodle siempre intentará usar una conexión segura en primer lugar.';
 $string['nomissingstrings'] = 'No hay cadenas sin traducir';
 $string['none'] = 'Ninguno';
@@ -1020,6 +1039,7 @@ $string['pathtosassc'] = 'Ruta hacia SassC';
 $string['pathtosassc_help'] = 'Al especificar la localización del binario de SassC cambiará al compilador de SASS de la implementación PHP de Moodle a SassC. Vea https://github.com/sass/sassc para más información.';
 $string['pcreunicodewarning'] = 'Se recomienda encarecidamente usar la extensión PCRE PHP que sea compatible con caracteres Unicode.';
 $string['perfdebug'] = 'Información de rendimiento';
+$string['perfdebugdeferred'] = 'Esperando a que el script finalice para mostrar el debug de rendimiento...';
 $string['performance'] = 'Rendimiento';
 $string['pgcluster'] = 'Cluster PostgreSQL';
 $string['pgclusterdescription'] = 'Parámetro de versión/cluster PostgreSQL para operaciones de línea de comandos. Si sólo tiene un postgresql en su sistema o no está seguro de qué es esto, déjelo en blanco.';
@@ -1176,7 +1196,7 @@ $string['requiremodintro_desc'] = 'Si se activa, los usuarios serán forzados a 
 $string['requires'] = 'Requerido';
 $string['resetindentation'] = 'Resetear sangría para todo el sitio';
 $string['resetindentation_help'] = 'Esto quitará cualquier indentación previamente configurada para cursos en {$a->format}.';
-$string['resetindentation_title'] = '¿Reiniciar la indentación en la página del curso?';
+$string['resetindentation_title'] = '¿Reiniciar indentación en página de curso?';
 $string['resetindentationsuccess'] = 'Reiniciar indentación';
 $string['restorecourse'] = 'Restaurar curso';
 $string['restorernewroleid'] = 'Rol de los restauradores en los cursos';

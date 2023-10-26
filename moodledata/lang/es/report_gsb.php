@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'report_gsb', language 'es', version '4.2'.
+ * Strings for component 'report_gsb', language 'es', version '4.3'.
  *
  * @package     report_gsb
  * @category    string
@@ -53,7 +53,7 @@ $string['bronzeimslogs'] = 'Actividad Retroalimentación Mínima';
 $string['bronzelabels'] = 'Número de Etiquetas';
 $string['bronzelabelslogs'] = 'Actividad Etiqueta Mínima';
 $string['bronzenumoptional'] = 'Requisitos opcionales';
-$string['bronzenumoptionalxp'] = 'Este es el número de configuraciones opcionales que deben cumplirse antes de otorgar esta medalla. Use esta configuración cuando haga patrones de referencia a una selección de un rango de actividades. Nota: Selecione solamente el número mínimo de criterios.';
+$string['bronzenumoptionalxp'] = 'Este es el número de configuraciones opcionales que deben cumplirse antes de otorgar esta medalla. Use esta configuración cuando haga patrones de referencia a una selección de un rango de actividades. Nota: Seleccione solamente el número mínimo de criterios.';
 $string['bronzequest'] = 'Número de Cuestionarios';
 $string['bronzequestlogs'] = 'Actividad Cuestionario Mínima';
 $string['bronzequiz'] = 'Número de Exámenes';
@@ -349,7 +349,7 @@ $string['goldheadings'] = 'Encabezados de Sección';
 $string['goldims'] = 'Número de paquetes IMS';
 $string['goldlabels'] = 'Número de Etiquetas';
 $string['goldnumoptional'] = 'Requisitos opcionales';
-$string['goldnumoptionalxp'] = 'Este es el número de configuraciones opcionales que deben cumplirse antes de otorgar esta medalla. Use esta configuración cuando haga patrones de referencia a una selección de un rango de actividades. Nota: Selecione solamente el número mínimo de criterios.';
+$string['goldnumoptionalxp'] = 'Este es el número de configuraciones opcionales que deben cumplirse antes de otorgar esta medalla. Use esta configuración cuando haga patrones de referencia a una selección de un rango de actividades. Nota: Seleccione solamente el número mínimo de criterios.';
 $string['goldquest'] = 'Número de encuestas';
 $string['goldquiz'] = 'Número de Exámenes (cuestionarios en España)';
 $string['goldresources'] = 'Número de Recursos';
@@ -361,4 +361,47 @@ $string['gsbadmin'] = 'Reporte de Medallas';
 $string['gsbdepartment'] = 'Moderación de Medallas';
 $string['minenrolments'] = 'Número mínimo de inscripciones';
 $string['minenrolmentsxp'] = 'El número mínimo de inscripciones necesarias en un curso antes de poder tener una puntuación calculada de medalla. Todos los cursos sin este criterio serán marcados como \'en desarrollo\'';
+$string['pluginname'] = 'Medallas';
+$string['silver_heading'] = 'Configurar Patrón de Referencia para Plata';
+$string['silverassignments'] = 'Número de Tareas';
+$string['silverassignmentslogs'] = 'Mínimo de Actividad Tarea';
+$string['silverbook'] = 'Número de Libros';
+$string['silverbooklogs'] = 'Mínimo de Actividad Libro';
+$string['silverchat'] = 'Número de Actividades Chat';
+$string['silverchatlogs'] = 'Mínimo de Actividad Chat';
+$string['silverchoice'] = 'Número de Actividades de Elección';
+$string['silverchoicelogs'] = 'Mínimo de Actividad Elección';
+$string['silverdatabase'] = 'Número de Bases de Datos';
+$string['silverdatabaselogs'] = 'Mínimo de Actividad BasedeDatos';
+$string['silverembed'] = 'Número de videos incrustados';
+$string['silverfeedback'] = 'Número de Actividades de Retroalimentación';
+$string['silverfeedbacklogs'] = 'Mínimo de Actividad Retroalimentación';
+$string['silverfolders'] = 'Número de Carpetas';
+$string['silverfolderslogs'] = 'Mínimo de Actividad Etiqueta';
+$string['silverforum'] = 'Número de Foros';
+$string['silverforumlogs'] = 'Mínimo de Actividad Foro';
+$string['silverglossary'] = 'Número de Glosarios';
+$string['silverglossarylogs'] = 'Mínimo de Actividad Glosario';
+$string['silverheadings'] = 'Encabezados de Sección';
+$string['silverims'] = 'Número de paquetes IMS';
+$string['silverimslogs'] = 'Mínimo de Actividad Retroalimentación';
+$string['silverlabels'] = 'Número de Etiquetas';
+$string['silverlabelslogs'] = 'Mínimo de Actividad Etiqueta';
+$string['silvernumoptional'] = 'Requisitos Opcionales';
+$string['silvernumoptionalxp'] = 'Este es el número de configuraciones opcionales que deben cumplirse antes de otorgar esta medalla. Use esta configuración cuando haga patrones de referencia a una selección de un rango de actividades. Nota: Seleccione solamente el número mínimo de criterios.';
 $string['silverquest'] = 'Número de encuestas';
+$string['silverquestlogs'] = 'Mínimo de Actividad Cuestionario';
+$string['silverquiz'] = 'Número de Exámenes (cuestionarios en España)';
+$string['silverquizlogs'] = 'Mínimo de Actividad Examen';
+$string['silverresources'] = 'Número de Recursos';
+$string['silverurls'] = 'Número de URLs';
+$string['silverurlslogs'] = 'Mínimo de Actividad URL';
+$string['silverwiki'] = 'Número de Actividades Wiki';
+$string['silverwikilogs'] = 'Mínimo de Actividad Wiki';
+$string['silverworkshop'] = 'Número de Talleres';
+$string['silverworkshoplogs'] = 'Mínimo de Actividad Taller';
+$string['studentviews'] = 'Vistas de Estudiantes Promedio';
+$string['studentviewsxp'] = 'El número mínimo de vistas promedio antes de poder tener un puntaje calculado de medalla. Todos los cursos sin este criterio serán marcados como \'en desarrollo\'';
+$string['subcategories'] = 'Incluir Sub Categorías';
+$string['subcategoriesxp'] = '¿Desea incluir sub categorías al otorgar medallas?';
+$string['title'] = 'título';

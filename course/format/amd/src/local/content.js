@@ -54,7 +54,6 @@ export default class Component extends BaseComponent {
             SECTION_CMLIST: `[data-for='cmlist']`,
             COURSE_SECTIONLIST: `[data-for='course_sectionlist']`,
             CM: `[data-for='cmitem']`,
-            PAGE: `#page`,
             TOGGLER: `[data-action="togglecoursecontentsection"]`,
             COLLAPSE: `[data-toggle="collapse"]`,
             TOGGLEALL: `[data-toggle="toggleall"]`,
@@ -146,10 +145,13 @@ export default class Component extends BaseComponent {
 
         // Capture page scroll to update page item.
         this.addEventListener(
-            document.querySelector(this.selectors.PAGE),
+            document,
             "scroll",
             this._scrollHandler
         );
+        setTimeout(() => {
+            this._scrollHandler();
+        }, 500);
     }
 
     /**
@@ -227,6 +229,7 @@ export default class Component extends BaseComponent {
             {watch: `cm.stealth:updated`, handler: this._reloadCm},
             {watch: `cm.sectionid:updated`, handler: this._reloadCm},
             {watch: `cm.indent:updated`, handler: this._reloadCm},
+            {watch: `cm.groupmode:updated`, handler: this._reloadCm},
             // Update section number and title.
             {watch: `section.number:updated`, handler: this._refreshSectionNumber},
             // Collapse and expand sections.
@@ -338,7 +341,7 @@ export default class Component extends BaseComponent {
      * Check the current page scroll and update the active element if necessary.
      */
     _scrollHandler() {
-        const pageOffset = document.querySelector(this.selectors.PAGE).scrollTop;
+        const pageOffset = window.scrollY;
         const items = this.reactive.getExporter().allItemsArray(this.reactive.state);
         // Check what is the active element now.
         let pageItem = null;
@@ -349,10 +352,6 @@ export default class Component extends BaseComponent {
             }
 
             const element = index[item.id].element;
-            // Activities without url can only be page items in edit mode.
-            if (item.type === 'cm' && !item.url && !this.reactive.isEditing) {
-                return pageOffset >= element.offsetTop;
-            }
             pageItem = item;
             return pageOffset >= element.offsetTop;
         });

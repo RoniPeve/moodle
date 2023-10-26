@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_analytics_graphs', language 'es', version '4.2'.
+ * Strings for component 'block_analytics_graphs', language 'es', version '4.3'.
  *
  * @package     block_analytics_graphs
  * @category    string

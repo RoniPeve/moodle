@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'reportbuilder', language 'es', version '4.2'.
+ * Strings for component 'reportbuilder', language 'es', version '4.3'.
  *
  * @package     reportbuilder
  * @category    string
@@ -54,6 +54,7 @@ $string['audiencemultiselectpostfix'] = '{$a->elements} mas {$a->morecount} más
 $string['audiencenotsaved'] = 'Audiencia no guardada';
 $string['audiencesaved'] = 'Audiencia guardada';
 $string['audienceupdated'] = 'Audiencia actualizada';
+$string['audienceusedbyschedule'] = 'Esta audiencia se utiliza en una programación para este informe.';
 $string['cardview'] = 'Vista de tarjeta';
 $string['cardview_help'] = 'La vista de tarjeta le permite definir el diseño de su informe cuando se ve en dispositivos estrechos. Las columnas se colapsarán más allá del límite establecido aquí, con un interruptor para expandir la tarjeta y ver todos los datos del informe.';
 $string['cardviewfirstcolumntitle'] = 'Título de la primera columna';

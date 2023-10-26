@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'report_lpmonitoring', language 'es', version '4.2'.
+ * Strings for component 'report_lpmonitoring', language 'es', version '4.3'.
  *
  * @package     report_lpmonitoring
  * @category    string
@@ -40,6 +40,7 @@ $string['comments'] = 'Comentarios';
 $string['commentsedit'] = 'Ver o añadir comentarios';
 $string['commentseditshort'] = 'Ver/Añadir';
 $string['commentsnumber'] = '<strong>({$a})</strong> comentario(s)';
+$string['competencyreports'] = 'Informes de competencias';
 $string['contd'] = 'cont.';
 $string['course'] = 'Curso';
 $string['dategenerated'] = 'Generado informe: {$a}';

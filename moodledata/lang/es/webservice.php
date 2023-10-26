@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'webservice', language 'es', version '4.2'.
+ * Strings for component 'webservice', language 'es', version '4.3'.
  *
  * @package     webservice
  * @category    string
@@ -196,11 +196,16 @@ $string['testwithtestclient'] = 'Comprobar el servicio';
 $string['testwithtestclientdescription'] = 'Simula el acceso externo al servicio usando el cliente de prueba de servicio web. Use un protocolo permitido con autenticación por ficha (token). <strong>ADVERTENCIA: ¡Las funciones que usted pruebe SERÁN EJECUTADAS para este usuario, por lo que debe ser cauteloso con lo que decida probar!</strong>';
 $string['token'] = 'Ficha';
 $string['tokenauthlog'] = 'Autenticación mediante ficha (token)';
+$string['tokencopied'] = 'Texto copiado al portapapeles.';
 $string['tokencreatedbyadmin'] = 'Únicamente puede ser restablecido por el administrador (*)';
 $string['tokencreator'] = 'Creador';
 $string['tokenfilter'] = 'Filtro de tokens';
 $string['tokenfilterreset'] = 'Mostrar todos los tokens';
 $string['tokenfiltersubmit'] = 'Mostrar solamente tokens coincidentes';
+$string['tokenname'] = 'Nombre';
+$string['tokennamehint'] = 'Si no introduce un nombre entonces se usará un nombre aleatorio.';
+$string['tokennameprefix'] = 'Servicio web-{$a}';
+$string['tokennewmessage'] = 'Copiar el token ahora. No se volverá a mostrar cuando ya haya salido de esta página.';
 $string['unknownoptionkey'] = 'Clave de opción desconocida ({$a})';
 $string['unnamedstringparam'] = 'Un parámetro de tipo cadena está sin nombre.';
 $string['updateusersettings'] = 'Actualizar';
@@ -211,12 +216,11 @@ $string['userasclientsdescription'] = 'Los siguientes pasos pueden ayudarle a co
 $string['usermissingcaps'] = 'Permisos ausentes: {$a}';
 $string['usernameorid'] = 'Nombre de usuario / ID de Usuario';
 $string['usernameorid_help'] = 'Introduzca el nombre de usuario o la ID de usuario.';
-$string['usernameoridnousererror'] = 'No se encontraron usuarios con este nombre de usuario / ID de usuario';
-$string['usernameoridoccurenceerror'] = 'Se encontró a más de un usuario con este nombre de usuario. Por favor introduzca la ID del usuario';
 $string['usernotallowed'] = 'El usuario no tiene permitido este servicio. Primeramente debe permitirselo a este usuario en las  {$a}\'s permitidas de la página de administración de usuarios.';
 $string['userservices'] = 'Servicios de usuario: {$a}';
 $string['usersettingssaved'] = 'Configuración de usuario guardada';
 $string['validuntil'] = 'Válido hasta';
+$string['validuntil_empty'] = 'Este token no tiene fecha de expiración.';
 $string['validuntil_help'] = 'Si se activa la opción, el servicio se desactivará para este usuario después de esta fecha.';
 $string['webservice'] = 'Servicio Web';
 $string['webservices'] = 'Servicios Web';

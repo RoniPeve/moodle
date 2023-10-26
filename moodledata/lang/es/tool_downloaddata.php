@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_downloaddata', language 'es', version '4.2'.
+ * Strings for component 'tool_downloaddata', language 'es', version '4.3'.
  *
  * @package     tool_downloaddata
  * @category    string
@@ -41,7 +41,7 @@ $string['emptyroles'] = 'Sin roles especificados';
 $string['emptyrolescache'] = 'Caché sin roles';
 $string['encoding'] = 'Codificación';
 $string['fields'] = 'Campos';
-$string['fields_help'] = 'Seleccione los campos a descargar. Los campos predeterminados están localizados en DOWNLOADDATA_PLUGIN_DIRECTORY/config.php.';
+$string['fields_help'] = 'Sewleccione los campos a descargar. Los campos predeterminados están localizados en DOWNLOADDATA_PLUGIN_DIRECTORY/config.php.';
 $string['filenotprepared'] = 'Archivo no preparado';
 $string['format'] = 'Formato de archivo';
 $string['formatcsv'] = 'Valores separadospor comas (.csv)';

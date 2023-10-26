@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'format_tiles', language 'es', version '4.2'.
+ * Strings for component 'format_tiles', language 'es', version '4.3'.
  *
  * @package     format_tiles
  * @category    string
@@ -324,7 +324,7 @@ $string['registeredthanks'] = 'Su extensión está registrada. Gracias';
 $string['registeremailno'] = 'No deseo recibir ningún correo electrónico';
 $string['registeremailyes'] = 'Si. Estoy de acuerdo en recibir notificaciones ocasionales sobre actualizaciones y otra información acerca del plugin Tiles (Mosaicos)';
 $string['registerintro1'] = '¡Nos encantaría estar en comunicación con Usted! Cuando se registre';
-$string['registerintro2'] = 'apoya el desarrollo futuro de este complemento';
+$string['registerintro2'] = 'Usted apoya el desarrollo futuro de este plugin';
 $string['registerintro3'] = 'Usted puede enterarse con prontitud acerca de planes futuros y actualizaciones importantes';
 $string['registerintro4'] = 'Nosotros podemos encontrar más acerca de lo que a Usted le gustaría que hiciera este plugin.';
 $string['registerintro5'] = 'Sus detalles se mantendrán privados por el desarrollador tal y como está descrito en la política de privacidad ligada abajo. ¡Gracias por su apoyo!';

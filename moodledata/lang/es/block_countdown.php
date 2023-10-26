@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_countdown', language 'es', version '4.2'.
+ * Strings for component 'block_countdown', language 'es', version '4.3'.
  *
  * @package     block_countdown
  * @category    string
@@ -25,5 +25,20 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['changesettings'] = 'Por favor configure fecha y hora';
+$string['countdown:addinstance'] = 'Añadir un nuevo bloque de cuenta regresiva';
+$string['countdown:myaddinstance'] = 'Añadir un nuevo bloque de conteo regresivo al Tablero';
+$string['countdown_ended_text'] = 'Texto después de agotado el tiempo';
+$string['countdown_style'] = 'Estilo del contador';
+$string['countdown_style_corporate'] = 'Estilo corporativo';
+$string['countdown_style_default'] = 'Estilo por defecto';
+$string['countdown_title'] = 'Título del contador';
+$string['countdown_url'] = 'URL';
+$string['countdown_urltarget'] = 'Destino';
 $string['css'] = 'CSS personalizado';
+$string['daystext'] = 'día(s)';
+$string['pluginname'] = 'Conteo final';
+$string['privacy:metadata'] = 'El bloque de Conteo regresivo final solamente muestra un cronómetro regresivo.';
 $string['until'] = 'Fecha y hora';
+$string['urltarget_blank'] = 'Abrir documento enlazado en una pestaña nueva';
+$string['urltarget_self'] = 'Abrir documento enlazado en la misma pestaña';

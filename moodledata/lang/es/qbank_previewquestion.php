@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'qbank_previewquestion', language 'es', version '4.2'.
+ * Strings for component 'qbank_previewquestion', language 'es', version '4.3'.
  *
  * @package     qbank_previewquestion
  * @category    string
@@ -35,5 +35,6 @@ $string['restartnow'] = 'Usar la última versión';
 $string['tagclosebutton'] = 'Cerrar';
 $string['tagerror'] = 'No se encontró ninguna pregunta con las siguientes etiquetas: {$a}. Por favor cambie o elimine el filtro de etiquetas.';
 $string['tagsnotfound'] = 'No se encontraron las etiquetas';
+$string['theoptionsyouselectonlyaffectthepreview'] = 'Estos ajustes son para probar la pregunta. Las opciones que selecciones solamente afectarán a la vista previa.';
 $string['versiontitle'] = 'Versión {$a}';
 $string['versiontitlelatest'] = 'Versión {$a} (última)';

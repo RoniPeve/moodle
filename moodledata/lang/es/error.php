@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'error', language 'es', version '4.2'.
+ * Strings for component 'error', language 'es', version '4.3'.
  *
  * @package     error
  * @category    string
@@ -432,6 +432,8 @@ $string['moduledoesnotexist'] = 'Este módulo no existe';
 $string['moduleinstancedoesnotexist'] = 'La instancia de este módulo no existe';
 $string['modulemissingcode'] = 'El módulo {$a} carece del código necesario para llevar a cabo esta función';
 $string['moodlenet:invalidshareformat'] = 'Formato compartido de MoodleNet no válido';
+$string['moodlenet:invalidsharestatus'] = 'Estado de compartición MoodleNet no válido';
+$string['moodlenet:invalidsharetype'] = 'Tipo de compartición MoodleNet no válido';
 $string['moodlenet:usernotconfigured'] = 'No tiene permiso para compartir contenido en MoodleNet o su cuenta está configurada incorrectamente.';
 $string['movecatcontentstoroot'] = 'No se permite mover el contenido de la categoría a la raíz (root). ¡Debe mover los contenidos hacia una categoría existente!';
 $string['movecatcontentstoselected'] = 'Algunos de los contenidos de categoría no se pueden mover dentro de la categoría seleccionada.';
@@ -504,6 +506,7 @@ $string['opensslsignerror'] = 'OpenSSL no puede firmar datos';
 $string['orderidnotfound'] = 'ID de la orden {$a} no se encuentra';
 $string['pagenotexist'] = '<p>Ha ocurrido un error inusual al intentar ver una página que no existe:</p>{$a}';
 $string['pagenotexisttitle'] = 'Error 404: Archivo no encontrado';
+$string['passwordexceeded'] = 'La contraseña no puede tener más de {$a} caracteres.';
 $string['pathdoesnotstartslash'] = 'No hay argumentos válidos suministrados, la ruta no comienza con diagonal!';
 $string['pleasereport'] = 'Si tiene tiempo, por favor háganos saber qué estaba intentando hacer cuando tuvo lugar el error:';
 $string['pluginrequirementsnotmet'] = 'No se ha podido instalar el plugin "{$a->pluginname}" ({$a->pluginversion}). Necesita una nueva versión de Moodle (actualmente usted está usando {$a->currentmoodle}, y necesita {$a->requiremoodle}).';

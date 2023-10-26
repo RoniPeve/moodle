@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_generator', language 'es', version '4.2'.
+ * Strings for component 'tool_generator', language 'es', version '4.3'.
  *
  * @package     tool_generator
  * @category    string
@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['additionalmodules'] = 'Actividades adicionales';
-$string['additionalmodules_help'] = 'Seleccione más actividades que implementen la función course_backend_generator_create_activity para incluir en el curso de prueba.';
+$string['additionalmodules_help'] = 'Seleccionar más actividades que implementan la función course_backend_generator_create_activity para incluirlas en el curso de prueba.';
 $string['bigfile'] = 'Fichero grande {$a}';
 $string['courseexplanation'] = 'Esta herramienta crea cursos de prueba estándar que incluyen muchas secciones, actividades , y archivos.
 

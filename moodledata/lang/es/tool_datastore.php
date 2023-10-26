@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tool_datastore', language 'es', version '4.2'.
+ * Strings for component 'tool_datastore', language 'es', version '4.3'.
  *
  * @package     tool_datastore
  * @category    string
@@ -33,7 +33,7 @@ $string['datastore:uploadcoursecompletion'] = 'Cargar la finalización del curso
 $string['entitycompletion'] = 'Completud del Almacén de datos';
 $string['entitycourse'] = 'Datos archivados del curso';
 $string['entityuser'] = 'Datos archivados del usuario';
-$string['pluginname'] = 'Datos archivados';
+$string['pluginname'] = 'Almacén de datos';
 $string['privacy:metadata:tool_datastore:action'] = 'El tipo de acción';
 $string['privacy:metadata:tool_datastore:actionid'] = 'El ID de la acción relacionada';
 $string['privacy:metadata:tool_datastore:entityid'] = 'El ID de la entidad relacionada';

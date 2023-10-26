@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_coursefiles', language 'es', version '4.2'.
+ * Strings for component 'block_coursefiles', language 'es', version '4.3'.
  *
  * @package     block_coursefiles
  * @category    string
@@ -25,4 +25,17 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['author'] = 'Autor';
+$string['cachedef_coursefiles'] = 'Cacheando todos los datos para tamaño de archivo y listado para cursos';
+$string['component'] = 'Componente';
+$string['coursefiles:addinstance'] = 'Añadir un nuevo bloque  de archivos del curso';
+$string['coursefiles:viewlist'] = 'Ver lista del uso de archivos de un curso en particular';
 $string['coursefilesusagereport'] = 'Informe de uso de archivos de curso';
+$string['filesize'] = 'Tamaño del archivo';
+$string['nofilesoncourse'] = 'No se encontraron archivos en el curso';
+$string['pluginname'] = 'Archivos del curso';
+$string['timecreated'] = 'Hora de creación';
+$string['topfive'] = 'Los cinco archivos principales';
+$string['totalfilesize'] = 'Tamaño total de archivo: {$a}';
+$string['totalsize'] = 'Tamaño total';
+$string['viewcoursefiles'] = 'Ver archivos del curso';

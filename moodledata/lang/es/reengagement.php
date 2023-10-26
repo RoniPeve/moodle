@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'reengagement', language 'es', version '4.2'.
+ * Strings for component 'reengagement', language 'es', version '4.3'.
  *
  * @package     reengagement
  * @category    string
@@ -67,6 +67,8 @@ $string['emailuser_help'] = 'Momentos en los que la actividad debería enviar co
 <li>Cuando se complete el reenganche: Enviar correo electrónico al usuario cuando la actividad de reenganche se haya completado.</li>
 <li>Después de un tiempo de retardo: Enviar correo electrónico al usuario un determinado tiempo después de que hayan empezado el módulo.</li>
 </ul>';
+$string['errornoid'] = 'Usted debe especificar un ID de curso_módulo o un ID de instancia';
+$string['errorreengagementnotvalid'] = 'Este módulo de re-compromiso no está habilitado para su cuenta. Por favor póngase en contacto con su administrador si siente que esto es un error.';
 $string['frequencytoohigh'] = 'El número máximo de recordatorios con el tiempo de retardo que has fijado es {$a}.';
 $string['hours'] = 'Horas';
 $string['introdefaultvalue'] = 'Esta es una actividad de reenganche. Su propósito es reforzar durante el periodo de tiempo entre las actividades que la preceden y las actividades que van a continuación.';
@@ -85,10 +87,16 @@ $string['oncompletion'] = 'Cuando se complete el reenganche';
 $string['periodtoolow'] = 'El retraso es muy bajo - debe ser de al menos 5 minutos';
 $string['pluginname'] = 'Reenganche';
 $string['privacy:metadata:completiontime'] = 'Cuando se complete este módulo';
+$string['privacy:metadata:emailsent'] = 'Email ha sido enviado';
+$string['privacy:metadata:emailtime'] = 'Cuando este usuario debería ser comunicado por Email';
+$string['privacy:metadata:reengagement'] = 'ID de Re-compromiso';
+$string['privacy:metadata:reengagement_inprogress'] = 'Actividad Reengagement en progreso';
+$string['privacy:metadata:userid'] = 'ID del usuario al que se relaciona este registro';
 $string['receiveemailattimex'] = 'El mensaje se enviará en {$a}.';
 $string['receiveemailattimexunless'] = 'El mensaje se enviará en {$a} a menos que complete la actividad en cuestión.';
 $string['reengagement'] = 'reenganche';
 $string['reengagement:addinstance'] = 'reenganche: añadir distancia';
+$string['reengagement:bulkactions'] = 'Realizar acciones masivas en re-compromiso';
 $string['reengagement:editreengagementduration'] = 'Editar duración del reenganche';
 $string['reengagement:startreengagement'] = 'Empezar reenganche';
 $string['reengagementduration'] = 'Duración del reenganche';
@@ -102,8 +110,12 @@ $string['remindercount_help'] = 'Este es el número de veces que se envía un co
 <li>menos de 5 días: límite de 10 recordatorios.</li>
 <li>menos de 15 días: límite de 26 recordatorios.</li>
 <li>más de 15 días: límite máximo de 40 recordatorios.</li> </ul>';
+$string['resetbyenrolment'] = 'Por fecha de creación de inscripción y una duración de: {$a}';
+$string['resetbyfirstaccess'] = 'Por primer acceso al curso y una duración de: {$a}';
+$string['resetbyspecificdate'] = 'Por fecha especificada';
 $string['resetcompletion'] = 'Restablecer la fecha de finalización';
 $string['search:activity'] = 'Reenganche - información de actividad';
+$string['seconds'] = 'Segundos';
 $string['specifydate'] = 'Fijar la fecha de finalización a:';
 $string['suppressemail'] = 'Suprime el correo electrónico si la actividad objetivo está completa';
 $string['suppressemail_help'] = 'Esta opción indica a la actividad que suprima los correos electrónicos de los usuarios donde una actividad mencionada está completa.';
@@ -113,3 +125,4 @@ $string['thirdpartyemails'] = 'Destinatarios de terceros';
 $string['thirdpartyemails_help'] = 'Una lista de direcciones de correo electrónico separadas por comas para terceros que deberían recibir un correo electrónico cuando el usuario lo hace.';
 $string['userandmanager'] = 'Usuario y Administrador';
 $string['weeks'] = 'Semanas';
+$string['withselectedusers'] = 'Con usuarios seleccionados...';

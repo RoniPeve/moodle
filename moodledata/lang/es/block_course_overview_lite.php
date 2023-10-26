@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_course_overview_lite', language 'es', version '4.2'.
+ * Strings for component 'block_course_overview_lite', language 'es', version '4.3'.
  *
  * @package     block_course_overview_lite
  * @category    string
@@ -26,3 +26,35 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['activityoverview'] = 'Tiene {$a}s que requieren atención';
+$string['alwaysshowall'] = 'Siempre Mostrar Todo';
+$string['collapseall'] = 'Colapsar todas las Listas de Cursos';
+$string['course_overview_lite:addinstance'] = 'Añadir un nuevo bloque de VIsta General de Curso.';
+$string['course_overview_lite:myaddinstance'] = 'Añadir un nuevo bloque de VIsta General de Curso a Mi hogar.';
+$string['currentcourses'] = 'cursos actuales/proximos';
+$string['defaultmaxcourses'] = 'Cursos máximos por defecto';
+$string['defaultmaxcoursesdesc'] = 'Máximo de cursos que serán mostrados en el bloque de vista general de curso. 0 mostrará todos los cursos.';
+$string['expandall'] = 'Expandir la Lista de Todos los Cursos';
+$string['forcedefaultmaxcourses'] = 'Forzar Máximo de Cursos';
+$string['forcedefaultmaxcoursesdesc'] = 'Si se configura, entonces el usuario no podrá cambiar su configuración personal';
+$string['hiddencoursecount'] = 'Usted tiene {$a} curso oculto';
+$string['hiddencoursecountplural'] = 'Usted tiene {$a} cursos ocultos';
+$string['hide_icon_alt'] = 'Alternar visibilidad del curso en este bloque';
+$string['highlightdelim'] = 'Resaltar delimitador';
+$string['highlightdelimdesc'] = 'Delimitador con el cual se dividirá el prefijo a coincidir contra múltiples términos.';
+$string['highlightprefix'] = 'Resaltar prefijo';
+$string['highlightprefixdesc'] = 'Prefijo para identificar cursos a resaltar basándose en el nombre corto del curso';
+$string['movecoursehere'] = 'Mover el curso aquí';
+$string['numtodisplay'] = 'Número de cursos a mostrar';
+$string['pluginname'] = 'Vista general de curso ligera';
+$string['shortnameprefix'] = 'Incluye {$a}';
+$string['shortnamesufixprural'] = '(y {$a} otros)';
+$string['shortnamesufixsingular'] = '(y {$a} otro)';
+$string['showchildren'] = 'Mostrar hijos';
+$string['showchildrendesc'] = '¿Deberían de enlistarse los cursos hijos debajo del título del curso principal?';
+$string['showwelcomearea'] = 'Mostrar área de alertas';
+$string['showwelcomeareadesc'] = '¿Mostrar área de alertas arriba de la lista de cursos?';
+$string['tabdetailed'] = 'Detallada';
+$string['tabsimple'] = 'Simple';
+$string['view_edit_profile'] = '(Ver y editar su perfil)';
+$string['welcomeareatext'] = 'Mensaje del área de alerta';
+$string['welcomeareatextdesc'] = 'Mensaje a mostrarse en el área de alerta';

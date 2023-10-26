@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'local_moodlecloudsignup', language 'es', version '4.2'.
+ * Strings for component 'local_moodlecloudsignup', language 'es', version '4.3'.
  *
  * @package     local_moodlecloudsignup
  * @category    string
@@ -397,7 +397,7 @@ $string['signup:password.form.fields.password_confirmation'] = 'Y otra vez, solo
 $string['signup:password.form.fields.save'] = 'Guardar contraseña';
 $string['signup:payment.body.charges.taxfree'] = 'Usted seleccionó el paquete %package% , plan %plan%. Su pago de (dólares australianos) AUD %costperyear% es para una suscripción de 12 meses a este plan.';
 $string['signup:payment.body.charges.withgst'] = 'Usted seleccionó el paquete %package% , plan %plan%. Su pago de (dólares australianos) AUD %costperyear% (incluyendo impuesto GST) es para una suscripción de 12 meses a este plan.';
-$string['signup:payment.body.title'] = 'Selecione su método de pago';
+$string['signup:payment.body.title'] = 'Seleccione su método de pago';
 $string['signup:payment.form.fields.continue'] = 'Siguiente';
 $string['signup:personal.body.lead'] = 'Únicamente necesitamos saber quién eres y estar seguros de que aceptas nuestras Condiciones de Servicio.';
 $string['signup:personal.body.title'] = '¡Tu sitio está disponible!';

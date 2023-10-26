@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'tiny_multilang2', language 'es', version '4.2'.
+ * Strings for component 'tiny_multilang2', language 'es', version '4.3'.
  *
  * @package     tiny_multilang2
  * @category    string
@@ -50,6 +50,5 @@ $string['pluginname'] = 'Contenido Multi-Idioma (v2)';
 $string['privacy:metadata'] = 'El plugin Tiny Contenido Multi-Idioma (v2) no guarda datos personales.';
 $string['requiremultilang2'] = 'Requerir el filtro de Contenido Multi-Idioma (v2)';
 $string['requiremultilang2_desc'] = 'Si se habilita, el menú desplegable de selección de idiomas solo es visible cuando esté habilitado el filtro de Contenido Multi-Idioma (v2).';
-$string['settings'] = 'Ajustes de Tiny Contenido Multi-Idioma (v2)';
 $string['showalllangs'] = 'Mostrar todos los idiomas';
 $string['showalllangs_desc'] = 'Si se habilita, el menú desplegable de selección de idiomas contendrá todos los idiomas soportados por Moodle. En caso contrario, sólo se mostrarán los idiomas instalados y habilitados.';

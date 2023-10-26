@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'filter_filtercodes', language 'es', version '4.2'.
+ * Strings for component 'filter_filtercodes', language 'es', version '4.3'.
  *
  * @package     filter_filtercodes
  * @category    string
@@ -32,6 +32,13 @@ $string['chartprogressbarlabel'] = '{$a->etiqueta}: {$a->valor}';
 $string['contentmissing'] = '<h1>Falta contenido.</h1><p>Por favor, informe al encargado de la página.</p>';
 $string['coursecardsbyenrol'] = '{coursecardsbyenrol} tarjetas máximas.';
 $string['coursecardsbyenrol_desc'] = 'Número máximo de tarjetas de curso a mostrar para la etiqueta {coursecardsbyenrol}. Ajustar a cero para no poner límite (no recomendado).';
+$string['coursecardsformat'] = 'Disposición de tarjetas de curso';
+$string['coursecardsformat_desc'] = 'Mostrar {coursecards}, {coursecardsbyenrol} y {mycoursescards} así:<br>
+<ul>
+<li><strong>Vertical</strong>: Imagen del curso por encima del nombre del cuso.</li>
+<li><strong>Horizontal</strong>: Imagen del curso a la izquierda del nombre del curso, categoría y resumen; o</li>
+<li><strong>Lista</strong> in a table: Nombre del curso, categoría y resumen.</li>
+</ul>';
 $string['coursecontactlinktype'] = 'Tipo de enlace de contacto';
 $string['coursecontactlinktype_desc'] = 'Seleccione el tipo de enlace de contacto para contacto(s) en las etiquetas {coursecontacts}.';
 $string['coursecontactshowdesc'] = 'Mostrar la descripción del perfil del contacto.';
@@ -202,6 +209,7 @@ $string['ifprofilefiedonlyvisible'] = 'Sólo visible {ifprofile_field_}.';
 $string['ifprofilefiedonlyvisible_desc'] = 'Cuando se marca, restringe la etiqueta {ifprofile_field_...} para acceder sólo a campos visibles del perfil de usuario. Los campos ocultos pueden comportarse como si estuvieran en blanco. Si no se marca, esta etiqueta también estará disponible para marcar archivos ocultos.';
 $string['narrowpage'] = 'Página estrecha';
 $string['narrowpage_desc'] = 'Habilite esta opción para optimizar la información si Moodle está usando un tema con ancho de página limitado (p.e., Boost en Moodle 4.0+)';
+$string['nocompletedcourses'] = 'Ninguno de los cursos en que usted participa se ha marcado como completado';
 $string['pagebuilder'] = 'Page builder (constructor de páginas)';
 $string['pagebuilderlink'] = 'https://www.layoutit.com/build';
 $string['photoeditor'] = 'Photo editor (editor de foto)';

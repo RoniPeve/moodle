@@ -5,4 +5,4 @@ MathJax.Hub.Config({
     skipStartupTypeset: true,
     messageStyle: "none"
 });
-";s:22:"texfiltercompatibility";s:1:"0";s:7:"version";s:10:"2023042400";}
+";s:22:"texfiltercompatibility";s:1:"0";s:7:"version";s:10:"2023100900";}

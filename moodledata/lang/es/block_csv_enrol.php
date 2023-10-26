@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_csv_enrol', language 'es', version '4.2'.
+ * Strings for component 'block_csv_enrol', language 'es', version '4.3'.
  *
  * @package     block_csv_enrol
  * @category    string
@@ -25,4 +25,17 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['alreadyenrolled'] = 'El usuario {$a} ya estaba previamente inscrito en este curso.';
+$string['csvenrol'] = 'Inscribir usuarios';
+$string['description'] = 'Usted puede subir su archivo CSV con direcciones de correo electrónico de usuarios de Moodle aquí, para que puedan ser inscritos al curso  "{$a}".';
+$string['done'] = 'Inscripción realizada.';
+$string['emailnotfound'] = 'No se pudo encontrar la dirección de correo {$a}.';
+$string['enrolling'] = 'Inscribiendo usuarios...';
+$string['enrollinguser'] = 'Inscribiendo al usuario {$a}.';
+$string['enrolmentlog'] = 'Bitácora de la inscripción:';
+$string['manageuploads'] = 'Administrar archivos subidos';
+$string['pluginname'] = 'Inscribir usuarios mediante CSV';
 $string['resultfiles'] = 'Resultado de su matriculación CSV:';
+$string['status'] = 'Inscripción realizada. Resultado: {$a->success} exitosos o ya estaban previamente inscritos, {$a->failed} fallas.';
+$string['title'] = 'Inscribir usuarios a {$a}';
+$string['uploadcsv'] = 'Suba su archivo CSV aquí:';

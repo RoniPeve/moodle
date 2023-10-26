@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'ltiservice_profile', language 'es', version '4.2'.
+ * Strings for component 'ltiservice_profile', language 'es', version '4.3'.
  *
  * @package     ltiservice_profile
  * @category    string
