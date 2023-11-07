@@ -37,12 +37,23 @@
 <div id="page-wrapper">
 
     {{{ output.standard_top_of_body_html }}}
-
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="../Assets/Images/Banner.png" alt="Image 1"></div>
+            <div class="slide"><img src="../Assets/Images/Banner02.png" alt="Image 2"></div>
+            <div class="slide"><img src="../Assets/Images/Banner02.png" alt="Image 3"></div>
+        </div>
+        <div class="slider-nav">
+            <div class="dot" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </div>
     <div id="page" class="container-fluid mt-0">
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
                 <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
-                    <div class="login-wrapper">
+                    <div class="login-wrapper inicio_sesion">
                         <div class="login-container">
                             {{{ output.main_content }}}
                         </div>
@@ -57,6 +68,60 @@
     {{{ output.standard_footer_html }}}
     {{{ output.standard_end_of_body_html }}}
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+
+  const updateSlider = () => {
+    slides.forEach((slide, index) => {
+      if (index === currentIndex) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  };
+
+  const goToSlide = (index) => {
+    currentIndex = index;
+    updateSlider();
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+
+      // Reiniciar el cambio automático
+      clearInterval(autoChangeInterval);
+      autoChangeInterval = setInterval(autoChangeSlide, 3000);
+    });
+  });
+
+  // Función para cambiar automáticamente cada 3 segundos
+  const autoChangeSlide = () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  };
+
+  // Iniciar cambio automático
+  let autoChangeInterval = setInterval(autoChangeSlide, 3000);
+
+  updateSlider();
+});
+
+
+</script>
 </body>
 </html>
 
