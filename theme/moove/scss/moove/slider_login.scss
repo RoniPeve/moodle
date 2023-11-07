@@ -41,7 +41,7 @@
   position: absolute;
   bottom: 20px;
   width: 100%;
-  z-index: 7;
+  z-index: 11;
 }
 
 .dot {
@@ -55,10 +55,59 @@
 
 /* Estilos para el punto activo */
 .dot.active {
-  background-color: #fff;
+  background-color: #eb5353;
 }
 
-  .inicio_sesion{
-    z-index: 5;
+.inicio_sesion{
+    z-index: 9;
     position: relative;
+    margin-top: 5px;
+}
+.login-container h2, .login-container .box, .login-container .singlebutton{
+ z-index: 10;
+ position: fixed; /* posición fija en la ventana de tu navegador */  
+  top: 0px; /* distancia en px desde la parte superior */  
+  right: 0px; /* distancia en px desde la parte derecha */
+  background-color: #fff;
+}
+.login-container h2{
+  margin-top: 50px;
+  margin-right: 100px;
+  padding: 10px;
+}
+.login-container .box{
+  margin-top: 100px;
+  margin-right: 10px;
+  padding: 10px;
+}
+.login-container .singlebutton{
+  margin-top: 300px;
+  margin-right: 150px;
+}
+.diagonal_login{
+  height: 100vh;
+  width: 50%;
+  //background-color: rgba($color: #fff, $alpha: .5);
+  position: fixed; /* posición fija en la ventana de tu navegador */  
+  top: 0px; /* distancia en px desde la parte superior */  
+  right: 0px; /* distancia en px desde la parte derecha */
+  background-color: #3b69ae; /* Fondo blanco */
+  clip-path: polygon(100% 0, 100% 100%, 0% 100%, 20% 0); /* Ajusta la inclinación */
+  
+  
+  /* Media query para ocultar el div en dispositivos móviles */
+  @media (max-width: 1000px) {
+    display: none;
   }
+}
+
+.diagonal_login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 108%;
+  height: 108%;
+  background-color: rgb(255, 255, 255); /* Color azul */
+  clip-path: polygon(100% 0, 100% 100%, 10% 100%, 30% 0); /* Ajusta la inclinación de la segunda diagonal */
+}

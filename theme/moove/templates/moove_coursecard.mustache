@@ -24,13 +24,16 @@
                 </a>
             </div>
         </div>
-
-        <div class="customfields">
-            {{{customfields}}}
-        </div>
+            
+        <!--<div class="customfields">
+            <strong>{{{customfields}}}</strong>
+        </div>-->
 
         <div class="course-summary">
             {{{summary}}}
+        </div>
+        <div class="customfields campos">
+           {{{customfields}}}
         </div>
     </div>
     {{#hasprogress}}
@@ -43,9 +46,9 @@
             </div>
         </div>
     {{/hasprogress}}
-
+        
     {{#hascontacts}}
-        <div class="course-contacts">
+        <div class="course-contacts row gx-3 pie_curso">
             {{#contacts}}
                 <a href="{{config.wwwroot}}/user/profile.php?id={{{id}}}" class="contact" data-toggle="tooltip" title="{{{fullname}}}">
                     <img src="{{{userpicture}}}" class="rounded-circle" alt="{{{fullname}}}">
@@ -56,5 +59,6 @@
                 </a>
             {{/contacts}}
         </div>
+        
     {{/hascontacts}}
 </div>
