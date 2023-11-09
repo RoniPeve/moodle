@@ -9,3 +9,66 @@
 .pie_curso a{
     margin: 5px;
 }
+/******BOTON INICIAR SESION***/
+#usernavigation .login a{
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #3B69AE;
+  color: #fff;
+}
+/*****************CATEGORIAS DE CURSOS****************/
+/*.info {
+    width: 100%;
+    height: 100%; //Puedes ajustar el ancho máximo según tus necesidades 
+    margin: 5px; //Centra la tarjeta horizontalmente 
+    background-color:#3B69AE;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}*/
+.category .info {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    background-color: #3B69AE;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+/*.categoryname {
+    width: 100%;
+}*/
+.category .info h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category .info h3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente el contenido */
+    width: 400px;
+}
+
+.category .info h3 a::before {
+    content: '';
+    background-image: url('../../../../Assets/Images/fase1.svg'); /* Ruta a tu imagen de icono local */
+    background-size: cover;
+    width: 40px; /* Ajusta el ancho del ícono según sea necesario */
+    height: 40px; /* Ajusta la altura del ícono según sea necesario */
+    margin-right: 5px; /* Ajusta la separación entre el ícono y el enlace según sea necesario */
+    //display: inline-block;
+}
+.category .info h3 img{
+    filter: invert(1);
+}
+/******color de la categoria*****/
+.category .info .categoryname a {
+    color: #fff;
+}
+/*********color de la descripcion de la categoria*******/
+.box .no-overflow p{
+    color: #fff;
+}

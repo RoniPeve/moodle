@@ -38,3 +38,15 @@ class matriculaform extends moodleform {
         return $errors;
     }
 }
+
+$newaccount = get_string('newaccount');
+$login      = get_string('login');
+
+$PAGE->navbar->add($login);
+$PAGE->navbar->add($newaccount);
+
+//$PAGE->set_pagelayout('login');
+$PAGE->set_title($newaccount);
+//$PAGE->set_heading($SITE->fullname);
+
+echo $OUTPUT->header();

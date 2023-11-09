@@ -100,9 +100,9 @@ $login      = get_string('login');
 $PAGE->navbar->add($login);
 $PAGE->navbar->add($newaccount);
 
-$PAGE->set_pagelayout('login');
+//$PAGE->set_pagelayout('login');
 $PAGE->set_title($newaccount);
-$PAGE->set_heading($SITE->fullname);
+//$PAGE->set_heading($SITE->fullname);
 
 echo $OUTPUT->header();
 

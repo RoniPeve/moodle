@@ -200,6 +200,7 @@ a[x-apple-data-detectors] {
 </html>';
 $string['enterusername'] = 'Escriba su número de DNI';
 $string['invalidusernameupload'] = 'DNI no valido';
+$string['login'] = 'Iniciar Sesión';
 $string['missingusername'] = 'Falta el número de DNI';
 $string['searchbyusername'] = 'Buscar por número de DNI';
 $string['username'] = 'DNI';

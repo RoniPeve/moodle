@@ -90,14 +90,14 @@
                         {{/slides}}
                     </div>
                     {{^slidersingleslide}}
-                    <a class="carousel-control-prev" href="#carousel-indicators" role="button" data-slide="prev">
+                    <!--<a class="carousel-control-prev" href="#carousel-indicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">{{#str}}previous{{/str}}</span>
                     </a>
                     <a class="carousel-control-next" href="#carousel-indicators" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">{{#str}}next{{/str}}</span>
-                    </a>
+                    </a>-->
                     {{/slidersingleslide}}
                 </div>
             </div>
@@ -173,7 +173,7 @@
             <div id="page-content" class="d-print-block main-inner">
                 <div id="region-main-box">
                     <section id="region-main" aria-label="{{#str}}content{{/str}}">
-                        {{{ output.course_content_header }}}
+                        {{{ output.course_content_footert_header }}}
                         {{{ output.main_content }}}
                         {{{ output.course_content_footer }}}
                     </section>
@@ -184,7 +184,7 @@
         {{#faqenabled}}
             <section id="faq" class="scale-up scale-up-show">
                 <div class="moove-container-fluid">
-                    <h2>{{#str}}faq, theme_moove{{/str}}</h2>
+                    <h2>Preguntas Frecuentes <!--{{#str}}faq, theme_moove{{/str}}--></h2>
 
                     <div class="accordion" id="accordionFaq">
                         {{#faq}}

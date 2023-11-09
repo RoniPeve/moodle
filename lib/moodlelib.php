@@ -3507,7 +3507,7 @@ function user_not_fully_set_up($user, $strict = true) {
         return false;
     }
 
-    if (empty($user->firstname) or empty($user->lastname) or empty($user->email) or over_bounce_threshold($user)) {
+    if (empty($user->firstname) or empty($user->lastname) or empty($user->email)  or empty($user->profile['cargo']) or over_bounce_threshold($user)) {
         return true;
     }
 
@@ -4035,6 +4035,7 @@ function truncate_userinfo(array $info) {
         'address'     => 255,
         'city'        => 120,
         'country'     =>   2,
+        'cargo'       => 120,
     );
 
     // Apply where needed.
