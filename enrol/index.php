@@ -104,7 +104,7 @@ $courserenderer = $PAGE->get_renderer('core', 'course');
 echo $courserenderer->course_info_box($course);
 
 //TODO: find if future enrolments present and display some info
-
+//formulario para matricula
 foreach ($forms as $form) {
     echo $form;
 }

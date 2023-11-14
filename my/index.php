@@ -99,7 +99,7 @@ $PAGE->set_pagetype('my-index');
 $PAGE->blocks->add_region('content');
 $PAGE->set_subpage($currentpage->id);
 $PAGE->set_title($pagetitle);
-$PAGE->set_heading($pagetitle);
+//$PAGE->set_heading($pagetitle);
 
 if (!isguestuser()) {   // Skip default home page for guests
     if (get_home_page() != HOMEPAGE_MY) {
@@ -182,9 +182,10 @@ if (core_userfeedback::should_display_reminder()) {
     core_userfeedback::print_reminder_block();
 }
 
-echo $OUTPUT->addblockbutton('content');
+echo $OUTPUT->addblockbutton('content'); //evita que el usuario pueda manipular la pagina de inicio
+include 'area_personal.php';
+echo $OUTPUT->custom_block_region('content');//contenido dinamico de area personal
 
-echo $OUTPUT->custom_block_region('content');
 
 echo $OUTPUT->footer();
 
