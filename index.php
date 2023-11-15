@@ -40,6 +40,7 @@ if (!empty($CFG->defaulthomepage) &&
         optional_param('redirect', 1, PARAM_BOOL) === 0
 ) {
     $urlparams['redirect'] = 0;
+    
 }
 $PAGE->set_url('/', $urlparams);
 $PAGE->set_pagelayout('frontpage');
@@ -72,6 +73,7 @@ if ($hassiteconfig && moodle_needs_upgrading()) {
 if (get_home_page() != HOMEPAGE_SITE) {
     // Redirect logged-in users to My Moodle overview if required.
     $redirect = optional_param('redirect', 1, PARAM_BOOL);
+    
     if (optional_param('setdefaulthome', false, PARAM_BOOL)) {
         set_user_preference('user_home_page_preference', HOMEPAGE_SITE);
     } else if (!empty($CFG->defaulthomepage) && ($CFG->defaulthomepage == HOMEPAGE_MY) && $redirect === 1) {
@@ -132,6 +134,8 @@ if (!empty($CFG->customfrontpageinclude)) {
 } else if ($siteformatoptions['numsections'] > 0) {
     echo $courserenderer->frontpage_section1();
 }
+
+
 // Include course AJAX.
 include_course_ajax($SITE, $modnamesused);
 
@@ -140,4 +144,5 @@ echo $courserenderer->frontpage();
 if ($editing && has_capability('moodle/course:create', context_system::instance())) {
     echo $courserenderer->add_new_course_button();
 }
+
 echo $OUTPUT->footer();
