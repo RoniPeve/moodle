@@ -105,10 +105,11 @@ $PAGE->set_pagetype('site-index');
 $PAGE->set_docs_path('');
 $editing = $PAGE->user_is_editing();
 $PAGE->set_title(get_string('home'));
-$PAGE->set_heading($SITE->fullname);
+//$PAGE->set_heading($SITE->fullname); nombre de la pagina principal al iniciar sesion
 $PAGE->set_secondary_active_tab('coursehome');
 
 $courserenderer = $PAGE->get_renderer('core', 'course');
+//$courserenderer = $PAGE->get_renderer('frontpage');
 
 if ($hassiteconfig) {
     $editurl = new moodle_url('/course/view.php', ['id' => SITEID, 'sesskey' => sesskey()]);
@@ -132,17 +133,19 @@ if (!empty($CFG->customfrontpageinclude)) {
     include($CFG->customfrontpageinclude);
 
 } else if ($siteformatoptions['numsections'] > 0) {
-    echo $courserenderer->frontpage_section1();
+    echo $courserenderer->frontpage_section1();  
 }
 
 
 // Include course AJAX.
 include_course_ajax($SITE, $modnamesused);
 
-echo $courserenderer->frontpage();
+echo $courserenderer->frontpage();// al iniciar sesion aparece este bloque
+//echo $OUTPUT->frontpage();
 
 if ($editing && has_capability('moodle/course:create', context_system::instance())) {
     echo $courserenderer->add_new_course_button();
+    
 }
 
 echo $OUTPUT->footer();

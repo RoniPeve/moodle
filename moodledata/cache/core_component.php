@@ -594,6 +594,7 @@ $cache = array (
     ),
     'local' => 
     array (
+      'contact' => 'C:\\xampp\\htdocs\\moodle/local/contact',
     ),
     'h5plib' => 
     array (
@@ -4036,6 +4037,9 @@ $cache = array (
     'gradingform_rubric\\privacy\\provider' => 'C:\\xampp\\htdocs\\moodle/grade/grading/form/rubric/classes/privacy/provider.php',
     'h5plib_v124\\local\\library\\handler' => 'C:\\xampp\\htdocs\\moodle/h5p/h5plib/v124/classes/local/library/handler.php',
     'h5plib_v124\\privacy\\provider' => 'C:\\xampp\\htdocs\\moodle/h5p/h5plib/v124/classes/privacy/provider.php',
+    'local_contact\\local_contact' => 'C:\\xampp\\htdocs\\moodle/local/contact/classes/local_contact.php',
+    'local_contact\\privacy\\provider' => 'C:\\xampp\\htdocs\\moodle/local/contact/classes/privacy/provider.php',
+    'local_contact_local_contact' => 'C:\\xampp\\htdocs\\moodle/local/contact/classes/local_contact.php',
     'logstore_database\\helper' => 'C:\\xampp\\htdocs\\moodle/admin/tool/log/store/database/classes/helper.php',
     'logstore_database\\log\\store' => 'C:\\xampp\\htdocs\\moodle/admin/tool/log/store/database/classes/log/store.php',
     'logstore_database\\privacy\\provider' => 'C:\\xampp\\htdocs\\moodle/admin/tool/log/store/database/classes/privacy/provider.php',
@@ -7057,6 +7061,7 @@ $cache = array (
       ),
       'local' => 
       array (
+        'contact' => 'C:\\xampp\\htdocs\\moodle/local/contact/settings.php',
       ),
       'h5plib' => 
       array (

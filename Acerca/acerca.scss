@@ -1,0 +1,104 @@
+/*********BANNER INICIAL************/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    background-image: url('../Assets/Images/fondo_header.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta real de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.banner-text {
+    z-index: 1; /* Asegura que el texto esté sobre la imagen de fondo */
+}
+/***********CUERPO*********************/
+.titulo1{
+    font-weight: bold;
+    margin: 20px 0;
+}
+.parrafo1{
+    margin: 20px 0;
+}
+
+/*********FORMULARIO DE CONTACTO**********/
+.formulario {
+    /* Establecer la imagen de fondo y centrarla */
+    background-image: url('../Assets/Images/imagen_formulario.png'); 
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-us {
+    max-width: 600px;
+    margin: 0;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+formulario .contact-us label {
+    font-weight: bold;
+}
+
+.contact-us .required {
+    color: red;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-us input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-us input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/****************/
+.titulo_formulario{
+    color: #FFF;
+    padding: 10px;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.6px; /* 120% */
+
+}
+.parrafo_formulario{
+    width: 90%;
+    color: #FFF;
+    padding: 10px;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
