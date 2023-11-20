@@ -98,7 +98,20 @@ if (core_userfeedback::should_display_reminder()) {
 }
 
 echo $OUTPUT->custom_block_region('content');
-
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}
 echo $OUTPUT->footer();
 
 // Trigger dashboard has been viewed event.

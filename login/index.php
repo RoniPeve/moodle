@@ -209,6 +209,7 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
             die;
         }
 
+
     /// Let's get them all set up.
         complete_user_login($user);
 
@@ -277,6 +278,11 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
         // test the session actually works by redirecting to self
         $SESSION->wantsurl = $urltogo;
         redirect(new moodle_url(get_login_url(), array('testsession'=>$USER->id)));
+        // Redirige al usuario a tu página personalizada
+       // $redirecturl = $CFG->wwwroot . '../my/index.php';
+        //redirect($redirecturl, '¡Bienvenido! Has iniciado sesión', null, \core\output\notification::NOTIFY_SUCCESS);
+        //echo 'mostrnado en consola la variable';
+
 
     } else {
         if (empty($errormsg)) {
@@ -292,13 +298,6 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
     }
 }
 
-/// Detect problems with timedout sessions
-if ($session_has_timed_out and !data_submitted()) {
-    $errormsg = get_string('sessionerroruser', 'error');
-    $errorcode = 4;
-}
-
-/// First, let's remember where the user was trying to get to before they got here
 
 if (empty($SESSION->wantsurl)) {
     $SESSION->wantsurl = null;

@@ -1,0 +1,93 @@
+.descripcion_dnpe {
+    text-align: center;
+}
+
+.nombre_plataforma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Puedes ajustar el margen según tus necesidades */
+}
+
+.descripcion_dnpe h2 {
+    margin: 0;
+}
+
+.descripcion_dnpe img {
+    max-width: 70px; /* Ajusta el tamaño máximo del icono según tus necesidades */
+    margin-right: 10px; /* Espaciado entre el icono y el título */
+}
+
+.descripcion_dnpe p {
+    padding: 15px; /* Puedes ajustar el padding según tus necesidades */
+    border: 2px solid #ccc; /* Borde sólido de color gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+}
+/******categorias***********/
+.categorias h3{
+    background-color: #3B69AEed; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 10px 30px; /* Ajusta el padding según tus necesidades */
+    border-radius: 5px; /* Bordes redondeados */
+     margin: 20px auto; /* Centra horizontalmente el h3 */
+    width: fit-content; /* Ajusta el ancho al tamaño del contenido */
+    font-size: 24px;
+}
+.categoria{
+    text-align: center;
+    margin-bottom: 20px; /* Espaciado entre las categorías */
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circulo {
+    width: 20%;
+    padding-bottom: 20%; /* 30% de ancho y alto iguales crean un círculo */
+    background-color: #3B69AE;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px; /* Ajusta el margen derecho según tus necesidades */
+  }
+  
+  .circulo img {
+    width: 50%; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto */
+    position: absolute;
+    top: 50%; /* Centra verticalmente la imagen */
+    left: 50%; /* Centra horizontalmente la imagen */
+    transform: translate(-50%, -50%); /* Ajusta para centrar correctamente */
+    border-radius: 10px; /* Bordes redondeados para la imagen (ajusta según sea necesario) */
+    max-width: 100%; /* Limita el ancho máximo de la imagen al 100% del contenedor */
+    max-height: 100%; /* Limita la altura máxima de la imagen al 100% del contenedor */
+  }
+  .circulo:hover {
+    transform: scale(1.1); /* Cambia la escala al 110% en hover */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}  
+
+.contenido p {
+    flex: 1; /* El párrafo ocupa todo el espacio restante */
+    text-align: justify; /* Alinea el texto a la izquierda */
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
+
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circulo {
+        width: 70%; /* Ajusta el tamaño del círculo en dispositivos móviles */
+        padding-bottom: 70%; /* Ajusta el tamaño del círculo en dispositivos móviles */
+
+        margin-bottom: 20px;
+    }
+}

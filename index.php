@@ -122,7 +122,25 @@ echo $OUTPUT->header();
 $siteformatoptions = course_get_format($SITE)->get_format_options();
 $modinfo = get_fast_modinfo($SITE);
 $modnamesused = $modinfo->get_used_module_names();
-
+/***********codigo nuevo*********** */
+/************OCULTAR LA PESTAÑA PAGINA PRINCIPAL*********** */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}else{
+    echo $courserenderer->frontpage();
+}
+/******************/
 // Print Section or custom info.
 if (!empty($CFG->customfrontpageinclude)) {
     // Pre-fill some variables that custom front page might use.
@@ -140,7 +158,8 @@ if (!empty($CFG->customfrontpageinclude)) {
 // Include course AJAX.
 include_course_ajax($SITE, $modnamesused);
 
-echo $courserenderer->frontpage();// al iniciar sesion aparece este bloque
+//echo $courserenderer->frontpage();
+
 //echo $OUTPUT->frontpage();
 
 if ($editing && has_capability('moodle/course:create', context_system::instance())) {

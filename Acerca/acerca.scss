@@ -2,14 +2,13 @@
 .banner {
     position: relative;
     width: 100%;
-    height: 500px; /* Ajusta la altura según tus necesidades */
+    height: 350px; /* Ajusta la altura según tus necesidades */
     background-image: url('../Assets/Images/fondo_header.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta real de tu imagen */
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
     font-size: 16px;
-    
     display: flex;
     align-items: center;
     justify-content: center;

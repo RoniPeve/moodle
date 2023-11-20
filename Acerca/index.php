@@ -60,6 +60,21 @@ echo $OUTPUT->header();
     </form>
 </div>
 <?php
+/************OCULTAR LA PESTAÑA PAGINA PRINCIPAL*********** */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}
 // Finaliza la página
 echo $OUTPUT->footer();
 ?>
