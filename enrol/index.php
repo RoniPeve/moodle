@@ -105,10 +105,37 @@ echo $courserenderer->course_info_box($course);
 
 //TODO: find if future enrolments present and display some info
 //formulario para matricula
+/*foreach ($forms as $form) {
+    echo $form;
+}*/
 foreach ($forms as $form) {
     echo $form;
 }
+/*
+//include '../Matricula/Index.php';
+//Imprimir el ID del usuario
+echo '<p>Usuario ID: ' . $USER->id . '</p>';
+echo '<p>Nombre de usuario: ' . $USER->username . '</p>';
+echo '<p>Correo electrónico: ' . $USER->email . '</p>';
+echo '<p>Nombre completo: ' . fullname($USER) . '</p>';
 
+// ID de usuario para el que deseas obtener el valor del campo "cargo"
+$userId = $USER->id; // Puedes cambiar esto al ID del usuario que desees
+
+// ID del campo "cargo" en mdl_user_info_field
+$fieldIdCargo = 2; // Reemplaza con el ID real de tu campo "cargo"
+
+// Consulta SQL para obtener el valor del campo "data"
+$sql = "SELECT data.data
+        FROM {user_info_data} data
+        WHERE data.fieldid = :fieldid
+          AND data.userid = :userid";
+
+$params = array('fieldid' => $fieldIdCargo, 'userid' => $userId);
+$cargo = $DB->get_field_sql($sql, $params);
+
+// Imprimir el valor del campo "cargo"
+echo '<p>Valor del campo "cargo": ' . $cargo . '</p>';
 if (!$forms) {
     if (isguestuser()) {
         notice(get_string('noguestaccess', 'enrol'), get_login_url());
@@ -122,5 +149,5 @@ if (!$forms) {
         notice(get_string('notenrollable', 'enrol'), $url);
     }
 }
-
+*/
 echo $OUTPUT->footer();

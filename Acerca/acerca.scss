@@ -27,6 +27,34 @@
     margin: 20px 0;
 }
 
+.cuerpo_contenido {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+
+  .cuerpo {
+    width: 60%;
+  }
+
+  .cuerpo_contenido  .imagen {
+    width: 40%;
+  }
+
+  .imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .cuerpo {
+        width: 100%; /* El cuerpo ocupa el 100% del ancho en dispositivos móviles */
+      }
+  
+      .cuerpo_contenido  .imagen {
+        width: 100%;
+      }
+}
 /*********FORMULARIO DE CONTACTO**********/
 .formulario {
     /* Establecer la imagen de fondo y centrarla */
@@ -101,3 +129,4 @@ font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
 }
+
