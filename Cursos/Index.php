@@ -27,6 +27,7 @@ echo $OUTPUT->header();
             background-color: #3B69AE;
             padding: 5px;
             font-weight: bold;
+            font-size: 12px;
             color: #fff;
         }
 
@@ -37,21 +38,77 @@ echo $OUTPUT->header();
         .lista_cursos{
             margin-bottom: 20px;
         }
+        .lista_cursos img{
+            width: 100%;
+            height: 160px;
+            max-width: 100%; 
+        }
         /* Estilo para los iconos de FontAwesome */
         .icono-fa {
             margin-right: 5px;
         }
-        
     </style>
 </head>
+<h1 class="mb-4">Todos los Cursos</h1>
+<div class="container">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get" class="form-inline mb-4">
+        <div class="form-group buscador">
+            <input type="text" name="search" class="form-control" placeholder="Buscar cursos" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
+        </div>
+        <button type="submit" class="btn btn-primary ml-2">Buscar</button>
+        <div class="form-group ml-2">
+            <label for="category">Categoría:</label>
+            <select name="category" id="category" class="form-control">
+                <option value="all" <?php echo (!isset($_GET['category']) || $_GET['category'] == 'all') ? 'selected' : ''; ?>>Todos</option>
+                <?php
+                // Obtener todas las categorías
+                $categories = $DB->get_records_menu('course_categories', null, '', 'id, name');
+                
+                // Mostrar opciones en el menú desplegable
+                foreach ($categories as $category_id => $category_name) {
+                    $selected = (isset($_GET['category']) && $_GET['category'] == $category_id) ? 'selected' : '';
+                    echo '<option value="' . $category_id . '" ' . $selected . '>' . $category_name . '</option>';
+                }
+                ?>
+            </select>
+        </div>
+        
+    </form>
+    <?php
+    // Mostrar el resultado de la búsqueda solo si hay un término de búsqueda
+    if (!empty($_GET['search'])) {
+        $search_keyword = $_GET['search'];
+        $category_filter = isset($_GET['category']) ? $_GET['category'] : 'all';
 
-<div class="container-fluid cursos">
-    <h1 class="mb-4">Todos los Cursos</h1>
+        $sql = "
+            SELECT COUNT(*) as count
+            FROM {course} c
+            WHERE c.id != 1
+            AND (c.fullname LIKE ? OR c.summary LIKE ?)
+            " . ($category_filter != 'all' ? "AND c.category = ?" : "");
+
+        $params = ['%' . $search_keyword . '%', '%' . $search_keyword . '%'];
+        if ($category_filter != 'all') {
+            $params[] = $category_filter;
+        }
+
+        $result_count = $DB->get_field_sql($sql, $params);
+
+        echo '<p>Resultados de la búsqueda: ' . $result_count . '</p>';
+    }
+    ?>
+</div>
+
+<div class="container cursos">
+    
  
     <div class="row">
         <?php
-        // Consulta para obtener cursos de la base de datos, excluyendo el curso con id 1
-        $cursos = $DB->get_records_sql("
+        // Modificación para incluir el filtro por categoría
+        $search_keyword = isset($_GET['search']) ? $_GET['search'] : '';
+        $category_filter = isset($_GET['category']) ? $_GET['category'] : 'all';
+
+        $sql = "
             SELECT c.id, c.fullname, c.summary, c.category, c.imagen, cc.name as category_name,
                    cd1.value as modalidad, cd2.value as fecha, cd3.value as duracion
             FROM {course} c
@@ -60,9 +117,16 @@ echo $OUTPUT->header();
             LEFT JOIN {customfield_data} cd2 ON c.id = cd2.instanceid AND cd2.fieldid = 2
             LEFT JOIN {customfield_data} cd3 ON c.id = cd3.instanceid AND cd3.fieldid = 3
             WHERE c.id != 1
-        ");
+            AND (c.fullname LIKE ? OR c.summary LIKE ?)
+            " . ($category_filter != 'all' ? "AND c.category = ?" : "");
 
-        // Mostrar cards de cursos en columnas de tres, pero ocupando más ancho
+        $params = ['%' . $search_keyword . '%', '%' . $search_keyword . '%'];
+        if ($category_filter != 'all') {
+            $params[] = $category_filter;
+        }
+
+        $cursos = $DB->get_records_sql($sql, $params);
+
         foreach ($cursos as $curso) {
             echo '<div class="col-md-4 lista_cursos">';
             echo '<div class="card position-relative">';
@@ -94,6 +158,13 @@ echo $OUTPUT->header();
     </div>
 </div>
 
+<script>
+    // Script para enviar automáticamente el formulario cuando cambia la categoría
+    document.getElementById('category').addEventListener('change', function() {
+        this.form.submit();
+    });
+</script>
+
 <?php
 if (isloggedin() && !isguestuser()) {
     echo '<script>
@@ -105,6 +176,21 @@ if (isloggedin() && !isguestuser()) {
             });
           </script>';
 }
-
+/*********OCULTAR PAGINA PRINCIPAL************* */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}
+/*******FIN DE BLOQUE PAGINA PRINCIPAL************* */
 echo $OUTPUT->footer();
 ?>

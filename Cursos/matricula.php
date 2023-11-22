@@ -108,8 +108,8 @@ echo '<style>
     }
 
     .modal-content {
-        width: 35%;
-        height: 500px;
+        width: 40%;
+        height: 400px;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
@@ -233,5 +233,21 @@ echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver req
 foreach ($forms as $form) {
     echo $form;
 }
+/*********OCULTAR PAGINA PRINCIPAL************* */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}
+/*******FIN DE BLOQUE PAGINA PRINCIPAL************* */
 echo $OUTPUT->footer();
 ?>
