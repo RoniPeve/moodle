@@ -45,7 +45,7 @@ $usercatlist = core_course_category::make_categories_list($capabilities);
 
 $search = trim(strip_tags($search)); // trim & clean raw searched string
 
-$site = get_site();
+$site = get_site();//nombre del aula
 
 $searchcriteria = array();
 foreach (array('search', 'blocklist', 'modulelist', 'tagid') as $param) {
@@ -109,4 +109,23 @@ $PAGE->set_heading($site->fullname);
 
 echo $OUTPUT->header();
 echo $courserenderer->search_courses($searchcriteria);
+/***********codigo nuevo*********** */
+/************OCULTAR LA PESTAÑA PAGINA PRINCIPAL*********** */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}else{
+    echo $courserenderer->frontpage();
+}
+/*******FIN OCULTAR PAGINA PRINCIPAL***********/
 echo $OUTPUT->footer();

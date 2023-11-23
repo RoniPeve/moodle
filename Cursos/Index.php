@@ -109,10 +109,12 @@ echo $OUTPUT->header();
         $category_filter = isset($_GET['category']) ? $_GET['category'] : 'all';
 
         $sql = "
-            SELECT c.id, c.fullname, c.summary, c.category, c.imagen, cc.name as category_name,
-                   cd1.value as modalidad, cd2.value as fecha, cd3.value as duracion
+            SELECT c.id, c.fullname, c.summary, c.category, cc.name as category_name,
+                ci.banner as imagen,
+                cd1.value as modalidad, cd2.value as fecha, cd3.value as duracion
             FROM {course} c
             JOIN {course_categories} cc ON c.category = cc.id
+            LEFT JOIN {course_images} ci ON c.id = ci.id_course_image
             LEFT JOIN {customfield_data} cd1 ON c.id = cd1.instanceid AND cd1.fieldid = 1
             LEFT JOIN {customfield_data} cd2 ON c.id = cd2.instanceid AND cd2.fieldid = 2
             LEFT JOIN {customfield_data} cd3 ON c.id = cd3.instanceid AND cd3.fieldid = 3

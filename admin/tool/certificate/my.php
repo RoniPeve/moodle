@@ -63,4 +63,24 @@ echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('mycertificates', 'tool_certificate'));
 echo html_writer::div(get_string('mycertificatesdescription', 'tool_certificate'));
 $table->out($perpage, false);
+
+/***********codigo nuevo*********** */
+/************OCULTAR LA PESTAÑA PAGINA PRINCIPAL*********** */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}else{
+    echo $courserenderer->frontpage();
+}
+/*******FIN OCULTAR PAGINA PRINCIPAL***********/
 echo $OUTPUT->footer();

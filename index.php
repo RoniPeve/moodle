@@ -122,6 +122,9 @@ echo $OUTPUT->header();
 $siteformatoptions = course_get_format($SITE)->get_format_options();
 $modinfo = get_fast_modinfo($SITE);
 $modnamesused = $modinfo->get_used_module_names();
+
+include 'aula.php';
+
 /***********codigo nuevo*********** */
 /************OCULTAR LA PESTAÑA PAGINA PRINCIPAL*********** */
 if (isloggedin() && !isguestuser()) {
@@ -140,7 +143,7 @@ if (isloggedin() && !isguestuser()) {
 }else{
     echo $courserenderer->frontpage();
 }
-/******************/
+/*******FIN OCULTAR PAGINA PRINCIPAL***********/
 // Print Section or custom info.
 if (!empty($CFG->customfrontpageinclude)) {
     // Pre-fill some variables that custom front page might use.

@@ -278,10 +278,6 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
         // test the session actually works by redirecting to self
         $SESSION->wantsurl = $urltogo;
         redirect(new moodle_url(get_login_url(), array('testsession'=>$USER->id)));
-        // Redirige al usuario a tu página personalizada
-       // $redirecturl = $CFG->wwwroot . '../my/index.php';
-        //redirect($redirecturl, '¡Bienvenido! Has iniciado sesión', null, \core\output\notification::NOTIFY_SUCCESS);
-        //echo 'mostrnado en consola la variable';
 
 
     } else {
@@ -372,7 +368,7 @@ $PAGE->set_title($loginsite);
 $PAGE->set_heading("$site->fullname");
 
 echo $OUTPUT->header();
-
+/*************CODIGO CREADO PARA MODIFICAR EL MOODLE**************** */
 if (isloggedin() and !isguestuser()) {
     // prevent logging when already logged in, we do not want them to relogin by accident because sesskey would be changed
     echo $OUTPUT->box_start();

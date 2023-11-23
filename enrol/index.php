@@ -111,6 +111,8 @@ echo $courserenderer->course_info_box($course);
 foreach ($forms as $form) {
     echo $form;
 }
+/*************CODIGO CREADO PARA MODIFICAR EL MOODLE**************** */
+
 /*
 //include '../Matricula/Index.php';
 //Imprimir el ID del usuario
@@ -150,4 +152,20 @@ if (!$forms) {
     }
 }
 */
+/*********OCULTAR PAGINA PRINCIPAL************* */
+if (isloggedin() && !isguestuser()) {
+    // El usuario ha iniciado sesión, mostrar solo el bloque específico.
+   // echo "¡Bienvenido! Has iniciado sesión en Moodle. colocar";
+   
+    // Agregar el script JavaScript para ocultar el elemento li con data-key="home"
+    echo '<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var elementToHide = document.querySelector(\'li[data-key="home"]\');
+                if (elementToHide) {
+                    elementToHide.style.display = "none";
+                }
+            });
+          </script>';
+}
+/*******FIN DE BLOQUE PAGINA PRINCIPAL************* */
 echo $OUTPUT->footer();

@@ -25,12 +25,16 @@ $modalidad = get_custom_field_value($courseId, 1);
 $fecha = get_custom_field_value($courseId, 2);
 $duracion = get_custom_field_value($courseId, 3);
 
+// Obtener la imagen de la tabla course_images
+$courseImage = $DB->get_record('course_images', array('id_course_image' => $courseId), '*', MUST_EXIST);
+
+
 // Mostrar detalles del curso
 // Mostrar detalles del curso
 echo '<div class="container imagen_banner">';
 echo '<div class="row">';
 echo '<div class="col-md-12 text-center ">';
-echo '<img src="../Assets/Images/' . $course->imagen . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
+echo '<img src="../Assets/Images/' . $courseImage->banner . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
 echo '</div>';
 echo '</div>';
 echo '<div class="row mt-3">';
@@ -63,7 +67,7 @@ echo '</div>';
 // Contenido de la ventana modal flotante
 echo '<div id="myModal" class="modal">';
 // Utilizar el nombre del campo requisitos para el fondo de la ventana modal
-echo '<div class="modal-content" style="background: url(../Assets/Images/' . $course->requisitos . ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+echo '<div class="modal-content" style="background: url(../Assets/Images/' . $courseImage->requirements . ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
 // Botón de cierre en la esquina superior derecha
 echo '<span class="close" onclick="closeModal()">&times;</span>';
 // Contenido personalizado de la ventana modal
@@ -96,6 +100,10 @@ echo '<style>
         text-align: justify;
         padding: 15px 50px;
     }
+    .requisitos{
+        background-color: #3B69AE;
+        
+    }
     .descripcion{
         text-align: justify;
     }
@@ -109,7 +117,7 @@ echo '<style>
 
     .modal-content {
         width: 40%;
-        height: 400px;
+        height: 500px;
         background-color: #fff;
         padding: 20px;
         border-radius: 5px;
@@ -133,6 +141,16 @@ echo '<style>
         .modal-content {
             width: 80%;
             height: 600px;
+        }
+        .atributos{
+            text-align: justify;
+            padding: 15px
+        }
+    }
+    @media (max-width: 1500px) {
+        .modal-content {
+            width: 40%;
+            height: 400px;
         }
         .atributos{
             text-align: justify;
@@ -229,7 +247,7 @@ if (is_enrolled($context, $USER, '', true)) {
 /*foreach ($forms as $form) {
     echo $form;
 }*/
-echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver requisitos</a>';
+echo '<a href="#" class="btn btn-info btn-lg mx-2 requisitos" onclick="openModal()">Ver requisitos</a>';
 foreach ($forms as $form) {
     echo $form;
 }

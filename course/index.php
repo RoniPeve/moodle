@@ -1,3 +1,4 @@
+
 <?php
 
 // This file is part of Moodle - http://moodle.org/
@@ -25,9 +26,10 @@
 
 require_once("../config.php");
 require_once($CFG->dirroot. '/course/lib.php');
-
+$PAGE->set_heading('Todos los Cursos');
 $categoryid = optional_param('categoryid', 0, PARAM_INT); // Category id
-$site = get_site();
+//$site = get_site();//nombre del sitio
+
 
 if ($CFG->forcelogin) {
     require_login();
@@ -92,4 +94,51 @@ if (isloggedin() && !isguestuser()) {
             });
           </script>';
 }
+function obtener_nombre_imagen($category_id) {
+    global $DB;
+
+    // Reemplaza 'nombre_tabla' con el nombre real de tu tabla que contiene la relación entre categorías e imágenes.
+    $table_name = 'course_categories_images';
+
+    // Realiza la consulta para obtener el nombre de la imagen.
+    $sql = "SELECT image FROM {" . $table_name . "} WHERE id_category = :category_id";
+    $params = array('category_id' => $category_id);
+    $result = $DB->get_record_sql($sql, $params);
+
+    if ($result) {
+        return $result->image;
+    } else {
+        // Si no se encuentra la imagen, puedes proporcionar un valor predeterminado o manejarlo de otra manera.
+        return 'imagen_predeterminada.svg';
+    }
+}
+
+/********iconos dinamicos en categorias de cursos***** */
+// Obtén la lista de categorías desde la base de datos
+$sql = "SELECT id FROM {course_categories}";
+$categories = $DB->get_records_sql_menu($sql);
+
+// Acumula el código CSS en una variable
+$css = '';
+
+foreach ($categories as $category_id => $category_name) {
+    // Obtener el nombre del archivo de imagen de la base de datos
+    $category_image = obtener_nombre_imagen($category_id);
+
+    // Acumula el código CSS dinámico
+    $css .= '.category[data-categoryid="' . $category_id . '"] .info h3 a::before  {';
+    $css .= '    content: \'\';';
+    $css .= '    background-image: url(\'../Assets/Images/' . $category_image . '\');';
+    $css .= '    background-size: cover;';
+    $css .= '    width: 40px;';
+    $css .= '    height: 40px;';
+    $css .= '    margin-right: 5px;';
+    $css .= '    display: inline-block;';
+    $css .= '}';
+}
+
+// Imprime todo el código CSS fuera del bucle
+echo '<style>' . $css . '</style>';
+
+echo '</style>';
 echo $OUTPUT->footer();

@@ -44,8 +44,8 @@
   }
   
   .circulo {
-    width: 20%;
-    padding-bottom: 20%; /* 30% de ancho y alto iguales crean un círculo */
+    width: 16%;
+    padding-bottom: 16%; /* 30% de ancho y alto iguales crean un círculo */
     background-color: #3B69AE;
     border-radius: 50%;
     overflow: hidden;
@@ -75,7 +75,12 @@
     text-align: justify; /* Alinea el texto a la izquierda */
     margin: 0; /* Elimina el margen predeterminado del párrafo */
 }
-
+@media (max-width: 1500px) {
+    .circulo {
+        width: 18%;
+        padding-bottom: 18%; /* 30% de ancho y alto iguales crean un círculo */
+      }
+}
 
 @media (max-width: 768px) {
     .contenido {
@@ -85,8 +90,8 @@
     }
 
     .circulo {
-        width: 70%; /* Ajusta el tamaño del círculo en dispositivos móviles */
-        padding-bottom: 70%; /* Ajusta el tamaño del círculo en dispositivos móviles */
+        width: 50%; /* Ajusta el tamaño del círculo en dispositivos móviles */
+        padding-bottom: 50%; /* Ajusta el tamaño del círculo en dispositivos móviles */
 
         margin-bottom: 20px;
     }
