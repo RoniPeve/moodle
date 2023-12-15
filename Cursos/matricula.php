@@ -57,8 +57,8 @@ echo '</div>';
 echo '<div class="row mt-3">';
 echo '<div class="col-md-12 text-center">';
 // Agregar evento onclick para abrir la ventana modal
-//echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver requisitos</a>';
-//echo '<a href="#" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
+echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver requisitos</a>';
+echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
 
 echo '</div>';
 echo '</div>';
@@ -247,10 +247,10 @@ if (is_enrolled($context, $USER, '', true)) {
 /*foreach ($forms as $form) {
     echo $form;
 }*/
-echo '<a href="#" class="btn btn-info btn-lg mx-2 requisitos" onclick="openModal()">Ver requisitos</a>';
-foreach ($forms as $form) {
+//echo '<a href="#" class="btn btn-info btn-lg mx-2 requisitos" onclick="openModal()">Ver requisitos</a>';
+/*foreach ($forms as $form) {
     echo $form;
-}
+}*/
 /*********OCULTAR PAGINA PRINCIPAL************* */
 if (isloggedin() && !isguestuser()) {
     // El usuario ha iniciado sesión, mostrar solo el bloque específico.
