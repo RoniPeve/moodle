@@ -79,6 +79,7 @@ echo $content;
 $eventparams = array('context' => $PAGE->context, 'objectid' => $categoryid);
 $event = \core\event\course_category_viewed::create($eventparams);
 $event->trigger();
+
 /************OCULTAR LA PESTAÑA PAGINA PRINCIPAL*********** */
 if (isloggedin() && !isguestuser()) {
     // El usuario ha iniciado sesión, mostrar solo el bloque específico.

@@ -192,7 +192,7 @@ echo $OUTPUT->addblockbutton('content'); //evita que el usuario pueda manipular 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="area_personal.scss"> <!-- Reemplaza "ruta/del/archivo" con la ruta real de tu archivo CSS -->
+    <link rel="stylesheet" href="area_personal.scss">
 </head>
 <div class="descripcion_dnpe">
     <div class="nombre_plataforma">

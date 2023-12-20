@@ -25,9 +25,14 @@
 require('../config.php');
 require_once("$CFG->libdir/formslib.php");
 
+
 $id = required_param('id', PARAM_INT);
 $returnurl = optional_param('returnurl', 0, PARAM_LOCALURL);
+/************************** */
 
+
+
+/********* */
 if (!isloggedin()) {
     $referer = get_local_referer();
     if (empty($referer)) {
@@ -103,55 +108,189 @@ echo $OUTPUT->heading(get_string('enrolmentoptions','enrol'));
 $courserenderer = $PAGE->get_renderer('core', 'course');
 echo $courserenderer->course_info_box($course);
 
-//TODO: find if future enrolments present and display some info
-//formulario para matricula
-/*foreach ($forms as $form) {
-    echo $form;
-}*/
+/***********MATRICULA NUEVA VISTA********************** */
+/*
+// Obtener el ID del curso desde los parámetros GET
+$courseId = optional_param('id', 0, PARAM_INT);
+
+// Verificar si se proporcionó un ID de curso válido
+if ($courseId <= 0) {
+    echo '<div class="alert alert-danger" role="alert">ID de curso inválido.</div>';
+    echo $OUTPUT->footer();
+    exit;
+}
+
+// Obtener información detallada del curso
+$course = $DB->get_record('course', array('id' => $courseId), '*', MUST_EXIST);
+$category = $DB->get_record('course_categories', array('id' => $course->category), '*', MUST_EXIST);
+
+// Obtener datos adicionales del curso desde la tabla customfield_data
+$modalidad = get_custom_field_value($courseId, 1);
+$fecha = get_custom_field_value($courseId, 2);
+$duracion = get_custom_field_value($courseId, 3);
+
+// Obtener la imagen de la tabla course_images
+$courseImage = $DB->get_record('course_images', array('id_course_image' => $courseId), '*', MUST_EXIST);
+
+
+// Mostrar detalles del curso
+// Mostrar detalles del curso
+echo '<div class="container imagen_banner">';
+echo '<div class="row">';
+echo '<div class="col-md-12 text-center ">';
+echo '<img src="../Assets/Images/' . $courseImage->banner . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
+echo '</div>';
+echo '</div>';
+echo '<div class="row mt-3">';
+echo '<div class="col-md-12 text-center">';
+echo '<h1>' . $course->fullname . '</h1>';
+echo '</div>';
+echo '</div>';
+echo '<div class="row mt-3">';
+echo '<div class="col-md-6 descripcion">';
+echo '<p ><strong>Descripción:</strong> ' . $course->summary . '</p>';
+echo '</div>';
+echo '<div class="col-md-6 atributos">';
+echo '<br>';
+echo '<p><strong>Categoría:</strong> ' . $category->name . '</p>';
+echo '<p><i class="far fa-clock icono-fa"></i><strong> Duración:</strong> ' . $duracion . '</p>';
+echo '<p><i class="fa fa-graduation-cap" aria-hidden="true"></i><strong> Modalidad:</strong>' . $modalidad . '</p>';
+echo '<p><i class="far fa-calendar-alt icono-fa"></i><strong> Fecha de inicio:</strong> ' . $fecha . '</p>';
+echo '</div>';
+echo '</div>';
+echo '<div class="row mt-3">';
+echo '<div class="col-md-12 text-center">';
+// Agregar evento onclick para abrir la ventana modal
+echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver requisitos</a>';
+echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
+
+echo '</div>';
+echo '</div>';
+echo '</div>';
+// Obtener el nombre del campo requisitos
+// Contenido de la ventana modal flotante
+echo '<div id="myModal" class="modal">';
+// Utilizar el nombre del campo requisitos para el fondo de la ventana modal
+echo '<div class="modal-content" style="background: url(../Assets/Images/' . $courseImage->requirements . ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+// Botón de cierre en la esquina superior derecha
+echo '<span class="close" onclick="closeModal()">&times;</span>';
+// Contenido personalizado de la ventana modal
+// Puedes agregar más contenido aquí si es necesario
+echo '</div>';
+echo '</div>';
+
+// Incluir el script JavaScript y el estilo CSS para la ventana modal
+echo '<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+
+    }
+
+    function closeModal() {
+        
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>';
+echo '<style>
+    .imagen_banner{
+        max-width: 100%;
+       
+    }
+    .imagen_curso{
+        border-radius: 20px;
+        height: 400px;
+    }
+    .atributos{
+        text-align: justify;
+        padding: 15px 50px;
+    }
+    .requisitos{
+        background-color: #3B69AE;
+        
+    }
+    .descripcion{
+        text-align: justify;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+        width: 40%;
+        height: 500px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        object-fit: contain;
+
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 15px;
+        color: #fff; 
+    }
+    
+    @media (max-width: 1200px) {
+        .modal-content {
+            width: 80%;
+            height: 600px;
+        }
+        .atributos{
+            text-align: justify;
+            padding: 15px
+        }
+    }
+    @media (max-width: 1500px) {
+        .modal-content {
+            width: 40%;
+            height: 400px;
+        }
+        .atributos{
+            text-align: justify;
+            padding: 15px
+        }
+    }
+    @media (max-width: 768px) {
+        .modal-content {
+            width: 90%;
+            height: 300px;
+        }
+        .imagen_curso{
+            border-radius: 10px;
+            height: auto;
+        }
+        
+    }
+</style>';
+// Función para obtener el valor de un campo personalizado desde la tabla customfield_data
+function get_custom_field_value($instanceId, $fieldId) {
+    global $DB;
+
+    $value = $DB->get_field('customfield_data', 'value', ['instanceid' => $instanceId, 'fieldid' => $fieldId]);
+
+    return $value ? $value : 'N/A';
+}
+
+*/
+/*********************************** */
 foreach ($forms as $form) {
     echo $form;
 }
 /*************CODIGO CREADO PARA MODIFICAR EL MOODLE**************** */
 
-/*
-//include '../Matricula/Index.php';
-//Imprimir el ID del usuario
-echo '<p>Usuario ID: ' . $USER->id . '</p>';
-echo '<p>Nombre de usuario: ' . $USER->username . '</p>';
-echo '<p>Correo electrónico: ' . $USER->email . '</p>';
-echo '<p>Nombre completo: ' . fullname($USER) . '</p>';
 
-// ID de usuario para el que deseas obtener el valor del campo "cargo"
-$userId = $USER->id; // Puedes cambiar esto al ID del usuario que desees
 
-// ID del campo "cargo" en mdl_user_info_field
-$fieldIdCargo = 2; // Reemplaza con el ID real de tu campo "cargo"
-
-// Consulta SQL para obtener el valor del campo "data"
-$sql = "SELECT data.data
-        FROM {user_info_data} data
-        WHERE data.fieldid = :fieldid
-          AND data.userid = :userid";
-
-$params = array('fieldid' => $fieldIdCargo, 'userid' => $userId);
-$cargo = $DB->get_field_sql($sql, $params);
-
-// Imprimir el valor del campo "cargo"
-echo '<p>Valor del campo "cargo": ' . $cargo . '</p>';
-if (!$forms) {
-    if (isguestuser()) {
-        notice(get_string('noguestaccess', 'enrol'), get_login_url());
-    } else if ($returnurl) {
-        notice(get_string('notenrollable', 'enrol'), $returnurl);
-    } else {
-        $url = get_local_referer(false);
-        if (empty($url)) {
-            $url = new moodle_url('/index.php');
-        }
-        notice(get_string('notenrollable', 'enrol'), $url);
-    }
-}
-*/
 /*********OCULTAR PAGINA PRINCIPAL************* */
 if (isloggedin() && !isguestuser()) {
     // El usuario ha iniciado sesión, mostrar solo el bloque específico.

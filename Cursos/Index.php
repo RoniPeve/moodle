@@ -1,53 +1,15 @@
 <?php
 require_once("../config.php");
 
-$PAGE->set_title('Acerca de');
+$PAGE->set_title('Cursos');
 
 echo $OUTPUT->header();
 ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Enlace a FontAwesome -->
-    <style>
-        /* Estilos básicos para las cards */
-        .curso-card {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        /* Estilo adicional para la categoría superpuesta */
-        .categoria-superpuesta {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: #3B69AE;
-            padding: 5px;
-            font-weight: bold;
-            font-size: 12px;
-            color: #fff;
-        }
-
-        /* Estilo para los datos adicionales */
-        .datos-adicionales {
-            margin-top: 10px;
-        }
-        .lista_cursos{
-            margin-bottom: 20px;
-        }
-        .lista_cursos img{
-            width: 100%;
-            height: 160px;
-            max-width: 100%; 
-        }
-        /* Estilo para los iconos de FontAwesome */
-        .icono-fa {
-            margin-right: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cursos.css">
 </head>
 <h1 class="mb-4">Todos los Cursos</h1>
 <div class="container">
@@ -142,8 +104,14 @@ echo $OUTPUT->header();
             
             echo '<div class="card-body">';
             echo '<h5 class="card-title">' . $curso->fullname . '</h5>';
-            echo '<p class="card-text">' . $curso->summary . '</p>';
+            //echo '<p class="card-text">' . $curso->summary . '</p>';
             
+            // Limitar la descripción a 50 palabras y agregar puntos suspensivos
+            $summary = strip_tags($curso->summary); // Eliminar etiquetas HTML para evitar problemas
+            $summary_words = explode(' ', $summary);
+            $limited_summary = implode(' ', array_slice($summary_words, 0, 50));
+            echo '<p class="card-text">' . $limited_summary . '...</p>';
+
             // Mostrar datos adicionales con iconos de FontAwesome
             echo '<div class="datos-adicionales">';
             echo '<i class="fas fa-graduation-cap icono-fa"></i>' . $curso->modalidad . '<br>';

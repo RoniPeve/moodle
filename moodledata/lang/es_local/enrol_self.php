@@ -16,16 +16,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Redirection of old enrol entry point.
+ * Local language pack from http://localhost:8080/moodle
  *
- * @copyright 1999 Martin Dougiamas  http://dougiamas.com
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @package course
+ * @package    enrol
+ * @subpackage self
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require('../config.php');
+defined('MOODLE_INTERNAL') || die();
 
-$id = required_param('id', PARAM_INT);
-
-//redirect(new moodle_url('/Cursos/matricula.php', array('id'=>$id)));
-redirect(new moodle_url('/enrol/index.php', array('id'=>$id)));
+$string['nopassword'] = 'Una vez matriculado podrá acceder al curso al instante.';

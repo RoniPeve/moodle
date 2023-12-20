@@ -1,6 +1,13 @@
 <?php
 require_once("../config.php");
-
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/matricula.css">
+</head>
+<?php
 $PAGE->set_title('Matrícula');
 $PAGE->set_heading('Matrícula');
 
@@ -56,9 +63,60 @@ echo '</div>';
 echo '</div>';
 echo '<div class="row mt-3">';
 echo '<div class="col-md-12 text-center">';
+$enrolDates = $DB->get_records('enrol', array('courseid' => $courseId), 'id ASC');
+
+$now = time(); // Obtener la marca de tiempo actual
+
+$enableMatriculation = false;
+$matriculationMessage = '';
+
+if ($enrolDates) {
+    echo '<div class="row mt-3">';
+    echo '<div class="col-md-12 text-center">';
+    echo '<p><strong>Fechas de matrícula:</strong></p>';
+    
+    foreach ($enrolDates as $enrolDate) {
+        // Verificar si las fechas son mayores que un valor específico
+        if ($enrolDate->enrolstartdate > 0 && $enrolDate->enrolenddate > 0) {
+            // Convertir timestamps a formato de fecha y hora
+            $enrolStartDate = userdate($enrolDate->enrolstartdate, '%d-%m-%Y %H:%M:%S');
+            $enrolEndDate = userdate($enrolDate->enrolenddate, '%d-%m-%Y %H:%M:%S');
+            
+            echo "<p><b>Inicio:</b> $enrolStartDate | <b>Fin:</b> $enrolEndDate</p>";
+            
+            // Verificar el estado de la matriculación
+            if ($enrolDate->enrolstartdate <= $now && $enrolDate->enrolenddate >= $now) {
+                $enableMatriculation = true;
+            } elseif ($enrolDate->enrolstartdate > $now) {
+                $matriculationMessage = "Las matrículas aún no han comenzado." ;//. $enrolStartDate;
+            } elseif ($enrolDate->enrolenddate < $now) {
+                $matriculationMessage = "Ya no puede matricularse, ya que el periodo finalizó " . $enrolEndDate;
+            }
+        }
+    }
+    
+    echo '</div>';
+    echo '</div>';
+    
+    // Mostrar el mensaje correspondiente
+    if (!empty($matriculationMessage)) {
+        echo '<div class="alert alert-warning" role="alert">' . $matriculationMessage . '</div>';
+    }
+
+    // Generar el botón de matriculación según el estado de las fechas
+    if ($enableMatriculation) {
+        echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
+    } else {
+        echo '<button class="btn btn-primary btn-lg mx-2" disabled>Matricularse</button>';
+    }
+} else {
+    echo '<div class="alert alert-warning" role="alert">No se encontraron fechas de matrícula para este curso.</div>';
+}
+
+/*******************/
 // Agregar evento onclick para abrir la ventana modal
 echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver requisitos</a>';
-echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
+//echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
 
 echo '</div>';
 echo '</div>';
@@ -87,88 +145,7 @@ echo '<script>
         document.getElementById("myModal").style.display = "none";
     }
 </script>';
-echo '<style>
-    .imagen_banner{
-        max-width: 100%;
-       
-    }
-    .imagen_curso{
-        border-radius: 20px;
-        height: 400px;
-    }
-    .atributos{
-        text-align: justify;
-        padding: 15px 50px;
-    }
-    .requisitos{
-        background-color: #3B69AE;
-        
-    }
-    .descripcion{
-        text-align: justify;
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
 
-    .modal-content {
-        width: 40%;
-        height: 500px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-        object-fit: contain;
-
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 15px;
-        color: #fff; /* Cambia el color según el fondo */
-    }
-    
-    @media (max-width: 1200px) {
-        .modal-content {
-            width: 80%;
-            height: 600px;
-        }
-        .atributos{
-            text-align: justify;
-            padding: 15px
-        }
-    }
-    @media (max-width: 1500px) {
-        .modal-content {
-            width: 40%;
-            height: 400px;
-        }
-        .atributos{
-            text-align: justify;
-            padding: 15px
-        }
-    }
-    @media (max-width: 768px) {
-        .modal-content {
-            width: 90%;
-            height: 300px;
-        }
-        .imagen_curso{
-            border-radius: 10px;
-            height: auto;
-        }
-        
-    }
-</style>';
 // Función para obtener el valor de un campo personalizado desde la tabla customfield_data
 function get_custom_field_value($instanceId, $fieldId) {
     global $DB;
@@ -248,9 +225,7 @@ if (is_enrolled($context, $USER, '', true)) {
     echo $form;
 }*/
 //echo '<a href="#" class="btn btn-info btn-lg mx-2 requisitos" onclick="openModal()">Ver requisitos</a>';
-/*foreach ($forms as $form) {
-    echo $form;
-}*/
+
 /*********OCULTAR PAGINA PRINCIPAL************* */
 if (isloggedin() && !isguestuser()) {
     // El usuario ha iniciado sesión, mostrar solo el bloque específico.

@@ -23,24 +23,39 @@ $category = $DB->get_record('course_categories', array('id' => $course->category
 // Mostrar el ID y el nombre del curso
 //echo '<h2>Matricula para el curso:' . $course->fullname . '</h2>';
 echo '<h2>Formulario de Matricula para el curso "' . $course->fullname . '"</h2>';
-echo '<p>Usuario ID: ' . $USER->username . '</p>';
-// Obtener el campo "Cargo" de la tabla mdl_user_info_field
-$fieldIdQuery = "SELECT id FROM {user_info_field} WHERE name = :fieldname";
-$fieldIdParams = ['fieldname' => 'Entidad'];
-$fieldId = $DB->get_field_sql($fieldIdQuery, $fieldIdParams);
 
-if ($fieldId) {
-    // Obtener el valor del campo "Cargo" de la tabla mdl_user_info_data
-    $cargoQuery = "SELECT data FROM {user_info_data} WHERE userid = :userid AND fieldid = :fieldid";
-    $cargoParams = ['userid' => $USER->id, 'fieldid' => $fieldId];
-    $cargo = $DB->get_field_sql($cargoQuery, $cargoParams);
 
-    // Mostrar el valor del campo "Cargo"
-    echo '<p>Cargo: ' . $cargo . '</p>';
-} else {
-    echo '<p>No se encontró el campo "Cargo".</p>';
+// Array asociativo para almacenar los resultados
+$campos = [];
+
+// Lista de campos que deseas buscar
+$camposBuscados = ['Cargo', 'Entidad', 'Fecha de Nacimiento', 'Nivel de Gobierno', 'Sector Laboral','Profesion','Grado de Instrucción','Sexo'];
+
+// Iterar sobre los campos buscados
+foreach ($camposBuscados as $campoBuscado) {
+    // Obtener el ID del campo actual
+    $fieldIdQuery = "SELECT id FROM {user_info_field} WHERE name = :fieldname";
+    $fieldIdParams = ['fieldname' => $campoBuscado];
+    $fieldId = $DB->get_field_sql($fieldIdQuery, $fieldIdParams);
+
+    if ($fieldId) {
+        // Obtener el valor del campo actual
+        $campoQuery = "SELECT data FROM {user_info_data} WHERE userid = :userid AND fieldid = :fieldid";
+        $campoParams = ['userid' => $USER->id, 'fieldid' => $fieldId];
+        $campo = $DB->get_field_sql($campoQuery, $campoParams);
+
+        // Almacenar el valor en el array asociativo
+        $campos[$campoBuscado] = $campo;
+
+        // Mostrar el valor del campo actual
+        //echo "<p>$campoBuscado: $campo</p>";
+    } else {
+        //echo "<p>No se encontró el campo '$campoBuscado'.</p>";
+    }
 }
-
+//echo $campos['Entidad'];
+// Ahora, los valores están almacenados en el array $campos
+//var_dump($campos);
 
 //echo '<p>Nombre de usuario: ' . $USER->username . '</p>';
 /*****************/
@@ -182,7 +197,7 @@ if (is_enrolled($context, $USER, '', true)) {
             ];
 
             $result = $DB->get_record_sql($sql, $params);
-
+            
             // Verificar si el usuario está en la tabla
             if ($result) {
                 // El usuario está en la tabla, ocultar el formulario y mostrar mensaje de felicitaciones
@@ -190,10 +205,11 @@ if (is_enrolled($context, $USER, '', true)) {
                         <h3 class="text-success">¡Felicitaciones! Estás apto para llevar el curso</h3>
                         
                       </div>';
-                      //echo $tableName;
+                      
                       foreach ($forms as $form) {
                         echo $form;
                     }
+                    
                     // Ocultar el formulario de registro mediante JavaScript
                     echo '<script>
                     document.addEventListener("DOMContentLoaded", function () {
@@ -221,6 +237,7 @@ if (is_enrolled($context, $USER, '', true)) {
                 </script>';
             }
         }
+        
         ?>
 
         <form id="formularioRegistro" action="censo.php?id=<?php echo $courseId; ?>" method="post">
@@ -249,27 +266,31 @@ if (is_enrolled($context, $USER, '', true)) {
                 <!-- Columna 2 -->
                 <div class="col-md-4 col-sm-12">
                     <!-- Fecha de Nacimiento -->
-                    <div class="form-group">
-                        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                        <input type="date" class="form-control" name="fecha_nacimiento" required>
-                    </div>
+                <div class="form-group">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <?php
+                    // Convertir timestamp a formato de fecha
+                    $fechaNacimiento = isset($campos['Fecha de Nacimiento']) ? date('Y-m-d', $campos['Fecha de Nacimiento']) : '';
+                    ?>
+                    <input type="date" class="form-control" name="fecha_nacimiento" required disabled value="<?php echo $fechaNacimiento; ?>">
+                </div>
 
                     <!-- Sexo -->
                     <div class="form-group">
                         <label>Sexo:</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sexo" value="Masculino" checked>
+                            <input class="form-check-input" type="radio" name="sexo" disabled value="M" <?php echo ($campos['Sexo'] == 'M') ? 'checked' : ''; ?>>
                             <label class="form-check-label">Masculino</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sexo" value="Femenino">
+                            <input class="form-check-input" type="radio" name="sexo" disabled value="F" <?php echo ($campos['Sexo'] == 'F') ? 'checked' : ''; ?>>
                             <label class="form-check-label">Femenino</label>
                         </div>
                     </div>
                     <!-- grado -->
                     <div class="form-group">
                         <label for="grado">Grado:</label>
-                        <input type="text" class="form-control" name="grado" required >
+                        <input type="text" class="form-control" name="grado" required disabled value="<?php echo isset($campos['Grado de Instrucción']) ? $campos['Grado de Instrucción'] : ''; ?>">
                     </div>
                 </div>
 
@@ -284,57 +305,20 @@ if (is_enrolled($context, $USER, '', true)) {
                     <!-- Profesion -->
                     <div class="form-group">
                         <label for="profesion">Profesion:</label>
-                        <input type="text" class="form-control" name="profesion" required>
+                        <input type="text" class="form-control" name="profesion" required disabled value="<?php echo isset($campos['Profesion']) ? $campos['Profesion'] : ''; ?>">
                     </div>
                       <!-- entidad -->
                     <div class="form-group">
-                        <label for="entidad">Entidad:</label>
-                        <input type="text" class="form-control" name="entidad" required >
+                        <label for="entidad">Entidad: </label>
+                        <input type="text" class="form-control" name="entidad" required disabled value="<?php echo isset($campos['Entidad']) ? $campos['Entidad'] : ''; ?>">
+
                     </div>
+
                 </div>
             </div>
             <?php
             /***************************************** */
-            // Obtener el ID del usuario
-            $userId = $USER->id;
-
-            // Consultar la tabla mdl_user_info_field para obtener los campos personalizados
-            $sql = "SELECT f.name, d.data
-                    FROM {user_info_data} d
-                    JOIN {user_info_field} f ON d.fieldid = f.id
-                    WHERE d.userid = :userid";
-
-            $params = ['userid' => $userId];
-            $userInfoData = $DB->get_records_sql($sql, $params);
-
-            // Dividir los campos en tres columnas
-            $numColumns = 3;
-            $fieldsPerColumn = ceil(count($userInfoData) / $numColumns);
-
-            // Mostrar los campos personalizados en un formulario con tres columnas
-            echo '<form><div class="row">';
-            $i = 0;
-
-            foreach ($userInfoData as $field) {
-                if ($i % $fieldsPerColumn === 0 && $i > 0) {
-                    echo '</div><div class="row">';
-                }
-
-                echo '<div class="col-md-' . (12 / $numColumns) . '">';
-                echo '<div class="form-group">';
-                echo '<label for="' . $field->name . '">' . $field->name . ':</label>';
-                echo '<input type="text" class="form-control" id="' . $field->name . '" name="' . $field->name . '" value="' . $field->data . '" disabled>';
-                echo '</div>';
-                echo '</div>';
-
-                $i++;
-            }
-
-            echo '</div></form>';
-            /***************************************** */
-            ?>
-
-            <!-- ... (resto de tu código) ... -->
+?>
 
             <!-- Botón de Continuar -->
             <button type="submit" class="btn btn-primary">Continuar</button>
