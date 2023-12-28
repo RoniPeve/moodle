@@ -34,6 +34,7 @@ echo $OUTPUT->header();
         <img src="../Assets/Images/chica.png" alt="">
     </div>
 </div>
+<!-- Formulario de contacto para que lo usuarios envien sus comentarios -->
 <div class="formulario">
     <div class="titulo_formulario">Ayúdenos a mejorar. Su opinión es importante para nosotros.</div>
     <div class="parrafo_formulario">
