@@ -171,8 +171,10 @@ if (is_enrolled($context, $USER, '', true)) {
                 echo $OUTPUT->footer();
                 exit;
             }
-
-            // Obtener el nombre de la tabla correspondiente al curso
+            /************************************************** */
+            
+            /*
+                DIRECTORIOS MEDIANTE OTRA TABLA
             $tableQuery = "SELECT nombre_directorio FROM {directorios_cursos} WHERE courseid = :courseid";
             $tableParams = ['courseid' => $courseId];
             $tableName = $DB->get_field_sql($tableQuery, $tableParams);
@@ -196,7 +198,37 @@ if (is_enrolled($context, $USER, '', true)) {
                 'nombres' => $nombres,
             ];
 
+            $result = $DB->get_record_sql($sql, $params);*/
+
+
+            /**************************************************** */
+            /* DiRECTORIO UTILIZANDO LOS CAMPOS DEL DASHBOARD DEL CURSO*/
+            /********************************** */
+            // Obtener el nombre de la tabla correspondiente al curso desde customfield_data
+            $tableQuery = "SELECT charvalue FROM {customfield_data} WHERE fieldid = (SELECT id FROM {customfield_field} WHERE shortname = 'directorio') AND instanceid = :courseid";
+            $tableParams = ['courseid' => $courseId];
+            $tableName = $DB->get_field_sql($tableQuery, $tableParams);
+
+            // Verificar si se obtuvo el nombre de la tabla
+            if (empty($tableName)) {
+                echo '<div class="alert alert-danger" role="alert">Por el momento no hay un directorio para este curso</div>';
+                echo $OUTPUT->footer();
+                exit;
+            }
+
+            // Realizar la consulta en la tabla correspondiente al curso (customfield_data)
+            $sql = "SELECT * FROM {" . $tableName . "} 
+                    WHERE DNI = :nro_documento 
+                    AND Apellidos = :apellidos 
+                    AND Nombres = :nombres";
+
+            $params = [
+                'nro_documento' => $nro_documento,
+                'apellidos' => $apellidos,
+                'nombres' => $nombres,
+            ];
             $result = $DB->get_record_sql($sql, $params);
+
             
             // Verificar si el usuario está en la tabla
             if ($result) {

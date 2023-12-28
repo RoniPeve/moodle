@@ -1,5 +1,5 @@
 .imagen_banner{
-    max-width: 100%;
+    max-width: 100% !important;
     
 }
 .imagen_curso{
@@ -26,7 +26,7 @@
 }
 
 .modal-content {
-    width: 40%;
+    width: 40% !important;
     height: 500px;
     background-color: #fff;
     padding: 20px;
@@ -49,7 +49,7 @@
 
 @media (max-width: 1200px) {
     .modal-content {
-        width: 80%;
+        width: 80% !important;
         height: 600px;
     }
     .atributos{
@@ -59,7 +59,7 @@
 }
 @media (max-width: 1500px) {
     .modal-content {
-        width: 40%;
+        width: 50% !important;
         height: 400px;
     }
     .atributos{
@@ -69,7 +69,18 @@
 }
 @media (max-width: 768px) {
     .modal-content {
-        width: 90%;
+        width: 90% !important;
+        height: 300px;
+    }
+    .imagen_curso{
+        border-radius: 10px;
+        height: auto;
+    }
+    
+}
+@media (max-width: 500px) {
+    .modal-content {
+        width: 100% !important;
         height: 300px;
     }
     .imagen_curso{

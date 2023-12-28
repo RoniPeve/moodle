@@ -23,7 +23,6 @@ if ($courseId <= 0) {
     exit;
 }
 
-// Obtener información detallada del curso
 $course = $DB->get_record('course', array('id' => $courseId), '*', MUST_EXIST);
 $category = $DB->get_record('course_categories', array('id' => $course->category), '*', MUST_EXIST);
 
@@ -31,9 +30,52 @@ $category = $DB->get_record('course_categories', array('id' => $course->category
 $modalidad = get_custom_field_value($courseId, 1);
 $fecha = get_custom_field_value($courseId, 2);
 $duracion = get_custom_field_value($courseId, 3);
+/********************************* */
 
+/* UTILIZANDO LOS CAMPOS DE LOS CURSOS PARA LAS IMAGENES DE LOS BANNER */
+// Obtener los valores de banner y requisitos desde customfield_data
+$fieldsQuery = "SELECT cf.shortname, cd.charvalue 
+                FROM {customfield_data} cd
+                JOIN {customfield_field} cf ON cd.fieldid = cf.id
+                WHERE cd.instanceid = :courseid
+                  AND cf.shortname IN ('banner', 'requisitos')";
+$fieldsParams = ['courseid' => $courseId];
+$fieldsResult = $DB->get_records_sql($fieldsQuery, $fieldsParams);
+
+// Verificar si se obtuvieron los valores
+/*if (empty($fieldsResult)) {
+    //echo '<div class="alert alert-danger" role="alert">Por el momento no hay información para este curso</div>';
+    //echo $OUTPUT->footer();
+    //exit;
+}
+*/
+// Inicializar variables con valores por defecto
+$imageFileName = 'Banner02.png';
+$requirementsValue = 'Banner.png';
+
+// Iterar sobre los resultados y almacenar en variables separadas
+foreach ($fieldsResult as $field) {
+    if ($field->shortname == 'banner') {
+        $imageFileName = !empty($field->charvalue) ? $field->charvalue : 'Banner.png';
+    } elseif ($field->shortname == 'requisitos') {
+        $requirementsValue = !empty($field->charvalue) ? $field->charvalue : 'Banner.png';
+    }
+}
+
+// Mostrar la imagen del banner del curso
+echo '<div class="container imagen_banner">';
+echo '<div class="row">';
+echo '<div class="col-md-12 text-center ">';
+echo '<img src="../Assets/Images/' . $imageFileName . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
+echo '</div>';
+
+
+
+/***************************************** */
+/*********************************** */
+//  ANTERIOR MANERA DE MOSTRAR IMAGEN MEDIANTE UNA TABLA LLAMADA COURSE_IMAGES
 // Obtener la imagen de la tabla course_images
-$courseImage = $DB->get_record('course_images', array('id_course_image' => $courseId), '*', MUST_EXIST);
+/*$courseImage = $DB->get_record('course_images', array('id_course_image' => $courseId), '*', MUST_EXIST);
 
 
 // Mostrar detalles del curso
@@ -43,6 +85,8 @@ echo '<div class="row">';
 echo '<div class="col-md-12 text-center ">';
 echo '<img src="../Assets/Images/' . $courseImage->banner . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
 echo '</div>';
+
+/*********************** */
 echo '</div>';
 echo '<div class="row mt-3">';
 echo '<div class="col-md-12 text-center">';
@@ -125,7 +169,7 @@ echo '</div>';
 // Contenido de la ventana modal flotante
 echo '<div id="myModal" class="modal">';
 // Utilizar el nombre del campo requisitos para el fondo de la ventana modal
-echo '<div class="modal-content" style="background: url(../Assets/Images/' . $courseImage->requirements . ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+echo '<div class="modal-content" style="background: url(../Assets/Images/' . $requirementsValue ./*$courseImage->requirements .*/ ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
 // Botón de cierre en la esquina superior derecha
 echo '<span class="close" onclick="closeModal()">&times;</span>';
 // Contenido personalizado de la ventana modal

@@ -24,7 +24,14 @@
 
 require('../config.php');
 require_once("$CFG->libdir/formslib.php");
-
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Cursos/css/matricula.css">
+</head>
+<?php
 
 $id = required_param('id', PARAM_INT);
 $returnurl = optional_param('returnurl', 0, PARAM_LOCALURL);
@@ -98,18 +105,18 @@ if (is_enrolled($context, $USER, '', true)) {
     redirect($destination);   // Bye!
 }
 
-$PAGE->set_title($course->shortname);
+/*$PAGE->set_title($course->shortname);
 $PAGE->set_heading($course->fullname);
 $PAGE->navbar->add(get_string('enrolmentoptions','enrol'));
-
+*/
 echo $OUTPUT->header();
-echo $OUTPUT->heading(get_string('enrolmentoptions','enrol'));
+/*echo $OUTPUT->heading(get_string('enrolmentoptions','enrol'));
 
 $courserenderer = $PAGE->get_renderer('core', 'course');
 echo $courserenderer->course_info_box($course);
 
 /***********MATRICULA NUEVA VISTA********************** */
-/*
+
 // Obtener el ID del curso desde los parámetros GET
 $courseId = optional_param('id', 0, PARAM_INT);
 
@@ -120,7 +127,6 @@ if ($courseId <= 0) {
     exit;
 }
 
-// Obtener información detallada del curso
 $course = $DB->get_record('course', array('id' => $courseId), '*', MUST_EXIST);
 $category = $DB->get_record('course_categories', array('id' => $course->category), '*', MUST_EXIST);
 
@@ -128,9 +134,51 @@ $category = $DB->get_record('course_categories', array('id' => $course->category
 $modalidad = get_custom_field_value($courseId, 1);
 $fecha = get_custom_field_value($courseId, 2);
 $duracion = get_custom_field_value($courseId, 3);
+/********************************* */
 
+/* UTILIZANDO LOS CAMPOS DE LOS CURSOS PARA LAS IMAGENES DE LOS BANNER */
+// Obtener los valores de banner y requisitos desde customfield_data
+$fieldsQuery = "SELECT cf.shortname, cd.charvalue 
+                FROM {customfield_data} cd
+                JOIN {customfield_field} cf ON cd.fieldid = cf.id
+                WHERE cd.instanceid = :courseid
+                  AND cf.shortname IN ('banner', 'requisitos')";
+$fieldsParams = ['courseid' => $courseId];
+$fieldsResult = $DB->get_records_sql($fieldsQuery, $fieldsParams);
+
+// Verificar si se obtuvieron los valores
+/*if (empty($fieldsResult)) {
+    //echo '<div class="alert alert-danger" role="alert">Por el momento no hay información para este curso</div>';
+    //echo $OUTPUT->footer();
+    //exit;
+}
+*/
+// Inicializar variables con valores por defecto
+$imageFileName = 'Banner02.png';
+$requirementsValue = 'Banner.png';
+
+// Iterar sobre los resultados y almacenar en variables separadas
+foreach ($fieldsResult as $field) {
+    if ($field->shortname == 'banner') {
+        $imageFileName = !empty($field->charvalue) ? $field->charvalue : 'Banner.png';
+    } elseif ($field->shortname == 'requisitos') {
+        $requirementsValue = !empty($field->charvalue) ? $field->charvalue : 'Banner.png';
+    }
+}
+// Mostrar la imagen del banner del curso
+echo '<div class="container imagen_banner">';
+echo '<div class="row">';
+echo '<div class="col-md-12 text-center ">';
+echo '<img src="../Assets/Images/' . $imageFileName . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
+echo '</div>';
+
+
+
+/***************************************** */
+/*********************************** */
+//  ANTERIOR MANERA DE MOSTRAR IMAGEN MEDIANTE UNA TABLA LLAMADA COURSE_IMAGES
 // Obtener la imagen de la tabla course_images
-$courseImage = $DB->get_record('course_images', array('id_course_image' => $courseId), '*', MUST_EXIST);
+/*$courseImage = $DB->get_record('course_images', array('id_course_image' => $courseId), '*', MUST_EXIST);
 
 
 // Mostrar detalles del curso
@@ -140,6 +188,8 @@ echo '<div class="row">';
 echo '<div class="col-md-12 text-center ">';
 echo '<img src="../Assets/Images/' . $courseImage->banner . '" alt="Imagen del curso" class="img-fluid imagen_curso" style="width: 100%; object-fit: cover;">';
 echo '</div>';
+
+/*********************** */
 echo '</div>';
 echo '<div class="row mt-3">';
 echo '<div class="col-md-12 text-center">';
@@ -160,9 +210,60 @@ echo '</div>';
 echo '</div>';
 echo '<div class="row mt-3">';
 echo '<div class="col-md-12 text-center">';
+$enrolDates = $DB->get_records('enrol', array('courseid' => $courseId), 'id ASC');
+
+$now = time(); // Obtener la marca de tiempo actual
+
+$enableMatriculation = false;
+$matriculationMessage = '';
+
+if ($enrolDates) {
+    echo '<div class="row mt-3">';
+    echo '<div class="col-md-12 text-center">';
+    echo '<p><strong>Fechas de matrícula:</strong></p>';
+    
+    foreach ($enrolDates as $enrolDate) {
+        // Verificar si las fechas son mayores que un valor específico
+        if ($enrolDate->enrolstartdate > 0 && $enrolDate->enrolenddate > 0) {
+            // Convertir timestamps a formato de fecha y hora
+            $enrolStartDate = userdate($enrolDate->enrolstartdate, '%d-%m-%Y %H:%M:%S');
+            $enrolEndDate = userdate($enrolDate->enrolenddate, '%d-%m-%Y %H:%M:%S');
+            
+            echo "<p><b>Inicio:</b> $enrolStartDate | <b>Fin:</b> $enrolEndDate</p>";
+            
+            // Verificar el estado de la matriculación
+            if ($enrolDate->enrolstartdate <= $now && $enrolDate->enrolenddate >= $now) {
+                $enableMatriculation = true;
+            } elseif ($enrolDate->enrolstartdate > $now) {
+                $matriculationMessage = "Las matrículas aún no han comenzado." ;//. $enrolStartDate;
+            } elseif ($enrolDate->enrolenddate < $now) {
+                $matriculationMessage = "Ya no puede matricularse, ya que el periodo finalizó " . $enrolEndDate;
+            }
+        }
+    }
+    
+    echo '</div>';
+    echo '</div>';
+    
+    // Mostrar el mensaje correspondiente
+    if (!empty($matriculationMessage)) {
+        echo '<div class="alert alert-warning" role="alert">' . $matriculationMessage . '</div>';
+    }
+
+    // Generar el botón de matriculación según el estado de las fechas
+    if ($enableMatriculation) {
+        echo '<a href="../Cursos/censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
+    } else {
+        echo '<button class="btn btn-primary btn-lg mx-2" disabled>Matricularse</button>';
+    }
+} else {
+    echo '<div class="alert alert-warning" role="alert">No se encontraron fechas de matrícula para este curso.</div>';
+}
+
+/*******************/
 // Agregar evento onclick para abrir la ventana modal
 echo '<a href="#" class="btn btn-info btn-lg mx-2" onclick="openModal()">Ver requisitos</a>';
-echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
+//echo '<a href="censo.php?id=' . $courseId . '" class="btn btn-primary btn-lg mx-2">Matricularse</a>';
 
 echo '</div>';
 echo '</div>';
@@ -171,7 +272,7 @@ echo '</div>';
 // Contenido de la ventana modal flotante
 echo '<div id="myModal" class="modal">';
 // Utilizar el nombre del campo requisitos para el fondo de la ventana modal
-echo '<div class="modal-content" style="background: url(../Assets/Images/' . $courseImage->requirements . ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+echo '<div class="modal-content" style="background: url(../Assets/Images/' . $requirementsValue ./*$courseImage->requirements .*/ ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
 // Botón de cierre en la esquina superior derecha
 echo '<span class="close" onclick="closeModal()">&times;</span>';
 // Contenido personalizado de la ventana modal
@@ -191,88 +292,7 @@ echo '<script>
         document.getElementById("myModal").style.display = "none";
     }
 </script>';
-echo '<style>
-    .imagen_banner{
-        max-width: 100%;
-       
-    }
-    .imagen_curso{
-        border-radius: 20px;
-        height: 400px;
-    }
-    .atributos{
-        text-align: justify;
-        padding: 15px 50px;
-    }
-    .requisitos{
-        background-color: #3B69AE;
-        
-    }
-    .descripcion{
-        text-align: justify;
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
 
-    .modal-content {
-        width: 40%;
-        height: 500px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        overflow: hidden;
-        object-fit: contain;
-
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 15px;
-        color: #fff; 
-    }
-    
-    @media (max-width: 1200px) {
-        .modal-content {
-            width: 80%;
-            height: 600px;
-        }
-        .atributos{
-            text-align: justify;
-            padding: 15px
-        }
-    }
-    @media (max-width: 1500px) {
-        .modal-content {
-            width: 40%;
-            height: 400px;
-        }
-        .atributos{
-            text-align: justify;
-            padding: 15px
-        }
-    }
-    @media (max-width: 768px) {
-        .modal-content {
-            width: 90%;
-            height: 300px;
-        }
-        .imagen_curso{
-            border-radius: 10px;
-            height: auto;
-        }
-        
-    }
-</style>';
 // Función para obtener el valor de un campo personalizado desde la tabla customfield_data
 function get_custom_field_value($instanceId, $fieldId) {
     global $DB;
@@ -282,9 +302,10 @@ function get_custom_field_value($instanceId, $fieldId) {
     return $value ? $value : 'N/A';
 }
 
-*/
-/*********************************** */
-foreach ($forms as $form) {
+
+
+/**********FIN DE LA NUEVA VISTA************************* */
+/*foreach ($forms as $form) {
     echo $form;
 }
 /*************CODIGO CREADO PARA MODIFICAR EL MOODLE**************** */

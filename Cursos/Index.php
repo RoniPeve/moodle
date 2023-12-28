@@ -46,7 +46,7 @@ echo $OUTPUT->header();
             SELECT COUNT(*) as count
             FROM {course} c
             WHERE c.id != 1
-            AND (c.fullname LIKE ? OR c.summary LIKE ?)
+            AND (c.fullname LIKE ? OR c.summary LIKE ?) AND c.visible = 1
             " . ($category_filter != 'all' ? "AND c.category = ?" : "");
 
         $params = ['%' . $search_keyword . '%', '%' . $search_keyword . '%'];
@@ -81,7 +81,7 @@ echo $OUTPUT->header();
             LEFT JOIN {customfield_data} cd2 ON c.id = cd2.instanceid AND cd2.fieldid = 2
             LEFT JOIN {customfield_data} cd3 ON c.id = cd3.instanceid AND cd3.fieldid = 3
             WHERE c.id != 1
-            AND (c.fullname LIKE ? OR c.summary LIKE ?)
+            AND (c.fullname LIKE ? OR c.summary LIKE ?) AND c.visible = 1
             " . ($category_filter != 'all' ? "AND c.category = ?" : "");
 
         $params = ['%' . $search_keyword . '%', '%' . $search_keyword . '%'];
