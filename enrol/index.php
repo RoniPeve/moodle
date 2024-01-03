@@ -37,7 +37,8 @@ $id = required_param('id', PARAM_INT);
 $returnurl = optional_param('returnurl', 0, PARAM_LOCALURL);
 /************************** */
 
-
+$PAGE->set_title('Matrícula');
+$PAGE->set_heading('Matrícula');
 
 /********* */
 if (!isloggedin()) {
