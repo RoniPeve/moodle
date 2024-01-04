@@ -242,5 +242,60 @@ echo $OUTPUT->header();
 echo $OUTPUT->heading($pagedesc);
 
 $editform->display();
+/************************************ */
+/************************************ */
+// Función para verificar si una tabla existe en la base de datos de Moodle.
+/*function table_exists($table_name) {
+    global $DB;
+    
+    $sql = "SHOW TABLES LIKE ?";
+    return $DB->record_exists_sql($sql, array($table_name));
+}
 
+function create_table($table_name) {
+    global $DB;
+
+    $sql = "
+        CREATE TABLE {" . $table_name . "} (
+            DNI VARCHAR(8),
+            Apellidos VARCHAR(100),
+            Nombres VARCHAR(100),
+            Entidad VARCHAR(100),
+            correo VARCHAR(100)
+        )
+    ";
+
+    try {
+        $DB->execute($sql);
+        return true;
+    } catch (\Exception $e) {
+        echo "Error al crear la tabla: " . $e->getMessage();
+        return false;
+    }
+}
+
+
+// Lógica para crear la tabla
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nombre_tabla = optional_param('nombre_tabla', '', PARAM_TEXT);
+
+    if (!empty($nombre_tabla)) {
+        if (!table_exists($nombre_tabla)) {
+            create_table($nombre_tabla);
+            echo "Tabla creada con éxito: mdl_$nombre_tabla";
+        } else {
+            echo "Error: La tabla con el nombre 'mdl_$nombre_tabla' ya existe.";
+        }
+    }
+}
+/********************************** */
+
+// Formulario para crear la tabla
+/*echo '<form method="post" action="">';
+echo '<label for="nombre_tabla">Nombre de la tabla:</label>';
+echo '<input type="text" name="nombre_tabla" required>';
+echo '<input type="submit" value="Crear tabla">';
+echo '</form>';
+/************************************ */
+/************************************ */
 echo $OUTPUT->footer();
