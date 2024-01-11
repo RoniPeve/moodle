@@ -47,6 +47,7 @@ $PAGE->set_heading($SITE->fullname);
 
 $PAGE->navbar->add($heading);
 
+
 $form = new \tool_certificate\verify_certificate_form($pageurl, null, 'post', '',
     ['class' => 'mt-3 mb-5 p-4 bg-light']);
 
@@ -56,6 +57,12 @@ if ($code) {
 
 $PAGE->set_heading($heading);
 echo $OUTPUT->header();
+
+?>
+<p>Esta página tiene por finalidad proveer un mecanismo para verificar la autenticidad del Certificado de Aprobación de los cursos tomados por un estudiante. </p>
+
+<?php
+
 $form->display();
 if ($form->get_data()) {
     $result = \tool_certificate\certificate::verify($code);

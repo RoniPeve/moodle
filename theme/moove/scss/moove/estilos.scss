@@ -119,3 +119,11 @@
       }
     }
   }
+
+  /***** OCULTAR PAGINA PRINCIPAL  *******/
+/* Ocultar cuando este en primero */
+.drawer-primary .drawercontent .list-group .list-group-item:first-child {
+  display: none;
+}
+
+/*********************************/

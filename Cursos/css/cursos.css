@@ -1,3 +1,7 @@
+.cursos{
+    max-width: 100% !important;
+}
+
 /* Estilos básicos para las cards */
 .curso-card {
     border: 1px solid #ddd;
@@ -5,6 +9,9 @@
     margin: 10px;
     text-align: center;
     cursor: pointer;
+}
+.titulo_curso{
+    text-align: center;
 }
 
 /* Estilo adicional para la categoría superpuesta */
@@ -34,4 +41,55 @@
 /* Estilo para los iconos de FontAwesome */
 .icono-fa {
     margin-right: 5px;
+}
+
+/**************************************/
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.categoria {
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+}
+
+.contenido {
+    text-align: center;
+}
+
+.circulo {
+   /* border-radius: 80%;*/
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.circulo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: invert(100%);
+}
+
+/* Estilos para el texto */
+h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #666;
 }

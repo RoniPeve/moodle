@@ -227,6 +227,7 @@ echo $OUTPUT->addblockbutton('content'); //evita que el usuario pueda manipular 
     echo '<div class="contenido">';
     echo '<div class="circulo">';
     echo '<a href="../course/index.php?categoryid=' . $category_id . '"><img src="../Assets/Images/' . $category_image . '" alt=""></a>';
+    //echo '<a href="../Cursos/Index.php?search=&category=' . $category_id . '"><img src="../Assets/Images/' . $category_image . '" alt=""></a>';
     echo '</div>';
     echo $category_description;
     echo '</div>';

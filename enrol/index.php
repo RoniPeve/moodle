@@ -273,8 +273,12 @@ echo '</div>';
 // Contenido de la ventana modal flotante
 echo '<div id="myModal" class="modal">';
 // Utilizar el nombre del campo requisitos para el fondo de la ventana modal
-echo '<div class="modal-content" style="background: url(../Assets/Images/' . $requirementsValue ./*$courseImage->requirements .*/ ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+echo '<div class="modal-content" style="background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+//echo '<div class="modal-content" style="background: url(../Assets/Images/' . $requirementsValue ./*$courseImage->requirements .*/ ') no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">';
+
 // Botón de cierre en la esquina superior derecha
+echo '<img class="imagen_requisitos" src="../Assets/Images/' . $requirementsValue . '"';
+echo '</img>';
 echo '<span class="close" onclick="closeModal()">&times;</span>';
 // Contenido personalizado de la ventana modal
 // Puedes agregar más contenido aquí si es necesario

@@ -6,14 +6,12 @@ $PAGE->set_title('Cursos');
 echo $OUTPUT->header();
 ?>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/cursos.css">
 </head>
-<h1 class="mb-4">Todos los Cursos</h1>
+<h1 class="mb-4 titulo_curso">Todos los Cursos</h1>
 <div class="container">
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get" class="form-inline mb-4">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get" class="form-inline mb-5">
         <div class="form-group buscador">
             <input type="text" name="search" class="form-control" placeholder="Buscar cursos" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
         </div>
