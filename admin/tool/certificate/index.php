@@ -70,6 +70,7 @@ if ($form->get_data()) {
     echo $OUTPUT->render($results);
 }
 
+
 /*********OCULTAR PAGINA PRINCIPAL************* */
 if (isloggedin() && !isguestuser()) {
     // El usuario ha iniciado sesión, mostrar solo el bloque específico.
@@ -86,4 +87,95 @@ if (isloggedin() && !isguestuser()) {
           </script>';
 }
 /*******FIN DE BLOQUE PAGINA PRINCIPAL************* */
+?>
+<style>
+.certificado {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.certificado h4 {
+    color: #333;
+}
+
+.certificado p {
+    color: #666;
+}
+
+.imagen_certificado {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.imagen_Certificado img {
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregamos un sombreado */
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    width: 80%;
+    height: 400px;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    object-fit: contain;
+
+}
+.imagen_modal{
+    width: 100%;
+    height: 100%;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+</style>
+
+<div class="certificado">
+        <h4>¿Dónde encuentro el Código de Verificación?</h4>
+        <p>El Código de verificación de su certificado aparece en la parte inferior derecha del documento. También puede escanear el código QR para obtener dicho código.</p>
+        <div class="imagen_Certificado" id="modalTrigger">
+            <img onclick="openModal()" src="../../../Assets/Images/codigo_certificados.png" alt="">
+        </div>
+    </div>
+
+<div id="myModal" class="modal">
+<div class="modal-content" style="background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+<!--<div class="modal-content" style="background: url(../../../Assets/Images/codigo_certificados.png) no-repeat center center fixed; background-size: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+--><span class="close" onclick="closeModal()">&times;</span>
+<img class="imagen_modal" src="../../../Assets/Images/codigo_certificados.png" alt=""></img>
+
+</div>
+</div>
+<script>
+function openModal() {
+        document.getElementById("myModal").style.display = "block";
+
+    }
+
+    function closeModal() {
+        
+        document.getElementById("myModal").style.display = "none";
+    }
+
+</script>
+<?php
 echo $OUTPUT->footer();
