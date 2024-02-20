@@ -20,41 +20,52 @@ echo $OUTPUT->header();
   <div class="row">
     <div class="col">
     <div class="image-container">
-            <img src="../Assets/Images/fondo_trabajo.jpg" alt="Imagen 3">
+            <img src="../Assets/Images/moocs.jpg" alt="Imagen 3">
         </div>
     </div>
     <div class="col">
       <h3>Cursos Mooc</h3>
       <p>MOOC (Massive Open Online Course), es una modalidad de formación que se caracteriza por ser masivo y abierto; es decir, diseñados para ser impartidos a un gran número de alumnos a la vez.
 
-<br><br>El estudiante ingresa a la plataforma en el horario que más le convenga, participa en foros, observa recursos interactivos y soluciona exámenes. 
+      <br><br>El estudiante ingresa a la plataforma en el horario que más le convenga, participa en foros, observa recursos interactivos y soluciona exámenes. 
 
-<br><br>Los cursos Mooc duran 15 días (equivale a 15 horas de estudio). Al culminar, el estudiante recibe un certificado de aprobación. 
+      <br><br>Los cursos Mooc duran 15 días (equivale a 15 horas de estudio). Al culminar, el estudiante recibe un certificado de aprobación. 
 
-<br><br>Vacantes ilimitadas. Dirigido al público en general.</p>
+      <br><br>Vacantes ilimitadas. Dirigido al público en general.</p>
     </div>
   </div>
+  <div class="linea"></div>
   <div class="row">
     <div class="col">
-      <h3>Título 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel tortor ut leo ultrices vestibulum. Integer eu ipsum sapien.</p>
+      <h3>Videoconferencia</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel tortor ut leo ultrices vestibulum. Integer eu ipsum sapien.
+        <br> <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam accusamus optio corrupti saepe est non omnis, repellendus esse beatae aspernatur alias distinctio ea necessitatibus hic eum ipsam iusto cupiditate nobis rem, dicta veritatis illum aperiam, voluptate cumque. Rerum ipsam fugiat a qui et. Maiores quaerat exercitationem ducimus eos tempora est!
+        <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatum mollitia voluptatibus repudiandae voluptate impedit? Nesciunt enim dolorem at!
+      </p>
     </div>
     <div class="col">
     <div class="image-container">
-            <img src="../Assets/Images/fondo_trabajo.jpg" alt="Imagen 3">
+            <img src="../Assets/Images/videoconferencia.jpg" alt="Imagen 3">
         </div>
     </div>
   </div>
+  <div class="linea"></div>
   <div class="row">
     <div class="col">
         <div class="image-container">
-            <img src="../Assets/Images/fondo_trabajo.jpg" alt="Imagen 3">
+            <img src="../Assets/Images/webinars.jpg" alt="Imagen 3">
         </div>
     </div>
     <div class="col">
-      <h3>Título 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel tortor ut leo ultrices vestibulum. Integer eu ipsum sapien.</p>
+      <h3>Webinars </h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel tortor ut leo ultrices vestibulum. Integer eu ipsum sapien.
+        <br> <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam accusamus optio corrupti saepe est non omnis, repellendus esse beatae aspernatur alias distinctio ea necessitatibus hic eum ipsam iusto cupiditate nobis rem, dicta veritatis illum aperiam, voluptate cumque. Rerum ipsam fugiat a qui et. Maiores quaerat exercitationem ducimus eos tempora est!
+        <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore corrupti voluptatum mollitia voluptatibus repudiandae voluptate impedit? Nesciunt enim dolorem at!
+      </p>  
     </div>
+    
   </div>
 </div>
 
