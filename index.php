@@ -140,9 +140,10 @@ if (isloggedin() && !isguestuser()) {
                 }
             });
           </script>';
-}else{
+}/*else{
     echo $courserenderer->frontpage();
-}
+}*/
+echo $courserenderer->frontpage();
 /*******FIN OCULTAR PAGINA PRINCIPAL***********/
 // Print Section or custom info.
 if (!empty($CFG->customfrontpageinclude)) {
