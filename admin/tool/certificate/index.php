@@ -59,7 +59,7 @@ $PAGE->set_heading($heading);
 echo $OUTPUT->header();
 
 ?>
-<p>Esta página tiene por finalidad proveer un mecanismo para verificar la autenticidad del Certificado de Aprobación de los cursos tomados por un estudiante. </p>
+<p>Esta página tiene por finalidad proveer un mecanismo para verificar la autenticidad de la Constancia de Aprobación de los cursos tomados por un estudiante. </p>
 
 <?php
 
@@ -151,7 +151,7 @@ if (isloggedin() && !isguestuser()) {
 
 <div class="certificado">
         <h4>¿Dónde encuentro el Código de Verificación?</h4>
-        <p>El Código de verificación de su certificado aparece en la parte inferior derecha del documento. También puede escanear el código QR para obtener dicho código.</p>
+        <p>El Código de verificación de su constancia aparece en la parte inferior izquierda del documento. También puede escanear el código QR para obtener dicho código.</p>
         <div class="imagen_Certificado" id="modalTrigger">
             <img onclick="openModal()" src="../../../Assets/Images/codigo_certificados.png" alt="">
         </div>
