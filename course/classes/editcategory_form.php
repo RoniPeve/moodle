@@ -44,6 +44,8 @@ class core_course_editcategory_form extends moodleform {
         $categoryid = $this->_customdata['categoryid'];
         $parent = $this->_customdata['parent'];
 
+        
+
         // Get list of categories to use as parents, with site as the first one.
         $options = array();
         if (has_capability('moodle/category:manage', context_system::instance()) || $parent == 0) {
@@ -77,6 +79,16 @@ class core_course_editcategory_form extends moodleform {
         $mform->addElement('editor', 'description_editor', get_string('description'), null,
             $this->get_description_editor_options());
         $mform->setType('description_editor', PARAM_RAW);
+
+       /************************ */
+        // Agregar campo de texto para ingresar el nombre de la imagen
+        $mform->addElement('text', 'category_image_name', get_string('Icono', 'core_course'));
+        $mform->setType('category_image_name', PARAM_TEXT);
+        $mform->addRule('category_image_name', null, 'required', null, 'client');
+        $mform->setDefault('category_image_name', ''); // Valor por defecto (opcional)
+
+/************* */
+
 
         if (!empty($CFG->allowcategorythemes)) {
             $themes = array(''=>get_string('forceno'));

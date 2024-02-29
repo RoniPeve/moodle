@@ -21,7 +21,7 @@
  * @copyright 2018 Toni Barbera  {@link http://moodle.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+$string['categoryimage'] = 'Imagen de la categoría';
 $string['action'] = 'Action';
 $string['addingnewcustomfield'] = 'Adding a new {$a}';
 $string['addnewcategory'] = 'Add a new category';

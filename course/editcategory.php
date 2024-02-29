@@ -30,9 +30,10 @@ require_once('../config.php');
 require_once($CFG->dirroot.'/course/lib.php');
 
 require_login();
-
+$max_id;
+$nuevoID;
 $id = optional_param('id', 0, PARAM_INT);
-
+$obtenerid;
 $url = new moodle_url('/course/editcategory.php');
 if ($id) {
     $coursecat = core_course_category::get($id, MUST_EXIST, true);
@@ -50,6 +51,16 @@ if ($id) {
     $fullname = $coursecat->get_formatted_name();
 
 } else {
+    /********RESTABLECER EL AUTOINCREMENTABLES**************** */
+
+    // Obtener el máximo ID de la tabla course_categories
+    $max_id_record = $DB->get_record_sql("SELECT MAX(id) as max_id FROM {course_categories}");
+    $max_id = $max_id_record->max_id;
+    // Restablecer el contador de autoincremento al siguiente número después del máximo ID existente
+    $sql = "ALTER TABLE {course_categories} AUTO_INCREMENT = " . ($max_id + 1);
+    $DB->execute($sql);
+    /************************* */
+
     $parent = required_param('parent', PARAM_INT);
     $url->param('parent', $parent);
     $strtitle = get_string('addnewcategory');
@@ -105,7 +116,7 @@ $mform->set_data(file_prepare_standard_editor(
     'description',
     $itemid
 ));
-
+$nuevoID=$max_id+1;
 $manageurl = new moodle_url('/course/management.php');
 if ($mform->is_cancelled()) {
     if ($id) {
@@ -115,16 +126,67 @@ if ($mform->is_cancelled()) {
     }
     redirect($manageurl);
 } else if ($data = $mform->get_data()) {
+    
     if (isset($coursecat)) {
         if ((int)$data->parent !== (int)$coursecat->parent && !$coursecat->can_change_parent($data->parent)) {
             throw new \moodle_exception('cannotmovecategory');
         }
         $coursecat->update($data, $mform->get_description_editor_options());
+        $obtenerid=$id;
+        echo "<script> alert('".$obtenerid."'); </script>";
+        // Actualizar la imagen si se proporciona un nuevo nombre
+        try {
+            if (!empty($data->category_image_name)) {
+                // Verificar si ya existe un registro para esta categoría en la tabla course_categories_images
+                $existing_image = $DB->get_record('course_categories_images', ['id_category' => $id]);
+            
+                if ($existing_image) {
+                    // Si existe, actualizar el nombre de la imagen
+                    $existing_image->image = $data->category_image_name;
+            
+                    // Verificar si el registro encontrado tiene el mismo id_category que $id
+                    if ($existing_image->id_category == $id) {
+                        // Actualizar el registro solo si el id_category coincide
+                        $updated = $DB->update_record('course_categories_images', $existing_image);
+                    }
+                } else {
+                    // Si no existe, lanzar una excepción o manejar el caso según tus requerimientos
+                    throw new Exception("No se encontró una imagen asociada a esta categoría para actualizar.");
+                }
+            }            
+        } catch (Exception $e) {
+            echo "Se produjo un error: " . $e->getMessage(); 
+        }
     } else {
         $category = core_course_category::create($data, $mform->get_description_editor_options());
+
+        /*********** CODIGO PARA INSERTAR EN LA NUEVA TABLA DE CORUSE_CATEGORIES_IMAGES
+         * ESTA TABLA CONTIENE EL ID DE MI CATEGORIA Y EL NOMBRE DE LA IMAGEN QUE SE DEBE ENCONTRAR EN ASSETS/IMAGES/
+         *  ************ */
+        /********************************************* */
+        // Insertar los datos de la imagen en la tabla course_categories_images
+        try{
+            if (!empty($data->category_image_name)) {
+                $image_data = new stdClass();
+                $image_data->id_category = $nuevoID;
+                $image_data->image = $data->category_image_name;
+    
+                $inserted = $DB->insert_record('course_categories_images', $image_data);
+                if (!$inserted) {
+                    echo "Error al insertar los datos de la imagen en la base de datos.";
+                }
+            }
+    
+        }catch(Exception $e){
+            echo "Se produjo un error: " . $e->getMessage(); 
+        }
+        /************************** */
     }
+    
     $manageurl->param('categoryid', $category->id);
     redirect($manageurl);
+    
+    
 }
 
 echo $OUTPUT->header();
