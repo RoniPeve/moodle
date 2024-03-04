@@ -87,7 +87,7 @@ class core_course_editcategory_form extends moodleform {
         $mform->addRule('category_image_name', null, 'required', null, 'client');
         $mform->setDefault('category_image_name', ''); // Valor por defecto (opcional)
 
-/************* */
+        /************* */
 
 
         if (!empty($CFG->allowcategorythemes)) {

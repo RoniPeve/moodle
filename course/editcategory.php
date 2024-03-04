@@ -33,7 +33,7 @@ require_login();
 $max_id;
 $nuevoID;
 $id = optional_param('id', 0, PARAM_INT);
-$obtenerid;
+$obtenerid=$id;
 $url = new moodle_url('/course/editcategory.php');
 if ($id) {
     $coursecat = core_course_category::get($id, MUST_EXIST, true);
@@ -59,6 +59,7 @@ if ($id) {
     // Restablecer el contador de autoincremento al siguiente número después del máximo ID existente
     $sql = "ALTER TABLE {course_categories} AUTO_INCREMENT = " . ($max_id + 1);
     $DB->execute($sql);
+
     /************************* */
 
     $parent = required_param('parent', PARAM_INT);
@@ -128,12 +129,12 @@ if ($mform->is_cancelled()) {
 } else if ($data = $mform->get_data()) {
     
     if (isset($coursecat)) {
+        $id = $coursecat->id;
         if ((int)$data->parent !== (int)$coursecat->parent && !$coursecat->can_change_parent($data->parent)) {
             throw new \moodle_exception('cannotmovecategory');
         }
         $coursecat->update($data, $mform->get_description_editor_options());
-        $obtenerid=$id;
-        echo "<script> alert('".$obtenerid."'); </script>";
+
         // Actualizar la imagen si se proporciona un nuevo nombre
         try {
             if (!empty($data->category_image_name)) {
@@ -141,18 +142,19 @@ if ($mform->is_cancelled()) {
                 $existing_image = $DB->get_record('course_categories_images', ['id_category' => $id]);
             
                 if ($existing_image) {
-                    // Si existe, actualizar el nombre de la imagen
-                    $existing_image->image = $data->category_image_name;
-            
-                    // Verificar si el registro encontrado tiene el mismo id_category que $id
-                    if ($existing_image->id_category == $id) {
-                        // Actualizar el registro solo si el id_category coincide
-                        $updated = $DB->update_record('course_categories_images', $existing_image);
+                    // Si existe, actualizar el nombre de la imagen solo si ha cambiado
+                    if ($existing_image->image != $data->category_image_name) {
+                        // Construir la consulta de actualización
+                        $sql = "UPDATE {course_categories_images} SET image = :image WHERE id_category = :id_category";
+
+                        $params = [
+                            'image' => $data->category_image_name,
+                            'id_category' => $id
+                        ];
+
+                        $updated = $DB->execute($sql, $params);
                     }
-                } else {
-                    // Si no existe, lanzar una excepción o manejar el caso según tus requerimientos
-                    throw new Exception("No se encontró una imagen asociada a esta categoría para actualizar.");
-                }
+                } 
             }            
         } catch (Exception $e) {
             echo "Se produjo un error: " . $e->getMessage(); 
